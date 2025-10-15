@@ -1,21 +1,17 @@
 import { Link } from "react-router-dom";
+import { data } from "~/data/data";
 
 const CounterListPage = () => {
   return (
     <section>
       <ul>
-        <li>
-          <Link to={"/counter/1"}>1</Link>
-        </li>
-        <li>
-          <Link to={"/counter/2"}>2</Link>
-        </li>
-        <li>
-          <Link to={"/counter/3"}>3</Link>
-        </li>
-        <li>
-          <Link to={"/counter/4"}>4</Link>
-        </li>
+        {data.map(({ id, shortName }) => {
+          return (
+            <li key={id}>
+              <Link to={`/counter/${id}`}>{shortName}</Link>
+            </li>
+          );
+        })}
       </ul>
     </section>
   );
