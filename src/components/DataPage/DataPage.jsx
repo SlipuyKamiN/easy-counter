@@ -1,6 +1,6 @@
 import { data } from "~/data/data";
 import { QtyInput, Td, Th } from "./DataPage.styled";
-import { createAddress, getDataSheet } from "~/API/API";
+import { API } from "~/API/API";
 
 const allLinens = Array.from(
   new Set(data.flatMap((item) => item.linens.map((l) => l.name)))
@@ -15,9 +15,6 @@ const allColumns = [
   ...allLinens,
   ...allAddOns,
 ];
-
-getDataSheet();
-createAddress({ name: "Vasia", address: "Add" });
 
 const DataPage = () => {
   return (
