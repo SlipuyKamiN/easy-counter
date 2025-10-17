@@ -5,7 +5,7 @@ import DatePicker from "react-multi-date-picker";
 import { getAllColums } from "~/helpers/dashboard";
 import { useState } from "react";
 import { IoIosAddCircleOutline } from "react-icons/io";
-import { EmptyQtyInput } from "./QtyInput";
+import { EmptyQtyInput } from "../Common/QtyInput";
 
 const initialRow = {
   shortName: "",

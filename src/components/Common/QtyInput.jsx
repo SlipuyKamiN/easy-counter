@@ -1,4 +1,4 @@
-import { NumberInput } from "./DashboardPage.styled";
+import { NumberInput } from "../DashboardPage/DashboardPage.styled";
 
 export const QtyInput = ({
   item,

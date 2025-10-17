@@ -1,6 +1,8 @@
+import { Checkbox } from "./Inputs.styled";
+
 export const PickUpCheckbox = ({ handleChange, item }) => {
   return (
-    <input
+    <Checkbox
       type="checkbox"
       checked={item.pickupNeeded}
       onChange={() =>
