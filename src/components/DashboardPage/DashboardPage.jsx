@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { DeleteBtn, Td, Th } from "./DashboardPage.styled";
 import { API } from "~/API/API";
 import { useAPI } from "~/hooks/useAPI";
@@ -9,10 +9,25 @@ import { EmptyRow } from "./EmptyRow";
 import { QtyInput } from "./QtyInput";
 import { PickUpCheckbox } from "./PickUpCheckbox";
 
+const getSortBy = (key) => {
+  switch (key.toLowerCase()) {
+    case "id":
+      return (a, b) => Number(a.id) - Number(b.id);
+
+    case "address":
+      return (a, b) => a.address.localeCompare(b.address);
+    case "next checkout":
+      return (a, b) => a.nextCheckout[0] - b.nextCheckout[0];
+    default:
+      return () => {};
+  }
+};
+
 const DashboardPage = () => {
   const [dispatch, data, isLoading, isError] = useAPI(API.getAll);
   const [update] = useAPI(API.update);
   const [deleteRow] = useAPI(API.delete);
+  const [sortBy, setSortBy] = useState("");
 
   useEffect(() => {
     if (!data) {
@@ -24,6 +39,8 @@ const DashboardPage = () => {
     update({ id, body }).then(() => dispatch());
   };
 
+  console.log(sortBy);
+
   if (!data || isLoading) return <div>Loading...</div>;
   if (!data || isError) return <div>Error...</div>;
 
@@ -32,13 +49,26 @@ const DashboardPage = () => {
       <table>
         <thead>
           <tr>
-            {getAllColums(data).allColumns.map((col) => (
-              <Th key={col}>{col}</Th>
-            ))}
+            {getAllColums(data).allColumns.map((col, i) => {
+              if (i <= 2) {
+                return (
+                  <Th key={col}>
+                    <button
+                      type="button"
+                      onClick={() => setSortBy(col.toLowerCase())}
+                    >
+                      {col}
+                    </button>
+                  </Th>
+                );
+              }
+
+              return <Th key={col}>{col}</Th>;
+            })}
           </tr>
         </thead>
         <tbody>
-          {data.map((item) => (
+          {data.sort(getSortBy(sortBy)).map((item) => (
             <tr key={item.id}>
               <td>
                 <DeleteBtn
