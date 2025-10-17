@@ -4,27 +4,18 @@ const BASE_URL = import.meta.env.VITE_BASE_URL;
 
 export const API = {
   getAll: async () => {
-    axios.get(BASE_URL);
+    return await axios.get(BASE_URL).then((res) => res);
   },
   getAddress: async (id) => {
-    axios.get(`${BASE_URL}/${id}`);
+    return await axios.get(`${BASE_URL}/${id}`).then((res) => res);
   },
   create: async (body) => {
-    return await axios
-      .post(BASE_URL, body)
-      .then((res) => res.data)
-      .catch(console.log);
+    return await axios.post(BASE_URL, body).then((res) => res);
   },
   update: async (id, body) => {
-    return await axios
-      .put(`${BASE_URL}/${id}`, body)
-      .then((res) => res.data)
-      .catch(console.log);
+    return await axios.put(`${BASE_URL}/${id}`, body).then((res) => res);
   },
   delete: async (id) => {
-    return await axios
-      .delete(`${BASE_URL}/${id}`)
-      .then((res) => res.data)
-      .catch(console.log);
+    return await axios.delete(`${BASE_URL}/${id}`).then((res) => res);
   },
 };
