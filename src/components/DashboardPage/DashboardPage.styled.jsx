@@ -42,7 +42,7 @@ export const Td = styled.td`
   text-align: center;
 `;
 
-export const QtyInput = styled.input`
+export const NumberInput = styled.input`
   width: 40px;
   height: 20px;
   padding: 0;
