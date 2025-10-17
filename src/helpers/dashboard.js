@@ -36,3 +36,16 @@ export const getAllColums = (data) => {
 
   return { allColumns, allLinens, allAddOns };
 };
+
+export const getSortBy = (key) => {
+  switch (key.toLowerCase()) {
+    case "id":
+      return (a, b) => Number(a.id) - Number(b.id);
+    case "address":
+      return (a, b) => a.address.localeCompare(b.address);
+    case "next checkout":
+      return (a, b) => a.nextCheckout[0] - b.nextCheckout[0];
+    default:
+      return (a, b) => Number(a.id) - Number(b.id);
+  }
+};

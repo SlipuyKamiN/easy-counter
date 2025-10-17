@@ -4,24 +4,10 @@ import { API } from "~/API/API";
 import { useAPI } from "~/hooks/useAPI";
 import DatePicker from "react-multi-date-picker";
 import { TiDeleteOutline } from "react-icons/ti";
-import { countBags, getAllColums } from "~/helpers/dashboard";
+import { countBags, getAllColums, getSortBy } from "~/helpers/dashboard";
 import { EmptyRow } from "./EmptyRow";
 import { QtyInput } from "./QtyInput";
 import { PickUpCheckbox } from "./PickUpCheckbox";
-
-const getSortBy = (key) => {
-  switch (key.toLowerCase()) {
-    case "id":
-      return (a, b) => Number(a.id) - Number(b.id);
-
-    case "address":
-      return (a, b) => a.address.localeCompare(b.address);
-    case "next checkout":
-      return (a, b) => a.nextCheckout[0] - b.nextCheckout[0];
-    default:
-      return () => {};
-  }
-};
 
 const DashboardPage = () => {
   const [dispatch, data, isLoading, isError] = useAPI(API.getAll);
@@ -38,8 +24,6 @@ const DashboardPage = () => {
   const handleChange = (id, body) => {
     update({ id, body }).then(() => dispatch());
   };
-
-  console.log(sortBy);
 
   if (!data || isLoading) return <div>Loading...</div>;
   if (!data || isError) return <div>Error...</div>;
