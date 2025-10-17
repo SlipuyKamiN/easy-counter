@@ -10,9 +10,10 @@ export const Td = styled.td`
 `;
 
 export const QtyInput = styled.input`
-  width: 20px;
+  width: 40px;
   height: 20px;
-  padding: 4px;
+  padding: 0;
+  text-align: center;
   font-size: 20px;
   background-color: transparent;
   border: none;

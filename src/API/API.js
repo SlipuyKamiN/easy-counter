@@ -12,7 +12,7 @@ export const API = {
   create: async (body) => {
     return await axios.post(BASE_URL, body).then((res) => res);
   },
-  update: async (id, body) => {
+  update: async ({ id, body }) => {
     return await axios.put(`${BASE_URL}/${id}`, body).then((res) => res);
   },
   delete: async (id) => {
