@@ -33,6 +33,45 @@ export const DeleteBtn = styled.button`
   }
 `;
 
+export const SortBtn = styled.button`
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding: 0;
+  margin: 0 auto;
+
+  background-color: transparent;
+  font-size: inherit;
+  font-weight: inherit;
+`;
+
+export const TableWrapper = styled.div`
+  overflow-x: scroll;
+`;
+
+export const Table = styled.table`
+  th,
+  td {
+    text-transform: capitalize;
+    border-bottom: 1px solid ${colors.light.hi100};
+  }
+
+  td:not(:last-of-type),
+  th:not(:last-of-type) {
+    border-right: 1px solid ${colors.light.hi100};
+  }
+
+  pointer-events: none;
+
+  @media screen and (min-width: 768px) {
+    pointer-events: all;
+  }
+`;
+
 export const Th = styled.th`
   max-width: 105px;
   text-align: center;
@@ -40,6 +79,21 @@ export const Th = styled.th`
 
 export const Td = styled.td`
   text-align: center;
+  max-width: 240px;
+
+  &.id {
+    width: 40px;
+  }
+
+  & .date-picker {
+    max-width: 60px;
+    padding: 4px;
+
+    border: none;
+
+    font-weight: 600;
+    background-color: transparent;
+  }
 `;
 
 export const NumberInput = styled.input`
@@ -50,4 +104,44 @@ export const NumberInput = styled.input`
   font-size: 20px;
   background-color: transparent;
   border: none;
+`;
+
+export const TableInputWrapper = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  input {
+    height: 30px;
+  }
+`;
+
+export const AddressInput = styled.input`
+  height: 30px;
+  border: none;
+  background-color: transparent;
+
+  font-size: inherit;
+`;
+
+export const PlusBtn = styled.button`
+  background-color: transparent;
+  border-radius: 50%;
+  width: 34px;
+  height: 34px;
+  padding: 0;
+  margin: 4px auto 0;
+
+  color: ${colors.light.lo100};
+  transition: ${transition.duration};
+
+  &:hover,
+  &:focus {
+    color: ${colors.light.hi200};
+    background-color: ${colors.light.mid100};
+  }
+
+  &.active {
+    color: ${colors.accent.cyan};
+  }
 `;

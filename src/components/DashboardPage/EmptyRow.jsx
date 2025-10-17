@@ -1,4 +1,10 @@
-import { NumberInput, Td } from "./DashboardPage.styled";
+import {
+  AddressInput,
+  NumberInput,
+  PlusBtn,
+  TableInputWrapper,
+  Td,
+} from "./DashboardPage.styled";
 import { API } from "~/API/API";
 import { useAPI } from "~/hooks/useAPI";
 import DatePicker from "react-multi-date-picker";
@@ -6,6 +12,7 @@ import { getAllColums } from "~/helpers/dashboard";
 import { useState } from "react";
 import { IoIosAddCircleOutline } from "react-icons/io";
 import { EmptyQtyInput } from "../Common/QtyInput";
+import { Checkbox } from "../Common/Inputs.styled";
 
 const initialRow = {
   shortName: "",
@@ -31,16 +38,17 @@ export const EmptyRow = ({ dispatch, data }) => {
 
   return !newRow ? (
     <tr>
-      <td>
-        <button type="button" onClick={() => setNewRow(initialRow)}>
-          New row
-        </button>
-      </td>
+      <Td>
+        <PlusBtn type="button" onClick={() => setNewRow(initialRow)}>
+          <IoIosAddCircleOutline size={34} />
+        </PlusBtn>
+      </Td>
     </tr>
   ) : (
     <tr>
-      <td>
-        <button
+      <Td>
+        <PlusBtn
+          className="active"
           type="button"
           onClick={() => {
             create(newRow).then(() => {
@@ -48,21 +56,22 @@ export const EmptyRow = ({ dispatch, data }) => {
             });
           }}
         >
-          <IoIosAddCircleOutline size={30} />
-        </button>
-      </td>
-      <td>
-        <input
+          <IoIosAddCircleOutline size={34} />
+        </PlusBtn>
+      </Td>
+      <Td>
+        <AddressInput
           required
           type="text"
           onBlur={({ target }) => {
             setNewRow((prev) => ({ ...prev, address: target.value }));
           }}
         />
-      </td>
+      </Td>
       <Td>
         <DatePicker
           required
+          inputClass="date-picker"
           format="DD/MM/YYYY"
           multiple
           minDate={new Date()}
@@ -74,7 +83,7 @@ export const EmptyRow = ({ dispatch, data }) => {
         />
       </Td>
       <Td>
-        <input
+        <Checkbox
           required
           type="checkbox"
           checked={newRow.pickupNeeded}
@@ -93,7 +102,7 @@ export const EmptyRow = ({ dispatch, data }) => {
         return (
           <Td key={name}>
             {found ? (
-              <>
+              <TableInputWrapper>
                 <EmptyQtyInput
                   value={found.available}
                   setNewRow={setNewRow}
@@ -109,7 +118,7 @@ export const EmptyRow = ({ dispatch, data }) => {
                   itemKey={"linens"}
                   name={name}
                 />
-              </>
+              </TableInputWrapper>
             ) : (
               "—"
             )}
@@ -122,7 +131,7 @@ export const EmptyRow = ({ dispatch, data }) => {
         return (
           <Td key={name}>
             {found ? (
-              <>
+              <TableInputWrapper>
                 <EmptyQtyInput
                   value={found.available}
                   setNewRow={setNewRow}
@@ -138,7 +147,7 @@ export const EmptyRow = ({ dispatch, data }) => {
                   itemKey={"addOns"}
                   name={name}
                 />
-              </>
+              </TableInputWrapper>
             ) : (
               "—"
             )}
