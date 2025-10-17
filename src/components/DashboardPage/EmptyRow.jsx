@@ -1,10 +1,11 @@
-import { QtyInput, Td } from "./DashboardPage.styled";
+import { NumberInput, Td } from "./DashboardPage.styled";
 import { API } from "~/API/API";
 import { useAPI } from "~/hooks/useAPI";
 import DatePicker from "react-multi-date-picker";
 import { getAllColums } from "~/helpers/dashboard";
 import { useState } from "react";
 import { IoIosAddCircleOutline } from "react-icons/io";
+import { EmptyQtyInput } from "./QtyInput";
 
 const initialRow = {
   shortName: "",
@@ -93,44 +94,20 @@ export const EmptyRow = ({ dispatch, data }) => {
           <Td key={name}>
             {found ? (
               <>
-                <QtyInput
-                  required
-                  type="number"
-                  min={0}
-                  maxLength={3}
+                <EmptyQtyInput
                   value={found.available}
-                  onChange={({ target }) => {
-                    const value = Number(target.value);
-                    setNewRow((prev) => ({
-                      ...prev,
-                      linens: prev.linens.map((l) => {
-                        if (l.name === name) {
-                          return { ...l, available: value };
-                        }
-                        return l;
-                      }),
-                    }));
-                  }}
+                  setNewRow={setNewRow}
+                  column={"available"}
+                  itemKey={"linens"}
+                  name={name}
                 />
                 {" / "}
-                <QtyInput
-                  required
-                  type="number"
-                  min={0}
-                  maxLength={3}
+                <EmptyQtyInput
                   value={found.minimum}
-                  onChange={({ target }) => {
-                    const value = Number(target.value);
-                    setNewRow((prev) => ({
-                      ...prev,
-                      linens: prev.linens.map((l) => {
-                        if (l.name === name) {
-                          return { ...l, minimum: value };
-                        }
-                        return l;
-                      }),
-                    }));
-                  }}
+                  setNewRow={setNewRow}
+                  column={"minimum"}
+                  itemKey={"linens"}
+                  name={name}
                 />
               </>
             ) : (
@@ -146,44 +123,20 @@ export const EmptyRow = ({ dispatch, data }) => {
           <Td key={name}>
             {found ? (
               <>
-                <QtyInput
-                  required
-                  type="number"
-                  min={0}
-                  maxLength={3}
+                <EmptyQtyInput
                   value={found.available}
-                  onChange={({ target }) => {
-                    const value = Number(target.value);
-                    setNewRow((prev) => ({
-                      ...prev,
-                      addOns: prev.addOns.map((l) => {
-                        if (l.name === name) {
-                          return { ...l, available: value };
-                        }
-                        return l;
-                      }),
-                    }));
-                  }}
+                  setNewRow={setNewRow}
+                  column={"available"}
+                  itemKey={"addOns"}
+                  name={name}
                 />
                 {" / "}
-                <QtyInput
-                  required
-                  type="number"
-                  min={0}
-                  maxLength={3}
+                <EmptyQtyInput
                   value={found.minimum}
-                  onChange={({ target }) => {
-                    const value = Number(target.value);
-                    setNewRow((prev) => ({
-                      ...prev,
-                      addOns: prev.addOns.map((l) => {
-                        if (l.name === name) {
-                          return { ...l, minimum: value };
-                        }
-                        return l;
-                      }),
-                    }));
-                  }}
+                  setNewRow={setNewRow}
+                  column={"minimum"}
+                  itemKey={"addOns"}
+                  name={name}
                 />
               </>
             ) : (

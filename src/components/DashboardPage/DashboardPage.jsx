@@ -23,8 +23,6 @@ const DashboardPage = () => {
     update({ id, body }).then(() => dispatch());
   };
 
-  // console.log(data, isLoading, isError);
-
   if (!data || isLoading) return <div>Loading...</div>;
   if (!data || isError) return <div>Error...</div>;
 
@@ -87,45 +85,21 @@ const DashboardPage = () => {
                     {found ? (
                       <>
                         <QtyInput
-                          type="number"
-                          min={0}
-                          maxLength={3}
+                          item={item}
+                          found={found}
+                          itemKey={"linens"}
+                          column={"available"}
                           defaultValue={found.available}
-                          onBlur={({ target }) => {
-                            const value = Number(target.value);
-                            if (found.available === value || value < 0) return;
-                            handleChange(item.id, {
-                              ...item,
-                              linens: item.linens.map((l) => {
-                                if (l.name === found.name) {
-                                  l.available = value;
-                                }
-
-                                return l;
-                              }),
-                            });
-                          }}
+                          handleChange={handleChange}
                         />
                         {" / "}
                         <QtyInput
-                          type="number"
-                          min={0}
-                          maxLength={3}
+                          item={item}
+                          found={found}
+                          itemKey={"linens"}
+                          column={"minimum"}
+                          handleChange={handleChange}
                           defaultValue={found.minimum}
-                          onBlur={({ target }) => {
-                            const value = Number(target.value);
-                            if (found.minimum === value) return;
-                            handleChange(item.id, {
-                              ...item,
-                              linens: item.linens.map((l) => {
-                                if (l.name === found.name) {
-                                  l.minimum = value;
-                                }
-
-                                return l;
-                              }),
-                            });
-                          }}
                         />
                       </>
                     ) : (
@@ -142,46 +116,21 @@ const DashboardPage = () => {
                     {found ? (
                       <>
                         <QtyInput
-                          type="number"
-                          min={0}
-                          maxLength={3}
+                          item={item}
+                          found={found}
+                          itemKey={"addOns"}
+                          column={"available"}
+                          handleChange={handleChange}
                           defaultValue={found.available}
-                          onBlur={({ target }) => {
-                            const value = Number(target.value);
-                            if (found.available === value || value < 0) return;
-                            return handleChange(item.id, {
-                              ...item,
-                              addOns: item.addOns.map((l) => {
-                                if (l.name === found.name) {
-                                  l.available = value;
-                                }
-
-                                return l;
-                              }),
-                            });
-                          }}
                         />
                         {" / "}
                         <QtyInput
-                          type="number"
-                          min={0}
-                          maxLength={3}
+                          item={item}
+                          found={found}
+                          itemKey={"addOns"}
+                          column={"minimum"}
+                          handleChange={handleChange}
                           defaultValue={found.minimum}
-                          onBlur={({ target }) => {
-                            const value = Number(target.value);
-
-                            if (found.minimum === value) return;
-                            handleChange(item.id, {
-                              ...item,
-                              addOns: item.addOns.map((l) => {
-                                if (l.name === found.name) {
-                                  l.minimum = value;
-                                }
-
-                                return l;
-                              }),
-                            });
-                          }}
                         />
                       </>
                     ) : (

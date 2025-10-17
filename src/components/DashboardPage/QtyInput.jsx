@@ -1,18 +1,25 @@
 import { NumberInput } from "./DashboardPage.styled";
 
-export const QtyInput = ({ item, found, handleChange, key, column }) => {
+export const QtyInput = ({
+  item,
+  found,
+  handleChange,
+  itemKey,
+  defaultValue,
+  column,
+}) => {
   return (
     <NumberInput
       type="number"
       min={0}
       maxLength={3}
-      defaultValue={found[column]}
+      defaultValue={defaultValue}
       onBlur={({ target }) => {
         const value = Number(target.value);
-        if (found[column] === value || value < 0) return;
+        if (defaultValue === value || value < 0) return;
         handleChange(item.id, {
           ...item,
-          [key]: item[key].map((l) => {
+          [itemKey]: item[itemKey].map((l) => {
             if (l.name === found.name) {
               l[column] = value;
             }
@@ -20,6 +27,31 @@ export const QtyInput = ({ item, found, handleChange, key, column }) => {
             return l;
           }),
         });
+      }}
+    />
+  );
+};
+
+export const EmptyQtyInput = ({ setNewRow, value, column, itemKey, name }) => {
+  return (
+    <NumberInput
+      required
+      type="number"
+      min={0}
+      maxLength={3}
+      value={value}
+      onChange={({ target }) => {
+        const value = Number(target.value);
+
+        setNewRow((prev) => ({
+          ...prev,
+          [itemKey]: prev[itemKey].map((l) => {
+            if (l.name === name) {
+              return { ...l, [column]: value };
+            }
+            return l;
+          }),
+        }));
       }}
     />
   );
