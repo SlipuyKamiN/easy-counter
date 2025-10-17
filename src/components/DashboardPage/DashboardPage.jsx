@@ -7,6 +7,7 @@ import { TiDeleteOutline } from "react-icons/ti";
 import { countBags, getAllColums } from "~/helpers/dashboard";
 import { EmptyRow } from "./EmptyRow";
 import { QtyInput } from "./QtyInput";
+import { PickUpCheckbox } from "./PickUpCheckbox";
 
 const DashboardPage = () => {
   const [dispatch, data, isLoading, isError] = useAPI(API.getAll);
@@ -65,16 +66,7 @@ const DashboardPage = () => {
                 />
               </Td>
               <Td>
-                <input
-                  type="checkbox"
-                  checked={item.pickupNeeded}
-                  onChange={() =>
-                    handleChange(item.id, {
-                      ...item,
-                      pickupNeeded: !item.pickupNeeded,
-                    })
-                  }
-                />
+                <PickUpCheckbox handleChange={handleChange} item={item} />
               </Td>
               <Td>{countBags(item)}</Td>
               {getAllColums(data).allLinens.map((name) => {

@@ -1,44 +1,79 @@
+import { useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { data } from "~/data/data";
+import { API } from "~/API/API";
+import { useAPI } from "~/hooks/useAPI";
+import { PickUpCheckbox } from "../DashboardPage/PickUpCheckbox";
+import { Counter } from "./Counter";
 
 const CounterPage = () => {
   const { addressID } = useParams();
-  const currentAddress = data.find(({ id }) => id === addressID);
-  const { linens, shortName, address, addOns, pickupNeeded } = currentAddress;
+  const [dispatch, current, isLoading, isError] = useAPI(API.getAddress);
+  const [update] = useAPI(API.update);
+
+  useEffect(() => {
+    if (!current) {
+      dispatch(addressID);
+    }
+  }, [dispatch, current, addressID]);
+
+  const handleCheckboxChange = (id, body) => {
+    update({ id, body }).then(() => dispatch(addressID));
+  };
+
+  const handleChange = ({ name, qty, itemKey }) => {
+    update({
+      id: addressID,
+      body: {
+        ...current,
+        [itemKey]: current[itemKey].map((l) => {
+          if (l.name === name) {
+            return { ...l, available: qty };
+          }
+          return l;
+        }),
+      },
+    }).then(() => dispatch(addressID));
+  };
+
+  if (!current || isLoading) return <div>Loading...</div>;
+  if (!current || isError) return <div>Error...</div>;
+
+  const { address, linens, addOns } = current;
 
   return (
     <section>
-      <h1>{shortName}</h1>
-      <p>{address}</p>
+      <h1>{address}</h1>
       <ul>
         <li>
           <h3>Pick-up needed:</h3>
-          <input type="checkbox" checked={pickupNeeded} />
+          <PickUpCheckbox handleChange={handleCheckboxChange} item={current} />
         </li>
         <li>
           <h3>Linens:</h3>
           <ul>
-            {linens.map(({ name, available }) => {
-              return (
-                <li>
-                  <h4>{name}</h4>
-                  <input type="number" value={available} />
-                </li>
-              );
-            })}
+            {linens.map(({ name, available }) => (
+              <Counter
+                key={name}
+                name={name}
+                available={available}
+                handleChange={handleChange}
+                itemKey={"linens"}
+              />
+            ))}
           </ul>
         </li>
         <li>
           <h3>Add-ons</h3>
           <ul>
-            {addOns.map(({ name, available }) => {
-              return (
-                <li>
-                  <h4>{name}</h4>
-                  <input type="number" value={available} />
-                </li>
-              );
-            })}
+            {addOns.map(({ name, available }) => (
+              <Counter
+                key={name}
+                name={name}
+                available={available}
+                handleChange={handleChange}
+                itemKey={"addOns"}
+              />
+            ))}
           </ul>
         </li>
       </ul>
