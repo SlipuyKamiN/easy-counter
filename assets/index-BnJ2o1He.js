@@ -380,6 +380,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
   margin: 0 auto;
   font-size: 24px;
   max-width: 320px;
+  margin-bottom: 10px;
 
   @media screen and (min-width: 768px) {
     font-size: 28px;
