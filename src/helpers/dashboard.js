@@ -6,7 +6,7 @@ export const countBags = (item) => {
     ["Laken orange"]: 5,
     ["Duschtücher"]: 6,
     ["Handtücher"]: 6,
-    ["Badvorleger"]: 5,
+    ["Badvorleger"]: 2,
     ["Geschirrtücher"]: 5,
   };
 
@@ -18,7 +18,7 @@ export const countBags = (item) => {
     bagsNeeded = bagsNeeded > neededBagsLinen ? bagsNeeded : neededBagsLinen;
   });
 
-  return Math.round(bagsNeeded);
+  return Math.round(bagsNeeded) > 4 ? 4 : Math.round(bagsNeeded);
 };
 
 export const getAllColums = (data) => {
