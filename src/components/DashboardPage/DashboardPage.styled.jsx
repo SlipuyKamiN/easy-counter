@@ -47,6 +47,8 @@ export const SortBtn = styled.button`
   background-color: transparent;
   font-size: inherit;
   font-weight: inherit;
+
+  pointer-events: all;
 `;
 
 export const TableWrapper = styled.div`
