@@ -44,7 +44,7 @@ export const Heading = styled.h1`
 `;
 
 export const PickupWrapper = styled.li`
-  margin: 0 auto;
+  margin: 0 auto 10px;
   max-width: 230px;
 
   display: flex;
@@ -76,14 +76,14 @@ export const CounterItem = styled.li`
     }
 
     button {
-      width: 36px;
-      height: 36px;
+      width: 40px;
+      height: 40px;
       padding: 0;
 
       color: ${colors.light.lo200};
       background-color: transparent;
       border-radius: 50%;
-      font-size: 30px;
+      font-size: 36px;
       font-weight: 600;
       line-height: 0;
 

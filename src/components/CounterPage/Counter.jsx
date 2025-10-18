@@ -12,7 +12,7 @@ export const Counter = ({ name, available, handleChange, itemKey }) => {
 
   return (
     <CounterItem>
-      <h4>{name}</h4>
+      <h3>{name}</h3>
       <div>
         <button type="button" onClick={() => setQty((prev) => prev - 1)}>
           -

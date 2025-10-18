@@ -4,6 +4,7 @@ import { API } from "~/API/API";
 import { useAPI } from "~/hooks/useAPI";
 import { Container, Section } from "../SharedLayout/SharedLayout.styled";
 import { AddressesListItem, CounterList } from "./CounterPage.styled";
+import { StateIndicator } from "../Common/StateIndicator";
 
 const CounterListPage = () => {
   const [dispatch, data, isLoading, isError] = useAPI(API.getAll);
@@ -14,8 +15,18 @@ const CounterListPage = () => {
     }
   }, [dispatch, data]);
 
-  if (!data || isLoading) return <div>Loading...</div>;
-  if (!data || isError) return <div>Error...</div>;
+  if (!data || isLoading)
+    return (
+      <div>
+        <StateIndicator isLoading={isLoading} data={data} isError={isError} />
+      </div>
+    );
+  if (!data || isError)
+    return (
+      <div>
+        <StateIndicator isLoading={isLoading} data={data} isError={isError} />
+      </div>
+    );
 
   return (
     <Section>
