@@ -57,7 +57,7 @@ const CounterPage = () => {
             <Heading>{current.address}</Heading>
             <ul>
               <PickupWrapper>
-                <h3>Pick-up needed:</h3>
+                <h3>Abholung:</h3>
                 <PickUpCheckbox
                   onChange={() =>
                     throttledCheckboxChange(current.id, {

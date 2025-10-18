@@ -8,8 +8,8 @@ export const App = () => {
   return (
     <Routes>
       <Route path="/" element={<SharedLayout />}>
-        <Route index element={<DashboardPage />}></Route>
-        <Route path="counterList" element={<CounterListPage />}></Route>
+        <Route index element={<CounterListPage />}></Route>
+        <Route path="dashboard" element={<DashboardPage />}></Route>
         <Route path="counter/:addressID" element={<CounterPage />}></Route>
         <Route path="404" element={<div>404</div>} />
       </Route>

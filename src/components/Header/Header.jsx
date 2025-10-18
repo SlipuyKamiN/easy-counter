@@ -10,10 +10,10 @@ const Header = () => (
         <PageLogo />
         <NavList>
           <li>
-            <NavLink to={"/"}>Dashboard</NavLink>
+            <NavLink to={"/"}>Counter list</NavLink>
           </li>
           <li>
-            <NavLink to={"/counterList"}>Counter list</NavLink>
+            <NavLink to={"/dashboard"}>Dashboard</NavLink>
           </li>
         </NavList>
       </HeaderWrapper>

@@ -47,7 +47,7 @@ export const Heading = styled.h1`
 
 export const PickupWrapper = styled.li`
   margin: 0 auto 10px;
-  max-width: 230px;
+  max-width: 190px;
 
   display: flex;
   flex-wrap: wrap;
