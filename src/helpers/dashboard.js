@@ -3,11 +3,11 @@ export const countBags = (item) => {
     ["Bettbezüge"]: 6,
     ["Kissenbezüge"]: 6,
     ["Laken grün"]: 3,
-    ["Laken orange"]: 1,
+    ["Laken orange"]: 5,
     ["Duschtücher"]: 6,
     ["Handtücher"]: 6,
-    ["Badvorleger"]: 2,
-    ["Geschirrtücher"]: 2,
+    ["Badvorleger"]: 5,
+    ["Geschirrtücher"]: 5,
   };
 
   let bagsNeeded = 0;
