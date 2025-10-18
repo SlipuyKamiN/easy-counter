@@ -82,7 +82,7 @@ const DashboardPage = () => {
                         </span>
                       </DeleteBtn>
                     </Td>
-                    <Td>{item.address}</Td>
+                    <Td className="address">{item.address}</Td>
                     <Td>
                       <DatePicker
                         placeholder=" - "

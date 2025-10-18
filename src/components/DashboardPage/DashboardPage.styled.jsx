@@ -79,10 +79,14 @@ export const Th = styled.th`
 
 export const Td = styled.td`
   text-align: center;
-  max-width: 240px;
+  padding: 0 4px;
 
   &.id {
     width: 40px;
+  }
+
+  &.address {
+    text-align: left;
   }
 
   & .date-picker {

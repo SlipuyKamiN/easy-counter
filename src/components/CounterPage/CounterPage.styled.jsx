@@ -2,26 +2,29 @@ import styled from "@emotion/styled";
 import { colors, transition } from "~/styles/common/vars";
 
 export const CounterList = styled.ul`
-  max-width: 375px;
   margin: 0 auto;
 `;
 
 export const AddressesListItem = styled.li`
-  width: 100%;
-  padding: 15px;
+  margin: 0 auto;
+  max-width: 375px;
+  padding: 10px;
+  transition: ${transition.duration};
+  border-radius: 12px;
 
   a {
     width: 100%;
-
+    height: 100%;
     padding: 15px;
-
-    border-radius: 12px;
-    transition: ${transition.duration};
   }
 
-  a:hover,
-  a:focus {
-    background-color: ${colors.light.hi100};
+  &:hover,
+  &:focus {
+    background-color: ${colors.light.hi200};
+  }
+
+  &:not(:last-of-type) {
+    margin-bottom: 10px;
   }
 `;
 
