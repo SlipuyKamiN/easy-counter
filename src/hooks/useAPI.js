@@ -8,7 +8,7 @@ export const useAPI = (method) => {
   const dispatch = async (payload) => {
     setIsLoading(true);
     setIsError(false);
-    setData(null);
+    // setData(null);
 
     try {
       const response = await method(payload);

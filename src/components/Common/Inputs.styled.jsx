@@ -23,6 +23,8 @@ export const CheckboxWrapper = styled.div`
   input {
     width: 34px;
     height: 34px;
+
+    background-color: transparent;
   }
 
   input:checked + span {

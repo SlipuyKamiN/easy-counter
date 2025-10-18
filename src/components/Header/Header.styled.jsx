@@ -4,7 +4,6 @@ import { colors, transition } from "~/styles/common/vars";
 
 export const PageHeader = styled.header`
   width: 100%;
-  position: fixed;
   z-index: 10;
   top: 0;
   left: 0;
@@ -14,12 +13,19 @@ export const PageHeader = styled.header`
   backdrop-filter: blur(10px);
   border-bottom: 3px solid ${colors.lo100};
   box-shadow: ${colors.lo100} 0px 0px 10px;
+
+  @media screen and (min-width: 768px) {
+    position: fixed;
+  }
 `;
 
 export const HeaderWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  flex-wrap: wrap;
+  gap: 10px;
 `;
 
 export const UiConfigWrapper = styled.div`

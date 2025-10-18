@@ -23,7 +23,7 @@ const Header = () => (
             <NavLink to={"/"}>Dashboard</NavLink>
           </li>
           <li>
-            <NavLink to={"/counterList"}>Counter</NavLink>
+            <NavLink to={"/counterList"}>Counter list</NavLink>
           </li>
         </NavList>
       </HeaderWrapper>

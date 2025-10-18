@@ -67,6 +67,8 @@ export const CounterItem = styled.li`
       max-width: 60px;
       text-align: center;
       border: none;
+
+      background-color: transparent;
     }
 
     button {
