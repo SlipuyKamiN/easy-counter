@@ -2,6 +2,7 @@ import styled from "@emotion/styled";
 import { colors, transition } from "~/styles/common/vars";
 
 export const CounterList = styled.ul`
+  padding-top: 20px;
   margin: 0 auto;
 `;
 
@@ -11,6 +12,7 @@ export const AddressesListItem = styled.li`
   padding: 10px;
   transition: ${transition.duration};
   border-radius: 12px;
+  border: 1px solid ${colors.light.hi100};
 
   a {
     width: 100%;

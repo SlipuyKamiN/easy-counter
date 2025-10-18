@@ -1,23 +1,13 @@
 import { Link, NavLink } from "react-router-dom";
-import {
-  ArrowLogo,
-  FirstLetterLogo,
-  HeaderWrapper,
-  LogoLink,
-  NavList,
-  PageHeader,
-  SubLogo,
-} from "./Header.styled";
+import { HeaderWrapper, NavList, PageHeader } from "./Header.styled";
 import { Container } from "../SharedLayout/SharedLayout.styled";
+import { PageLogo } from "../Common/PageLogo";
 
 const Header = () => (
   <PageHeader>
     <Container>
       <HeaderWrapper>
-        <LogoLink to={"/"}>
-          <FirstLetterLogo>e</FirstLetterLogo>asyRing<ArrowLogo>↺</ArrowLogo>
-          <SubLogo>counter</SubLogo>
-        </LogoLink>
+        <PageLogo />
         <NavList>
           <li>
             <NavLink to={"/"}>Dashboard</NavLink>

@@ -34,7 +34,7 @@ const CounterPage = () => {
           ),
         },
       }).then(() => dispatch(addressID));
-    }, 2000)
+    }, 1000)
   ).current;
 
   const throttledCheckboxChange = useRef(
