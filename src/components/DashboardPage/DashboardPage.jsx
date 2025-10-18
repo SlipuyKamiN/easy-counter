@@ -14,17 +14,17 @@ import DatePicker from "react-multi-date-picker";
 import { TiDeleteOutline } from "react-icons/ti";
 import { countBags, getAllColums, getSortBy } from "~/helpers/dashboard";
 import { EmptyRow } from "./EmptyRow";
-import { QtyInput } from "../Common/QtyInput";
 import { PickUpCheckbox } from "../Common/PickUpCheckbox";
 import { Container, Section } from "../SharedLayout/SharedLayout.styled";
 import { FaSortAmountDownAlt } from "react-icons/fa";
 import { StateIndicator } from "../Common/StateIndicator";
+import { QtyInput } from "../Common/QtyInput";
 
 const DashboardPage = () => {
   const [dispatch, data, isLoading, isError] = useAPI(API.getAll);
   const [update] = useAPI(API.update);
   const [deleteRow] = useAPI(API.delete);
-  const [sortBy, setSortBy] = useState("");
+  const [sortBy, setSortBy] = useState("next checkout");
 
   useEffect(() => {
     if (!data) {
@@ -85,6 +85,7 @@ const DashboardPage = () => {
                     <Td>{item.address}</Td>
                     <Td>
                       <DatePicker
+                        placeholder=" - "
                         inputClass="date-picker"
                         format="DD/MM/YY"
                         multiple
@@ -108,7 +109,7 @@ const DashboardPage = () => {
                         item={item}
                       />
                     </Td>
-                    <Td>{countBags(item)}</Td>
+                    <Td className="bags-needed">{countBags(item)}</Td>
                     {getAllColums(data).allLinens.map((name) => {
                       const found = item.linens.find((l) => l.name === name);
 

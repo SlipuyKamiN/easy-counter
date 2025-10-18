@@ -1,9 +1,13 @@
 export const countBags = (item) => {
   const bagIncludes = {
-    ["pillow case"]: 6,
-    ["sheets Green"]: 3,
-    ["towel Big"]: 6,
-    ["towel Small"]: 6,
+    ["Bettbezüge"]: 6,
+    ["Kissenbezüge"]: 6,
+    ["Laken grün"]: 3,
+    ["Laken orange"]: 1,
+    ["Duschtücher"]: 6,
+    ["Handtücher"]: 6,
+    ["Badvorleger"]: 2,
+    ["Geschirrtücher"]: 2,
   };
 
   let bagsNeeded = 0;

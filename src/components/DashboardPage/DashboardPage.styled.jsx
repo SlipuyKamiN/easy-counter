@@ -73,7 +73,7 @@ export const Table = styled.table`
 `;
 
 export const Th = styled.th`
-  max-width: 105px;
+  padding: 0 10px;
   text-align: center;
 `;
 
@@ -95,22 +95,45 @@ export const Td = styled.td`
     font-weight: 600;
     background-color: transparent;
   }
+
+  &.bags-needed {
+    font-size: 28px;
+  }
 `;
 
 export const NumberInput = styled.input`
-  width: 40px;
+  width: 48px;
   height: 20px;
   padding: 0;
   text-align: center;
   font-size: 20px;
   background-color: transparent;
   border: none;
+
+  font-family: Montserrat;
+
+  &.available {
+    font-size: 28px;
+  }
+
+  &.low.available {
+    color: ${colors.errorRed};
+  }
+
+  &.medium.available {
+    color: ${colors.warning};
+  }
+
+  &.high.available {
+    color: ${colors.success};
+  }
 `;
 
 export const TableInputWrapper = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  gap: 5px;
 
   input {
     height: 30px;

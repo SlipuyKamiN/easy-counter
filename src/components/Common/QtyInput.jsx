@@ -8,9 +8,20 @@ export const QtyInput = ({
   defaultValue,
   column,
 }) => {
+  const className =
+    found.minimum === 0
+      ? ""
+      : found.available <= found.minimum
+      ? "low"
+      : found.available === found.minimum + 1
+      ? "medium"
+      : "high";
+
   return (
     <NumberInput
+      name={column}
       type="number"
+      className={`${className} ${column === "available" && column}`}
       min={0}
       maxLength={3}
       defaultValue={defaultValue}
@@ -35,8 +46,10 @@ export const QtyInput = ({
 export const EmptyQtyInput = ({ setNewRow, value, column, itemKey, name }) => {
   return (
     <NumberInput
-      required
+      name={column}
       type="number"
+      className={column === "available" && column}
+      required
       min={0}
       maxLength={3}
       value={value}

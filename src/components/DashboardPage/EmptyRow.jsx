@@ -11,23 +11,35 @@ import { getAllColums } from "~/helpers/dashboard";
 import { useState } from "react";
 import { IoIosAddCircleOutline } from "react-icons/io";
 import { EmptyQtyInput } from "../Common/QtyInput";
-import { Checkbox } from "../Common/Inputs.styled";
+import { PickUpCheckbox } from "../Common/PickUpCheckbox";
 
 const initialRow = {
-  shortName: "",
   address: "",
   nextCheckout: [],
   pickupNeeded: false,
   linens: [
-    { name: "pillow case", available: 0, minimum: 0 },
-    { name: "sheets Green", available: 0, minimum: 0 },
-    { name: "towel Big", available: 0, minimum: 0 },
-    { name: "towel Small", available: 0, minimum: 0 },
+    { name: "Bettbezüge", available: 0, minimum: 0 },
+    { name: "Kissenbezüge", available: 0, minimum: 0 },
+    { name: "Laken grün", available: 0, minimum: 0 },
+    { name: "Laken orange", available: 0, minimum: 0 },
+    { name: "Duschtücher", available: 0, minimum: 0 },
+    { name: "Handtücher", available: 0, minimum: 0 },
+    { name: "Badvorleger", available: 0, minimum: 0 },
+    { name: "Geschirrtücher", available: 0, minimum: 0 },
   ],
   addOns: [
-    { name: "shower gel", available: 0, minimum: 0 },
-    { name: "dishwasher tabs", available: 0, minimum: 0 },
-    { name: "coffee tabs green", available: 0, minimum: 0 },
+    { name: "Toilettenpapier", available: 0, minimum: 0 },
+    { name: "Küchenrollen", available: 0, minimum: 0 },
+    { name: "Geschirrspültabs", available: 0, minimum: 0 },
+    { name: "Schwammtücher", available: 0, minimum: 0 },
+    { name: "Kaffeetabs/Tee", available: 0, minimum: 0 },
+    { name: "Handseife", available: 0, minimum: 0 },
+    { name: "Reinigungsmittel", available: 0, minimum: 0 },
+    { name: "Geschirrspülmittel", available: 0, minimum: 0 },
+    { name: "Spülschwämme", available: 0, minimum: 0 },
+    { name: "Zucker, Salz, Pfeffer", available: 0, minimum: 0 },
+    { name: "Essig, Öl", available: 0, minimum: 0 },
+    { name: "Duschgel/Shampoo", available: 0, minimum: 0 },
   ],
 };
 
@@ -70,6 +82,7 @@ export const EmptyRow = ({ dispatch, data }) => {
       <Td>
         <DatePicker
           required
+          placeholder=" - "
           inputClass="date-picker"
           format="DD/MM/YYYY"
           multiple
@@ -82,10 +95,11 @@ export const EmptyRow = ({ dispatch, data }) => {
         />
       </Td>
       <Td>
-        <Checkbox
+        <PickUpCheckbox
           required
           type="checkbox"
           checked={newRow.pickupNeeded}
+          item={newRow}
           onChange={() => {
             setNewRow((prev) => ({
               ...prev,
