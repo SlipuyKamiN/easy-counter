@@ -3,23 +3,23 @@ import axios from "axios";
 const BASE_URL = import.meta.env.VITE_BASE_URL;
 
 export const API = {
-  getAll: async () => {
-    return await axios.get(BASE_URL).then((res) => res);
+  getAll: async (config) => {
+    return axios.get(BASE_URL, config);
   },
-  getAddress: async (id) => {
+  getAddress: async (id, config) => {
     if (!id) throw new Error("ID missed");
-    return await axios.get(`${BASE_URL}/${id}`).then((res) => res);
+    return axios.get(`${BASE_URL}/${id}`, config);
   },
-  create: async (body) => {
+  create: async (body, config) => {
     if (!body) throw new Error("body missed");
-    return await axios.post(BASE_URL, body).then((res) => res);
+    return axios.post(BASE_URL, body, config);
   },
-  update: async ({ id, body }) => {
+  update: async ({ id, body }, config) => {
     if (!id || !body) throw new Error("ID or body missed");
-    return await axios.put(`${BASE_URL}/${id}`, body).then((res) => res);
+    return axios.put(`${BASE_URL}/${id}`, body, config);
   },
-  delete: async (id) => {
+  delete: async (id, config) => {
     if (!id) throw new Error("ID missed");
-    return await axios.delete(`${BASE_URL}/${id}`).then((res) => res);
+    return axios.delete(`${BASE_URL}/${id}`, config);
   },
 };

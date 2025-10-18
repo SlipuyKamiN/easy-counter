@@ -67,9 +67,10 @@ export const CounterItem = styled.li`
 
     input {
       font-size: 30px;
-      max-width: 60px;
+      width: 90px;
       text-align: center;
       border: none;
+      padding: 0;
 
       background-color: transparent;
     }

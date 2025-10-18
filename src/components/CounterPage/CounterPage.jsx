@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { useParams } from "react-router-dom";
 import { API } from "~/API/API";
 import { useAPI } from "~/hooks/useAPI";
@@ -7,11 +7,15 @@ import { Counter } from "./Counter";
 import { Container, Section } from "../SharedLayout/SharedLayout.styled";
 import { Heading, PickupWrapper } from "./CounterPage.styled";
 import { StateIndicator } from "../Common/StateIndicator";
+import throttle from "lodash.throttle";
 
 const CounterPage = () => {
   const { addressID } = useParams();
   const [dispatch, current, isLoading, isError] = useAPI(API.getAddress);
   const [update] = useAPI(API.update);
+
+  const currentRef = useRef(current);
+  currentRef.current = current;
 
   useEffect(() => {
     if (!current) {
@@ -19,24 +23,25 @@ const CounterPage = () => {
     }
   }, [dispatch, current, addressID]);
 
-  const handleCheckboxChange = (id, body) => {
-    update({ id, body }).then(() => dispatch(addressID));
-  };
+  const throttledHandleChange = useRef(
+    throttle(({ name, qty, itemKey }) => {
+      update({
+        id: addressID,
+        body: {
+          ...currentRef.current,
+          [itemKey]: currentRef.current[itemKey].map((l) =>
+            l.name === name ? { ...l, available: qty } : l
+          ),
+        },
+      }).then(() => dispatch(addressID));
+    }, 2000)
+  ).current;
 
-  const handleChange = ({ name, qty, itemKey }) => {
-    update({
-      id: addressID,
-      body: {
-        ...current,
-        [itemKey]: current[itemKey].map((l) => {
-          if (l.name === name) {
-            return { ...l, available: qty };
-          }
-          return l;
-        }),
-      },
-    }).then(() => dispatch(addressID));
-  };
+  const throttledCheckboxChange = useRef(
+    throttle((id, body) => {
+      update({ id, body }).then(() => dispatch(addressID));
+    }, 200)
+  ).current;
 
   return (
     <Section>
@@ -54,9 +59,8 @@ const CounterPage = () => {
               <PickupWrapper>
                 <h3>Pick-up needed:</h3>
                 <PickUpCheckbox
-                  handleChange={handleCheckboxChange}
                   onChange={() =>
-                    handleCheckboxChange(current.id, {
+                    throttledCheckboxChange(current.id, {
                       ...current,
                       pickupNeeded: !current.pickupNeeded,
                     })
@@ -69,7 +73,7 @@ const CounterPage = () => {
                   key={name}
                   name={name}
                   available={available}
-                  handleChange={handleChange}
+                  handleChange={throttledHandleChange}
                   itemKey={"linens"}
                 />
               ))}
@@ -78,7 +82,7 @@ const CounterPage = () => {
                   key={name}
                   name={name}
                   available={available}
-                  handleChange={handleChange}
+                  handleChange={throttledHandleChange}
                   itemKey={"addOns"}
                 />
               ))}
