@@ -16,6 +16,8 @@ jobs:
           npm install
           npm run lint
           npm run build
+        env:
+          VITE_BASE_URL: ${{ vars.VITE_BASE_URL }}
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.0
