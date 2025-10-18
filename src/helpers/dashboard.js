@@ -30,10 +30,10 @@ export const getAllColums = (data) => {
   );
   const allColumns = [
     "id",
-    "Address",
-    "Next Checkout",
-    "Pickup Needed",
-    "Bags needed",
+    "Adresse",
+    "Nächste Checkout",
+    "Abholung",
+    "Taschen benötigt",
     ...allLinens,
     ...allAddOns,
   ];
