@@ -95,6 +95,10 @@ export const CounterItem = styled.li`
         color: ${colors.light.hi200};
         background-color: ${colors.light.mid100};
       }
+
+      &:disabled {
+        color: ${colors.light.hi200};
+      }
     }
   }
 `;

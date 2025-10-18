@@ -5,6 +5,7 @@ export const Counter = ({ name, available, handleChange, itemKey }) => {
   const [qty, setQty] = useState(available);
 
   useEffect(() => {
+    if (qty <= 0) return;
     if (qty !== available) {
       handleChange({ name, qty: Number(qty), itemKey });
     }
@@ -14,11 +15,16 @@ export const Counter = ({ name, available, handleChange, itemKey }) => {
     <CounterItem>
       <h3>{name}</h3>
       <div>
-        <button type="button" onClick={() => setQty((prev) => prev - 1)}>
+        <button
+          type="button"
+          disabled={qty <= 0}
+          onClick={() => setQty((prev) => prev - 1)}
+        >
           -
         </button>
         <input
           type="number"
+          min={0}
           value={qty}
           onChange={(e) => setQty(Number(e.target.value))}
         />
