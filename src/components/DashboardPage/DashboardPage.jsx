@@ -24,7 +24,7 @@ const DashboardPage = () => {
   const [dispatch, data, isLoading, isError] = useAPI(API.getAll);
   const [update] = useAPI(API.update);
   const [deleteRow] = useAPI(API.delete);
-  const [sortBy, setSortBy] = useState("");
+  const [sortBy, setSortBy] = useState("id");
 
   useEffect(() => {
     if (!data) {

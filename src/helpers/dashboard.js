@@ -45,9 +45,9 @@ export const getSortBy = (key) => {
   switch (key.toLowerCase()) {
     case "id":
       return (a, b) => Number(a.id) - Number(b.id);
-    case "address":
+    case "adresse":
       return (a, b) => a.address.localeCompare(b.address);
-    case "next checkout":
+    case "nächste checkout":
       return (a, b) => {
         const aDate = a.nextCheckout[0];
         const bDate = b.nextCheckout[0];
