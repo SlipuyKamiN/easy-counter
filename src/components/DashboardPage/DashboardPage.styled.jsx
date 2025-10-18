@@ -86,11 +86,12 @@ export const Td = styled.td`
   }
 
   & .date-picker {
-    max-width: 60px;
+    max-width: 78px;
     padding: 4px;
 
     border: none;
 
+    font-size: inherit;
     font-weight: 600;
     background-color: transparent;
   }

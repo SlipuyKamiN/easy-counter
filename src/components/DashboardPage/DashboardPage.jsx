@@ -91,7 +91,15 @@ const DashboardPage = () => {
                     />
                   </Td>
                   <Td>
-                    <PickUpCheckbox handleChange={handleChange} item={item} />
+                    <PickUpCheckbox
+                      onChange={() =>
+                        handleChange(item.id, {
+                          ...item,
+                          pickupNeeded: !item.pickupNeeded,
+                        })
+                      }
+                      item={item}
+                    />
                   </Td>
                   <Td>{countBags(item)}</Td>
                   {getAllColums(data).allLinens.map((name) => {

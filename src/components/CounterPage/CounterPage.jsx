@@ -51,6 +51,12 @@ const CounterPage = () => {
             <h3>Pick-up needed:</h3>
             <PickUpCheckbox
               handleChange={handleCheckboxChange}
+              onChange={() =>
+                handleCheckboxChange(current.id, {
+                  ...current,
+                  pickupNeeded: !current.pickupNeeded,
+                })
+              }
               item={current}
             />
           </PickupWrapper>

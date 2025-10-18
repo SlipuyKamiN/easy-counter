@@ -1,6 +1,5 @@
 import {
   AddressInput,
-  NumberInput,
   PlusBtn,
   TableInputWrapper,
   Td,

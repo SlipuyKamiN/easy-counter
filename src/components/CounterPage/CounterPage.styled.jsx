@@ -74,6 +74,7 @@ export const CounterItem = styled.li`
       height: 36px;
       padding: 0;
 
+      color: ${colors.light.lo200};
       background-color: transparent;
       border-radius: 50%;
       font-size: 30px;

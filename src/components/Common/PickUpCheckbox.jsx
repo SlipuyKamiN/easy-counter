@@ -1,16 +1,18 @@
-import { Checkbox } from "./Inputs.styled";
+import { Checkbox, CheckboxWrapper } from "./Inputs.styled";
+import { FaCheck } from "react-icons/fa";
 
-export const PickUpCheckbox = ({ handleChange, item }) => {
+export const PickUpCheckbox = ({ item, onChange }) => {
   return (
-    <Checkbox
-      type="checkbox"
-      checked={item.pickupNeeded}
-      onChange={() =>
-        handleChange(item.id, {
-          ...item,
-          pickupNeeded: !item.pickupNeeded,
-        })
-      }
-    />
+    <CheckboxWrapper>
+      <Checkbox
+        name="pick-up"
+        type="checkbox"
+        checked={item.pickupNeeded}
+        onChange={onChange}
+      />
+      <span>
+        <FaCheck size={28} />
+      </span>
+    </CheckboxWrapper>
   );
 };
