@@ -108,7 +108,7 @@ export const EmptyRow = ({ dispatch, data }) => {
           }}
         />
       </Td>
-      <Td>0</Td>
+      <Td className="bags-needed">0</Td>
       {getAllColums(data).allLinens.map((name) => {
         const found = newRow.linens.find((l) => l.name === name);
 

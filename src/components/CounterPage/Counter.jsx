@@ -5,7 +5,7 @@ export const Counter = ({ name, available, handleChange, itemKey }) => {
   const [qty, setQty] = useState(available);
 
   useEffect(() => {
-    if (qty <= 0) return;
+    if (qty < 0) return;
     if (qty !== available) {
       handleChange({ name, qty: Number(qty), itemKey });
     }
