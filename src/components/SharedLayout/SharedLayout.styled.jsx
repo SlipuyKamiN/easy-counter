@@ -55,9 +55,10 @@ export const Container = styled.div`
 `;
 
 export const Section = styled.section`
+  padding: 40px 0;
   text-align: center;
 
   @media screen and (min-width: 768px) {
-    padding: 80px 0;
+    padding: 100px 0;
   }
 `;

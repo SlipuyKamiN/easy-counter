@@ -2,6 +2,11 @@ import styled from "@emotion/styled";
 import { colors } from "~/styles/common/vars";
 
 export const StateWrapper = styled.div`
+  position: fixed;
+  z-index: 11;
+  top: 15px;
+  right: 25px;
+
   display: flex;
   gap: 10px;
   align-items: center;

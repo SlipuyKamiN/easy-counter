@@ -2,7 +2,6 @@ import styled from "@emotion/styled";
 import { colors, transition } from "~/styles/common/vars";
 
 export const CounterList = styled.ul`
-  padding-top: 20px;
   margin: 0 auto;
 `;
 
@@ -57,6 +56,8 @@ export const PickupWrapper = styled.li`
 `;
 
 export const CounterItem = styled.li`
+  margin-bottom: 20px;
+
   h4 {
     text-transform: capitalize;
     margin-bottom: 10px;
@@ -66,7 +67,6 @@ export const CounterItem = styled.li`
     display: flex;
     justify-content: center;
     gap: 15px;
-    margin-bottom: 20px;
 
     input {
       font-size: 30px;
@@ -76,6 +76,7 @@ export const CounterItem = styled.li`
       padding: 0;
 
       background-color: transparent;
+      border-bottom: 1px solid ${colors.light.hi100};
     }
 
     button {
