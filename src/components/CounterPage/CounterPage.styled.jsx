@@ -66,7 +66,7 @@ export const CounterItem = styled.li`
     display: flex;
     justify-content: center;
     gap: 15px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 
     input {
       font-size: 30px;
