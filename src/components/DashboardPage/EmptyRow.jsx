@@ -48,7 +48,7 @@ export const EmptyRow = ({ dispatch, data }) => {
   const [newRow, setNewRow] = useState(null);
 
   return !newRow ? (
-    <tr>
+    <tr className={"empty-row"}>
       <Td>
         <PlusBtn type="button" onClick={() => setNewRow(initialRow)}>
           <IoIosAddCircleOutline size={34} />

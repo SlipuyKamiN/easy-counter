@@ -51,6 +51,7 @@ export const SortBtn = styled.button`
 
 export const TableWrapper = styled.div`
   overflow-x: scroll;
+  overflow-y: hidden;
 `;
 
 export const Table = styled.table`
@@ -71,6 +72,14 @@ export const Table = styled.table`
 
   @media screen and (min-width: 768px) {
     pointer-events: all;
+  }
+
+  .empty-row {
+    display: none;
+
+    @media screen and (min-width: 768px) {
+      display: block;
+    }
   }
 `;
 
