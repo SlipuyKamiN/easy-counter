@@ -48,7 +48,25 @@ export const getSortBy = (key) => {
     case "address":
       return (a, b) => a.address.localeCompare(b.address);
     case "next checkout":
-      return (a, b) => a.nextCheckout[0] - b.nextCheckout[0];
+      return (a, b) => {
+        const aDate = a.nextCheckout[0];
+        const bDate = b.nextCheckout[0];
+
+        if (aDate && bDate) {
+          return aDate - bDate;
+        }
+
+        if (aDate && !bDate) {
+          return -1;
+        }
+
+        if (!aDate && bDate) {
+          return 1;
+        }
+
+        return 0;
+      };
+
     default:
       return (a, b) => Number(a.id) - Number(b.id);
   }
