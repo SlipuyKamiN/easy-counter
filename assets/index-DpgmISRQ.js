@@ -417,7 +417,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
     display: flex;
     justify-content: center;
     gap: 15px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 
     input {
       font-size: 30px;
