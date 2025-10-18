@@ -3,7 +3,7 @@ export const countBags = (item) => {
     ["Bettbezüge"]: 6,
     ["Kissenbezüge"]: 6,
     ["Laken grün"]: 3,
-    ["Laken orange"]: 5,
+    ["Laken orange"]: 3,
     ["Duschtücher"]: 6,
     ["Handtücher"]: 6,
     ["Badvorleger"]: 2,
@@ -13,12 +13,12 @@ export const countBags = (item) => {
   let bagsNeeded = 0;
 
   item.linens.map((l) => {
-    const neededBagsLinen = (l.minimum * 2 - l.available) / bagIncludes[l.name];
+    const neededBagsLinen = (l.minimum - l.available) / bagIncludes[l.name];
 
     bagsNeeded = bagsNeeded > neededBagsLinen ? bagsNeeded : neededBagsLinen;
   });
 
-  return Math.round(bagsNeeded) > 4 ? 4 : Math.round(bagsNeeded);
+  return Math.floor(bagsNeeded);
 };
 
 export const getAllColums = (data) => {
