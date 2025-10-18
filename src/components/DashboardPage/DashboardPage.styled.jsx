@@ -54,6 +54,8 @@ export const TableWrapper = styled.div`
 `;
 
 export const Table = styled.table`
+  color: ${colors.light.lo200};
+
   th,
   td {
     text-transform: capitalize;
