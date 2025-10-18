@@ -101,6 +101,8 @@ Please change the parent <Route path="${k}"> to <Route path="${k==="/"?"*":`${k}
   background-color: transparent;
   font-size: inherit;
   font-weight: inherit;
+
+  pointer-events: all;
 `,u2=dt.div`
   overflow-x: scroll;
   overflow-y: hidden;
