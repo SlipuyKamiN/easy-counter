@@ -23,10 +23,11 @@ export const Counter = ({ name, available, handleChange, itemKey }) => {
           -
         </button>
         <input
-          type="number"
+          type="tel"
           min={0}
           value={qty}
           onChange={(e) => setQty(Number(e.target.value))}
+          onFocus={(e) => e.target.select()}
         />
         <button type="button" onClick={() => setQty((prev) => prev + 1)}>
           +

@@ -25,6 +25,7 @@ export const QtyInput = ({
       min={0}
       maxLength={3}
       defaultValue={defaultValue}
+      onFocus={(e) => e.target.select()}
       onBlur={({ target }) => {
         const value = Number(target.value);
         if (defaultValue === value || value < 0) return;
