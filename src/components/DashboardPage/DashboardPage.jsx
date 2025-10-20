@@ -14,7 +14,7 @@ import DatePicker from "react-multi-date-picker";
 import { TiDeleteOutline } from "react-icons/ti";
 import { countBags, getAllColums, getSortBy } from "~/helpers/dashboard";
 import { EmptyRow } from "./EmptyRow";
-import { SuppliesCheckbox, PickUpCheckbox } from "../Common/PickUpCheckbox";
+import { EssentialsCheckbox, PickUpCheckbox } from "../Common/PickUpCheckbox";
 import { Container, Section } from "../SharedLayout/SharedLayout.styled";
 import { FaSortAmountDownAlt } from "react-icons/fa";
 import { StateIndicator } from "../Common/StateIndicator";
@@ -142,13 +142,15 @@ const DashboardPage = () => {
                       );
                     })}
 
-                    {getAllColums(data).allAddOns.map((name) => {
-                      const found = item.addOns.find((a) => a.name === name);
+                    {getAllColums(data).allEssentials.map((name) => {
+                      const found = item.essentials.find(
+                        (a) => a.name === name
+                      );
 
                       return (
                         <Td key={name}>
                           {found ? (
-                            <SuppliesCheckbox
+                            <EssentialsCheckbox
                               item={item}
                               found={found}
                               onChange={handleChange}

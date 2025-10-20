@@ -11,7 +11,7 @@ import { getAllColums } from "~/helpers/dashboard";
 import { useState } from "react";
 import { IoIosAddCircleOutline } from "react-icons/io";
 import { EmptyQtyInput } from "../Common/QtyInput";
-import { PickUpCheckbox } from "../Common/PickUpCheckbox";
+import { EssentialsCheckbox, PickUpCheckbox } from "../Common/PickUpCheckbox";
 
 const initialRow = {
   address: "",
@@ -27,19 +27,19 @@ const initialRow = {
     { name: "Badvorleger", available: 0, minimum: 0 },
     { name: "Geschirrtücher", available: 0, minimum: 0 },
   ],
-  addOns: [
-    { name: "Toilettenpapier", available: 0, minimum: 0 },
-    { name: "Küchenrollen", available: 0, minimum: 0 },
-    { name: "Geschirrspültabs", available: 0, minimum: 0 },
-    { name: "Schwammtücher", available: 0, minimum: 0 },
-    { name: "Kaffeetabs/Tee", available: 0, minimum: 0 },
-    { name: "Handseife", available: 0, minimum: 0 },
-    { name: "Reinigungsmittel", available: 0, minimum: 0 },
-    { name: "Geschirrspülmittel", available: 0, minimum: 0 },
-    { name: "Spülschwämme", available: 0, minimum: 0 },
-    { name: "Zucker, Salz, Pfeffer", available: 0, minimum: 0 },
-    { name: "Essig, Öl", available: 0, minimum: 0 },
-    { name: "Duschgel/Shampoo", available: 0, minimum: 0 },
+  essentials: [
+    { name: "Toilettenpapier", available: false },
+    { name: "Küchenrollen", available: false },
+    { name: "Geschirrspültabs", available: false },
+    { name: "Schwammtücher", available: false },
+    { name: "Kaffeetabs/Tee", available: false },
+    { name: "Handseife", available: false },
+    { name: "Reinigungsmittel", available: false },
+    { name: "Geschirrspülmittel", available: false },
+    { name: "Spülschwämme", available: false },
+    { name: "Zucker, Salz, Pfeffer", available: false },
+    { name: "Essig, Öl", available: false },
+    { name: "Duschgel/Shampoo", available: false },
   ],
 };
 
@@ -139,28 +139,17 @@ export const EmptyRow = ({ dispatch, data }) => {
         );
       })}
 
-      {getAllColums(data).allAddOns.map((name) => {
-        const found = newRow.addOns.find((a) => a.name === name);
+      {getAllColums(data).allEssentials.map((name) => {
+        const found = newRow.essentials.find((a) => a.name === name);
+
         return (
           <Td key={name}>
             {found ? (
-              <TableInputWrapper>
-                <EmptyQtyInput
-                  value={found.available}
-                  setNewRow={setNewRow}
-                  column={"available"}
-                  itemKey={"addOns"}
-                  name={name}
-                />
-                {" / "}
-                <EmptyQtyInput
-                  value={found.minimum}
-                  setNewRow={setNewRow}
-                  column={"minimum"}
-                  itemKey={"addOns"}
-                  name={name}
-                />
-              </TableInputWrapper>
+              <EssentialsCheckbox
+                item={newRow}
+                found={found}
+                onChange={(_, body) => setNewRow(body)}
+              />
             ) : (
               "—"
             )}

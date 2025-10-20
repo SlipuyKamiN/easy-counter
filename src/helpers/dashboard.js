@@ -25,8 +25,8 @@ export const getAllColums = (data) => {
   const allLinens = Array.from(
     new Set(data.flatMap((item) => item.linens.map((l) => l.name)))
   );
-  const allAddOns = Array.from(
-    new Set(data.flatMap((item) => item.addOns.map((a) => a.name)))
+  const allEssentials = Array.from(
+    new Set(data.flatMap((item) => item.essentials.map((a) => a.name)))
   );
   const allColumns = [
     "id",
@@ -35,10 +35,10 @@ export const getAllColums = (data) => {
     "Abholung",
     "Taschen benötigt",
     ...allLinens,
-    ...allAddOns,
+    ...allEssentials,
   ];
 
-  return { allColumns, allLinens, allAddOns };
+  return { allColumns, allLinens, allEssentials };
 };
 
 export const getSortBy = (key) => {

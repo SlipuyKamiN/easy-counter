@@ -17,11 +17,11 @@ export const PickUpCheckbox = ({ item, onChange }) => {
   );
 };
 
-export const SuppliesCheckbox = ({ item, found, onChange }) => {
+export const EssentialsCheckbox = ({ item, found, onChange }) => {
   const handleChange = () => {
     onChange(item.id, {
       ...item,
-      addOns: item.addOns.map((a) => {
+      essentials: item.essentials.map((a) => {
         if (a.name === found.name) {
           a.available = !found.available;
         }

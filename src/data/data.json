@@ -45,7 +45,7 @@
         "minimum": 0
       }
     ],
-    "addOns": [
+    "essentials": [
       {
         "name": "Toilettenpapier",
         "available": false
@@ -143,7 +143,7 @@
         "minimum": 8
       }
     ],
-    "addOns": [
+    "essentials": [
       {
         "name": "Toilettenpapier",
         "available": false
@@ -241,7 +241,7 @@
         "minimum": 4
       }
     ],
-    "addOns": [
+    "essentials": [
       {
         "name": "Toilettenpapier",
         "available": false
@@ -339,7 +339,7 @@
         "minimum": 8
       }
     ],
-    "addOns": [
+    "essentials": [
       {
         "name": "Toilettenpapier",
         "available": false
@@ -437,7 +437,7 @@
         "minimum": 8
       }
     ],
-    "addOns": [
+    "essentials": [
       {
         "name": "Toilettenpapier",
         "available": false
@@ -535,7 +535,7 @@
         "minimum": 10
       }
     ],
-    "addOns": [
+    "essentials": [
       {
         "name": "Toilettenpapier",
         "available": false
@@ -633,7 +633,7 @@
         "minimum": 9
       }
     ],
-    "addOns": [
+    "essentials": [
       {
         "name": "Toilettenpapier",
         "available": false
@@ -731,7 +731,7 @@
         "minimum": 4
       }
     ],
-    "addOns": [
+    "essentials": [
       {
         "name": "Toilettenpapier",
         "available": false
@@ -829,7 +829,7 @@
         "minimum": 8
       }
     ],
-    "addOns": [
+    "essentials": [
       {
         "name": "Toilettenpapier",
         "available": false
@@ -927,7 +927,7 @@
         "minimum": 10
       }
     ],
-    "addOns": [
+    "essentials": [
       {
         "name": "Toilettenpapier",
         "available": false
@@ -1025,7 +1025,7 @@
         "minimum": 8
       }
     ],
-    "addOns": [
+    "essentials": [
       {
         "name": "Toilettenpapier",
         "available": false
@@ -1123,7 +1123,7 @@
         "minimum": 0
       }
     ],
-    "addOns": [
+    "essentials": [
       {
         "name": "Toilettenpapier",
         "available": false
@@ -1221,7 +1221,7 @@
         "minimum": 12
       }
     ],
-    "addOns": [
+    "essentials": [
       {
         "name": "Toilettenpapier",
         "available": false,
@@ -1322,7 +1322,7 @@
         "minimum": 4
       }
     ],
-    "addOns": [
+    "essentials": [
       {
         "name": "Toilettenpapier",
         "available": false
@@ -1420,7 +1420,7 @@
         "minimum": 0
       }
     ],
-    "addOns": [
+    "essentials": [
       {
         "name": "Toilettenpapier",
         "available": false
@@ -1518,7 +1518,7 @@
         "minimum": 2
       }
     ],
-    "addOns": [
+    "essentials": [
       {
         "name": "Toilettenpapier",
         "available": false
@@ -1616,7 +1616,7 @@
         "minimum": 0
       }
     ],
-    "addOns": [
+    "essentials": [
       {
         "name": "Toilettenpapier",
         "available": false

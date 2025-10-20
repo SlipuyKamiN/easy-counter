@@ -2,7 +2,7 @@ import { useEffect, useRef } from "react";
 import { useParams } from "react-router-dom";
 import { API } from "~/API/API";
 import { useAPI } from "~/hooks/useAPI";
-import { PickUpCheckbox, SuppliesCheckbox } from "../Common/PickUpCheckbox";
+import { PickUpCheckbox, EssentialsCheckbox } from "../Common/PickUpCheckbox";
 import { Counter } from "./Counter";
 import { Container, Section } from "../SharedLayout/SharedLayout.styled";
 import { CounterItem, Heading, PickupWrapper } from "./CounterPage.styled";
@@ -77,10 +77,10 @@ const CounterPage = () => {
                   itemKey={"linens"}
                 />
               ))}
-              {current.addOns.map((found) => (
+              {current.essentials.map((found) => (
                 <CounterItem key={found.name}>
                   <h3>{found.name}</h3>
-                  <SuppliesCheckbox
+                  <EssentialsCheckbox
                     item={current}
                     found={found}
                     onChange={throttledCheckboxChange}
