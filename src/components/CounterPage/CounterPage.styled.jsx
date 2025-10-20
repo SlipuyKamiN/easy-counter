@@ -58,9 +58,9 @@ export const PickupWrapper = styled.li`
 export const CounterItem = styled.li`
   margin-bottom: 20px;
 
-  h4 {
+  h3 {
     text-transform: capitalize;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
   }
 
   div {

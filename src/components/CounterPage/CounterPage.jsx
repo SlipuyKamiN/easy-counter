@@ -2,10 +2,10 @@ import { useEffect, useRef } from "react";
 import { useParams } from "react-router-dom";
 import { API } from "~/API/API";
 import { useAPI } from "~/hooks/useAPI";
-import { PickUpCheckbox } from "../Common/PickUpCheckbox";
+import { PickUpCheckbox, SuppliesCheckbox } from "../Common/PickUpCheckbox";
 import { Counter } from "./Counter";
 import { Container, Section } from "../SharedLayout/SharedLayout.styled";
-import { Heading, PickupWrapper } from "./CounterPage.styled";
+import { CounterItem, Heading, PickupWrapper } from "./CounterPage.styled";
 import { StateIndicator } from "../Common/StateIndicator";
 import throttle from "lodash.throttle";
 
@@ -77,14 +77,15 @@ const CounterPage = () => {
                   itemKey={"linens"}
                 />
               ))}
-              {current.addOns.map(({ name, available }) => (
-                <Counter
-                  key={name}
-                  name={name}
-                  available={available}
-                  handleChange={throttledHandleChange}
-                  itemKey={"addOns"}
-                />
+              {current.addOns.map((found) => (
+                <CounterItem key={found.name}>
+                  <h3>{found.name}</h3>
+                  <SuppliesCheckbox
+                    item={current}
+                    found={found}
+                    onChange={throttledCheckboxChange}
+                  />
+                </CounterItem>
               ))}
             </ul>
           </>

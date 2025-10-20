@@ -1,422 +1,1671 @@
 [
   {
-    "id": "1",
-    "address": "Wexstraße 40, 10715 Berlin",
+    "address": "Wex-40 | 10715",
     "nextCheckout": [],
     "pickupNeeded": false,
     "linens": [
-      { "name": "Bettbezüge", "available": 0, "minimum": 0 },
-      { "name": "Kissenbezüge", "available": 0, "minimum": 0 },
-      { "name": "Laken grün", "available": 0, "minimum": 0 },
-      { "name": "Laken orange", "available": 0, "minimum": 0 },
-      { "name": "Duschtücher", "available": 0, "minimum": 0 },
-      { "name": "Handtücher", "available": 0, "minimum": 0 },
-      { "name": "Badvorleger", "available": 0, "minimum": 0 },
-      { "name": "Geschirrtücher", "available": 0, "minimum": 0 }
+      {
+        "name": "Bettbezüge",
+        "available": 0,
+        "minimum": 0
+      },
+      {
+        "name": "Kissenbezüge",
+        "available": 0,
+        "minimum": 0
+      },
+      {
+        "name": "Laken grün",
+        "available": 0,
+        "minimum": 0
+      },
+      {
+        "name": "Laken orange",
+        "available": 0,
+        "minimum": 0
+      },
+      {
+        "name": "Duschtücher",
+        "available": 0,
+        "minimum": 0
+      },
+      {
+        "name": "Handtücher",
+        "available": 0,
+        "minimum": 0
+      },
+      {
+        "name": "Badvorleger",
+        "available": 0,
+        "minimum": 0
+      },
+      {
+        "name": "Geschirrtücher",
+        "available": 0,
+        "minimum": 0
+      }
     ],
     "addOns": [
-      { "name": "Toilettenpapier", "available": 0, "minimum": 0 },
-      { "name": "Küchenrollen", "available": 0, "minimum": 0 },
-      { "name": "Geschirrspültabs", "available": 0, "minimum": 0 },
-      { "name": "Schwammtücher", "available": 0, "minimum": 0 },
-      { "name": "Kaffeetabs/Tee", "available": 0, "minimum": 0 },
-      { "name": "Handseife", "available": 0, "minimum": 0 },
-      { "name": "Reinigungsmittel", "available": 0, "minimum": 0 },
-      { "name": "Geschirrspülmittel", "available": 0, "minimum": 0 },
-      { "name": "Spülschwämme", "available": 0, "minimum": 0 },
-      { "name": "Zucker, Salz, Pfeffer", "available": 0, "minimum": 0 },
-      { "name": "Essig, Öl", "available": 0, "minimum": 0 },
-      { "name": "Duschgel/Shampoo", "available": 0, "minimum": 0 }
-    ]
+      {
+        "name": "Toilettenpapier",
+        "available": false
+      },
+      {
+        "name": "Küchenrollen",
+        "available": false
+      },
+      {
+        "name": "Geschirrspültabs",
+        "available": false
+      },
+      {
+        "name": "Schwammtücher",
+        "available": false
+      },
+      {
+        "name": "Kaffeetabs/Tee",
+        "available": false
+      },
+      {
+        "name": "Handseife",
+        "available": false
+      },
+      {
+        "name": "Reinigungsmittel",
+        "available": false
+      },
+      {
+        "name": "Geschirrspülmittel",
+        "available": false
+      },
+      {
+        "name": "Spülschwämme",
+        "available": false
+      },
+      {
+        "name": "Zucker, Salz, Pfeffer",
+        "available": false
+      },
+      {
+        "name": "Essig, Öl",
+        "available": false
+      },
+      {
+        "name": "Duschgel/Shampoo",
+        "available": false
+      }
+    ],
+    "id": "15"
   },
   {
-    "id": "2",
-    "address": "Siemensstraße 18, 10551 Berlin",
+    "address": "Tempelherren-20 | 10961",
     "nextCheckout": [],
     "pickupNeeded": false,
     "linens": [
-      { "name": "Bettbezüge", "available": 0, "minimum": 0 },
-      { "name": "Kissenbezüge", "available": 0, "minimum": 0 },
-      { "name": "Laken grün", "available": 0, "minimum": 0 },
-      { "name": "Laken orange", "available": 0, "minimum": 0 },
-      { "name": "Duschtücher", "available": 0, "minimum": 0 },
-      { "name": "Handtücher", "available": 0, "minimum": 0 },
-      { "name": "Badvorleger", "available": 0, "minimum": 0 },
-      { "name": "Geschirrtücher", "available": 0, "minimum": 0 }
+      {
+        "name": "Bettbezüge",
+        "available": 0,
+        "minimum": 8
+      },
+      {
+        "name": "Kissenbezüge",
+        "available": 0,
+        "minimum": 8
+      },
+      {
+        "name": "Laken grün",
+        "available": 0,
+        "minimum": 4
+      },
+      {
+        "name": "Laken orange",
+        "available": 11,
+        "minimum": 0
+      },
+      {
+        "name": "Duschtücher",
+        "available": 0,
+        "minimum": 8
+      },
+      {
+        "name": "Handtücher",
+        "available": 0,
+        "minimum": 8
+      },
+      {
+        "name": "Badvorleger",
+        "available": 0,
+        "minimum": 8
+      },
+      {
+        "name": "Geschirrtücher",
+        "available": 0,
+        "minimum": 8
+      }
     ],
     "addOns": [
-      { "name": "Toilettenpapier", "available": 0, "minimum": 0 },
-      { "name": "Küchenrollen", "available": 0, "minimum": 0 },
-      { "name": "Geschirrspültabs", "available": 0, "minimum": 0 },
-      { "name": "Schwammtücher", "available": 0, "minimum": 0 },
-      { "name": "Kaffeetabs/Tee", "available": 0, "minimum": 0 },
-      { "name": "Handseife", "available": 0, "minimum": 0 },
-      { "name": "Reinigungsmittel", "available": 0, "minimum": 0 },
-      { "name": "Geschirrspülmittel", "available": 0, "minimum": 0 },
-      { "name": "Spülschwämme", "available": 0, "minimum": 0 },
-      { "name": "Zucker, Salz, Pfeffer", "available": 0, "minimum": 0 },
-      { "name": "Essig, Öl", "available": 0, "minimum": 0 },
-      { "name": "Duschgel/Shampoo", "available": 0, "minimum": 0 }
-    ]
+      {
+        "name": "Toilettenpapier",
+        "available": false
+      },
+      {
+        "name": "Küchenrollen",
+        "available": false
+      },
+      {
+        "name": "Geschirrspültabs",
+        "available": false
+      },
+      {
+        "name": "Schwammtücher",
+        "available": false
+      },
+      {
+        "name": "Kaffeetabs/Tee",
+        "available": false
+      },
+      {
+        "name": "Handseife",
+        "available": false
+      },
+      {
+        "name": "Reinigungsmittel",
+        "available": false
+      },
+      {
+        "name": "Geschirrspülmittel",
+        "available": false
+      },
+      {
+        "name": "Spülschwämme",
+        "available": false
+      },
+      {
+        "name": "Zucker, Salz, Pfeffer",
+        "available": false
+      },
+      {
+        "name": "Essig, Öl",
+        "available": false
+      },
+      {
+        "name": "Duschgel/Shampoo",
+        "available": false
+      }
+    ],
+    "id": "16"
   },
   {
-    "id": "3",
-    "address": "Granseer Straße 8 (Studio), 10435 Berlin",
+    "address": "Burgherren-11 | 12101",
     "nextCheckout": [],
     "pickupNeeded": false,
     "linens": [
-      { "name": "Bettbezüge", "available": 0, "minimum": 0 },
-      { "name": "Kissenbezüge", "available": 0, "minimum": 0 },
-      { "name": "Laken grün", "available": 0, "minimum": 0 },
-      { "name": "Laken orange", "available": 0, "minimum": 0 },
-      { "name": "Duschtücher", "available": 0, "minimum": 0 },
-      { "name": "Handtücher", "available": 0, "minimum": 0 },
-      { "name": "Badvorleger", "available": 0, "minimum": 0 },
-      { "name": "Geschirrtücher", "available": 0, "minimum": 0 }
+      {
+        "name": "Bettbezüge",
+        "available": 0,
+        "minimum": 8
+      },
+      {
+        "name": "Kissenbezüge",
+        "available": 0,
+        "minimum": 8
+      },
+      {
+        "name": "Laken grün",
+        "available": 0,
+        "minimum": 0
+      },
+      {
+        "name": "Laken orange",
+        "available": 0,
+        "minimum": 0
+      },
+      {
+        "name": "Duschtücher",
+        "available": 0,
+        "minimum": 8
+      },
+      {
+        "name": "Handtücher",
+        "available": 0,
+        "minimum": 8
+      },
+      {
+        "name": "Badvorleger",
+        "available": 0,
+        "minimum": 4
+      },
+      {
+        "name": "Geschirrtücher",
+        "available": 0,
+        "minimum": 4
+      }
     ],
     "addOns": [
-      { "name": "Toilettenpapier", "available": 0, "minimum": 0 },
-      { "name": "Küchenrollen", "available": 0, "minimum": 0 },
-      { "name": "Geschirrspültabs", "available": 0, "minimum": 0 },
-      { "name": "Schwammtücher", "available": 0, "minimum": 0 },
-      { "name": "Kaffeetabs/Tee", "available": 0, "minimum": 0 },
-      { "name": "Handseife", "available": 0, "minimum": 0 },
-      { "name": "Reinigungsmittel", "available": 0, "minimum": 0 },
-      { "name": "Geschirrspülmittel", "available": 0, "minimum": 0 },
-      { "name": "Spülschwämme", "available": 0, "minimum": 0 },
-      { "name": "Zucker, Salz, Pfeffer", "available": 0, "minimum": 0 },
-      { "name": "Essig, Öl", "available": 0, "minimum": 0 },
-      { "name": "Duschgel/Shampoo", "available": 0, "minimum": 0 }
-    ]
+      {
+        "name": "Toilettenpapier",
+        "available": false
+      },
+      {
+        "name": "Küchenrollen",
+        "available": false
+      },
+      {
+        "name": "Geschirrspültabs",
+        "available": false
+      },
+      {
+        "name": "Schwammtücher",
+        "available": false
+      },
+      {
+        "name": "Kaffeetabs/Tee",
+        "available": false
+      },
+      {
+        "name": "Handseife",
+        "available": false
+      },
+      {
+        "name": "Reinigungsmittel",
+        "available": false
+      },
+      {
+        "name": "Geschirrspülmittel",
+        "available": false
+      },
+      {
+        "name": "Spülschwämme",
+        "available": false
+      },
+      {
+        "name": "Zucker, Salz, Pfeffer",
+        "available": false
+      },
+      {
+        "name": "Essig, Öl",
+        "available": false
+      },
+      {
+        "name": "Duschgel/Shampoo",
+        "available": false
+      }
+    ],
+    "id": "17"
   },
   {
-    "id": "4",
-    "address": "Granseer Straße 8 (Apart), 10435 Berlin",
+    "address": "Cherusker-3 STUDIO | 10829",
     "nextCheckout": [],
-    "pickupNeeded": false,
+    "pickupNeeded": true,
     "linens": [
-      { "name": "Bettbezüge", "available": 0, "minimum": 0 },
-      { "name": "Kissenbezüge", "available": 0, "minimum": 0 },
-      { "name": "Laken grün", "available": 0, "minimum": 0 },
-      { "name": "Laken orange", "available": 0, "minimum": 0 },
-      { "name": "Duschtücher", "available": 0, "minimum": 0 },
-      { "name": "Handtücher", "available": 0, "minimum": 0 },
-      { "name": "Badvorleger", "available": 0, "minimum": 0 },
-      { "name": "Geschirrtücher", "available": 0, "minimum": 0 }
+      {
+        "name": "Bettbezüge",
+        "available": 0,
+        "minimum": 16
+      },
+      {
+        "name": "Kissenbezüge",
+        "available": 0,
+        "minimum": 16
+      },
+      {
+        "name": "Laken grün",
+        "available": 0,
+        "minimum": 12
+      },
+      {
+        "name": "Laken orange",
+        "available": 0,
+        "minimum": 0
+      },
+      {
+        "name": "Duschtücher",
+        "available": 0,
+        "minimum": 16
+      },
+      {
+        "name": "Handtücher",
+        "available": 0,
+        "minimum": 15
+      },
+      {
+        "name": "Badvorleger",
+        "available": 0,
+        "minimum": 8
+      },
+      {
+        "name": "Geschirrtücher",
+        "available": 0,
+        "minimum": 8
+      }
     ],
     "addOns": [
-      { "name": "Toilettenpapier", "available": 0, "minimum": 0 },
-      { "name": "Küchenrollen", "available": 0, "minimum": 0 },
-      { "name": "Geschirrspültabs", "available": 0, "minimum": 0 },
-      { "name": "Schwammtücher", "available": 0, "minimum": 0 },
-      { "name": "Kaffeetabs/Tee", "available": 0, "minimum": 0 },
-      { "name": "Handseife", "available": 0, "minimum": 0 },
-      { "name": "Reinigungsmittel", "available": 0, "minimum": 0 },
-      { "name": "Geschirrspülmittel", "available": 0, "minimum": 0 },
-      { "name": "Spülschwämme", "available": 0, "minimum": 0 },
-      { "name": "Zucker, Salz, Pfeffer", "available": 0, "minimum": 0 },
-      { "name": "Essig, Öl", "available": 0, "minimum": 0 },
-      { "name": "Duschgel/Shampoo", "available": 0, "minimum": 0 }
-    ]
+      {
+        "name": "Toilettenpapier",
+        "available": false
+      },
+      {
+        "name": "Küchenrollen",
+        "available": false
+      },
+      {
+        "name": "Geschirrspültabs",
+        "available": false
+      },
+      {
+        "name": "Schwammtücher",
+        "available": false
+      },
+      {
+        "name": "Kaffeetabs/Tee",
+        "available": false
+      },
+      {
+        "name": "Handseife",
+        "available": false
+      },
+      {
+        "name": "Reinigungsmittel",
+        "available": false
+      },
+      {
+        "name": "Geschirrspülmittel",
+        "available": false
+      },
+      {
+        "name": "Spülschwämme",
+        "available": false
+      },
+      {
+        "name": "Zucker, Salz, Pfeffer",
+        "available": false
+      },
+      {
+        "name": "Essig, Öl",
+        "available": false
+      },
+      {
+        "name": "Duschgel/Shampoo",
+        "available": false
+      }
+    ],
+    "id": "18"
   },
   {
-    "id": "5",
-    "address": "Urbanstraße 94, 10967 Berlin",
+    "address": "Cherusker-3 APART2 | 10829",
     "nextCheckout": [],
-    "pickupNeeded": false,
+    "pickupNeeded": true,
     "linens": [
-      { "name": "Bettbezüge", "available": 0, "minimum": 0 },
-      { "name": "Kissenbezüge", "available": 0, "minimum": 0 },
-      { "name": "Laken grün", "available": 0, "minimum": 0 },
-      { "name": "Laken orange", "available": 0, "minimum": 0 },
-      { "name": "Duschtücher", "available": 0, "minimum": 0 },
-      { "name": "Handtücher", "available": 0, "minimum": 0 },
-      { "name": "Badvorleger", "available": 0, "minimum": 0 },
-      { "name": "Geschirrtücher", "available": 0, "minimum": 0 }
+      {
+        "name": "Bettbezüge",
+        "available": 0,
+        "minimum": 16
+      },
+      {
+        "name": "Kissenbezüge",
+        "available": 0,
+        "minimum": 16
+      },
+      {
+        "name": "Laken grün",
+        "available": 0,
+        "minimum": 10
+      },
+      {
+        "name": "Laken orange",
+        "available": 0,
+        "minimum": 0
+      },
+      {
+        "name": "Duschtücher",
+        "available": 0,
+        "minimum": 16
+      },
+      {
+        "name": "Handtücher",
+        "available": 0,
+        "minimum": 16
+      },
+      {
+        "name": "Badvorleger",
+        "available": 0,
+        "minimum": 8
+      },
+      {
+        "name": "Geschirrtücher",
+        "available": 0,
+        "minimum": 8
+      }
     ],
     "addOns": [
-      { "name": "Toilettenpapier", "available": 0, "minimum": 0 },
-      { "name": "Küchenrollen", "available": 0, "minimum": 0 },
-      { "name": "Geschirrspültabs", "available": 0, "minimum": 0 },
-      { "name": "Schwammtücher", "available": 0, "minimum": 0 },
-      { "name": "Kaffeetabs/Tee", "available": 0, "minimum": 0 },
-      { "name": "Handseife", "available": 0, "minimum": 0 },
-      { "name": "Reinigungsmittel", "available": 0, "minimum": 0 },
-      { "name": "Geschirrspülmittel", "available": 0, "minimum": 0 },
-      { "name": "Spülschwämme", "available": 0, "minimum": 0 },
-      { "name": "Zucker, Salz, Pfeffer", "available": 0, "minimum": 0 },
-      { "name": "Essig, Öl", "available": 0, "minimum": 0 },
-      { "name": "Duschgel/Shampoo", "available": 0, "minimum": 0 }
-    ]
+      {
+        "name": "Toilettenpapier",
+        "available": false
+      },
+      {
+        "name": "Küchenrollen",
+        "available": false
+      },
+      {
+        "name": "Geschirrspültabs",
+        "available": false
+      },
+      {
+        "name": "Schwammtücher",
+        "available": false
+      },
+      {
+        "name": "Kaffeetabs/Tee",
+        "available": false
+      },
+      {
+        "name": "Handseife",
+        "available": false
+      },
+      {
+        "name": "Reinigungsmittel",
+        "available": false
+      },
+      {
+        "name": "Geschirrspülmittel",
+        "available": false
+      },
+      {
+        "name": "Spülschwämme",
+        "available": false
+      },
+      {
+        "name": "Zucker, Salz, Pfeffer",
+        "available": false
+      },
+      {
+        "name": "Essig, Öl",
+        "available": false
+      },
+      {
+        "name": "Duschgel/Shampoo",
+        "available": false
+      }
+    ],
+    "id": "19"
   },
   {
-    "id": "6",
-    "address": "Cheruskerstraße 3 (Studio), 10829 Berlin",
+    "address": "Cherusker-3 APART3 | 10829",
     "nextCheckout": [],
-    "pickupNeeded": false,
+    "pickupNeeded": true,
     "linens": [
-      { "name": "Bettbezüge", "available": 0, "minimum": 0 },
-      { "name": "Kissenbezüge", "available": 0, "minimum": 0 },
-      { "name": "Laken grün", "available": 0, "minimum": 0 },
-      { "name": "Laken orange", "available": 0, "minimum": 0 },
-      { "name": "Duschtücher", "available": 0, "minimum": 0 },
-      { "name": "Handtücher", "available": 0, "minimum": 0 },
-      { "name": "Badvorleger", "available": 0, "minimum": 0 },
-      { "name": "Geschirrtücher", "available": 0, "minimum": 0 }
+      {
+        "name": "Bettbezüge",
+        "available": 0,
+        "minimum": 20
+      },
+      {
+        "name": "Kissenbezüge",
+        "available": 0,
+        "minimum": 20
+      },
+      {
+        "name": "Laken grün",
+        "available": 0,
+        "minimum": 13
+      },
+      {
+        "name": "Laken orange",
+        "available": 0,
+        "minimum": 0
+      },
+      {
+        "name": "Duschtücher",
+        "available": 0,
+        "minimum": 20
+      },
+      {
+        "name": "Handtücher",
+        "available": 0,
+        "minimum": 20
+      },
+      {
+        "name": "Badvorleger",
+        "available": 0,
+        "minimum": 10
+      },
+      {
+        "name": "Geschirrtücher",
+        "available": 0,
+        "minimum": 10
+      }
     ],
     "addOns": [
-      { "name": "Toilettenpapier", "available": 0, "minimum": 0 },
-      { "name": "Küchenrollen", "available": 0, "minimum": 0 },
-      { "name": "Geschirrspültabs", "available": 0, "minimum": 0 },
-      { "name": "Schwammtücher", "available": 0, "minimum": 0 },
-      { "name": "Kaffeetabs/Tee", "available": 0, "minimum": 0 },
-      { "name": "Handseife", "available": 0, "minimum": 0 },
-      { "name": "Reinigungsmittel", "available": 0, "minimum": 0 },
-      { "name": "Geschirrspülmittel", "available": 0, "minimum": 0 },
-      { "name": "Spülschwämme", "available": 0, "minimum": 0 },
-      { "name": "Zucker, Salz, Pfeffer", "available": 0, "minimum": 0 },
-      { "name": "Essig, Öl", "available": 0, "minimum": 0 },
-      { "name": "Duschgel/Shampoo", "available": 0, "minimum": 0 }
-    ]
+      {
+        "name": "Toilettenpapier",
+        "available": false
+      },
+      {
+        "name": "Küchenrollen",
+        "available": false
+      },
+      {
+        "name": "Geschirrspültabs",
+        "available": false
+      },
+      {
+        "name": "Schwammtücher",
+        "available": false
+      },
+      {
+        "name": "Kaffeetabs/Tee",
+        "available": false
+      },
+      {
+        "name": "Handseife",
+        "available": false
+      },
+      {
+        "name": "Reinigungsmittel",
+        "available": false
+      },
+      {
+        "name": "Geschirrspülmittel",
+        "available": false
+      },
+      {
+        "name": "Spülschwämme",
+        "available": false
+      },
+      {
+        "name": "Zucker, Salz, Pfeffer",
+        "available": false
+      },
+      {
+        "name": "Essig, Öl",
+        "available": false
+      },
+      {
+        "name": "Duschgel/Shampoo",
+        "available": false
+      }
+    ],
+    "id": "20"
   },
   {
-    "id": "7",
-    "address": "Cheruskerstraße 3 (Apart 2), 10829 Berlin",
+    "address": "Krausnick-5 | 10115",
     "nextCheckout": [],
-    "pickupNeeded": false,
+    "pickupNeeded": true,
     "linens": [
-      { "name": "Bettbezüge", "available": 0, "minimum": 0 },
-      { "name": "Kissenbezüge", "available": 0, "minimum": 0 },
-      { "name": "Laken grün", "available": 0, "minimum": 0 },
-      { "name": "Laken orange", "available": 0, "minimum": 0 },
-      { "name": "Duschtücher", "available": 0, "minimum": 0 },
-      { "name": "Handtücher", "available": 0, "minimum": 0 },
-      { "name": "Badvorleger", "available": 0, "minimum": 0 },
-      { "name": "Geschirrtücher", "available": 0, "minimum": 0 }
+      {
+        "name": "Bettbezüge",
+        "available": 0,
+        "minimum": 18
+      },
+      {
+        "name": "Kissenbezüge",
+        "available": 0,
+        "minimum": 16
+      },
+      {
+        "name": "Laken grün",
+        "available": 0,
+        "minimum": 12
+      },
+      {
+        "name": "Laken orange",
+        "available": 0,
+        "minimum": 0
+      },
+      {
+        "name": "Duschtücher",
+        "available": 0,
+        "minimum": 18
+      },
+      {
+        "name": "Handtücher",
+        "available": 0,
+        "minimum": 17
+      },
+      {
+        "name": "Badvorleger",
+        "available": 0,
+        "minimum": 9
+      },
+      {
+        "name": "Geschirrtücher",
+        "available": 0,
+        "minimum": 9
+      }
     ],
     "addOns": [
-      { "name": "Toilettenpapier", "available": 0, "minimum": 0 },
-      { "name": "Küchenrollen", "available": 0, "minimum": 0 },
-      { "name": "Geschirrspültabs", "available": 0, "minimum": 0 },
-      { "name": "Schwammtücher", "available": 0, "minimum": 0 },
-      { "name": "Kaffeetabs/Tee", "available": 0, "minimum": 0 },
-      { "name": "Handseife", "available": 0, "minimum": 0 },
-      { "name": "Reinigungsmittel", "available": 0, "minimum": 0 },
-      { "name": "Geschirrspülmittel", "available": 0, "minimum": 0 },
-      { "name": "Spülschwämme", "available": 0, "minimum": 0 },
-      { "name": "Zucker, Salz, Pfeffer", "available": 0, "minimum": 0 },
-      { "name": "Essig, Öl", "available": 0, "minimum": 0 },
-      { "name": "Duschgel/Shampoo", "available": 0, "minimum": 0 }
-    ]
+      {
+        "name": "Toilettenpapier",
+        "available": false
+      },
+      {
+        "name": "Küchenrollen",
+        "available": false
+      },
+      {
+        "name": "Geschirrspültabs",
+        "available": false
+      },
+      {
+        "name": "Schwammtücher",
+        "available": false
+      },
+      {
+        "name": "Kaffeetabs/Tee",
+        "available": false
+      },
+      {
+        "name": "Handseife",
+        "available": false
+      },
+      {
+        "name": "Reinigungsmittel",
+        "available": false
+      },
+      {
+        "name": "Geschirrspülmittel",
+        "available": false
+      },
+      {
+        "name": "Spülschwämme",
+        "available": false
+      },
+      {
+        "name": "Zucker, Salz, Pfeffer",
+        "available": false
+      },
+      {
+        "name": "Essig, Öl",
+        "available": false
+      },
+      {
+        "name": "Duschgel/Shampoo",
+        "available": false
+      }
+    ],
+    "id": "21"
   },
   {
-    "id": "8",
-    "address": "Cheruskerstraße 3 (Apart 3), 10829 Berlin",
-    "nextCheckout": [],
+    "address": "Granseer-8 STUDIO | 10435",
+    "nextCheckout": [1760905277713],
     "pickupNeeded": false,
     "linens": [
-      { "name": "Bettbezüge", "available": 0, "minimum": 0 },
-      { "name": "Kissenbezüge", "available": 0, "minimum": 0 },
-      { "name": "Laken grün", "available": 0, "minimum": 0 },
-      { "name": "Laken orange", "available": 0, "minimum": 0 },
-      { "name": "Duschtücher", "available": 0, "minimum": 0 },
-      { "name": "Handtücher", "available": 0, "minimum": 0 },
-      { "name": "Badvorleger", "available": 0, "minimum": 0 },
-      { "name": "Geschirrtücher", "available": 0, "minimum": 0 }
+      {
+        "name": "Bettbezüge",
+        "available": 0,
+        "minimum": 9
+      },
+      {
+        "name": "Kissenbezüge",
+        "available": 0,
+        "minimum": 9
+      },
+      {
+        "name": "Laken grün",
+        "available": 0,
+        "minimum": 4
+      },
+      {
+        "name": "Laken orange",
+        "available": 0,
+        "minimum": 0
+      },
+      {
+        "name": "Duschtücher",
+        "available": 0,
+        "minimum": 8
+      },
+      {
+        "name": "Handtücher",
+        "available": 0,
+        "minimum": 8
+      },
+      {
+        "name": "Badvorleger",
+        "available": 0,
+        "minimum": 4
+      },
+      {
+        "name": "Geschirrtücher",
+        "available": 0,
+        "minimum": 4
+      }
     ],
     "addOns": [
-      { "name": "Toilettenpapier", "available": 0, "minimum": 0 },
-      { "name": "Küchenrollen", "available": 0, "minimum": 0 },
-      { "name": "Geschirrspültabs", "available": 0, "minimum": 0 },
-      { "name": "Schwammtücher", "available": 0, "minimum": 0 },
-      { "name": "Kaffeetabs/Tee", "available": 0, "minimum": 0 },
-      { "name": "Handseife", "available": 0, "minimum": 0 },
-      { "name": "Reinigungsmittel", "available": 0, "minimum": 0 },
-      { "name": "Geschirrspülmittel", "available": 0, "minimum": 0 },
-      { "name": "Spülschwämme", "available": 0, "minimum": 0 },
-      { "name": "Zucker, Salz, Pfeffer", "available": 0, "minimum": 0 },
-      { "name": "Essig, Öl", "available": 0, "minimum": 0 },
-      { "name": "Duschgel/Shampoo", "available": 0, "minimum": 0 }
-    ]
+      {
+        "name": "Toilettenpapier",
+        "available": false
+      },
+      {
+        "name": "Küchenrollen",
+        "available": false
+      },
+      {
+        "name": "Geschirrspültabs",
+        "available": false
+      },
+      {
+        "name": "Schwammtücher",
+        "available": false
+      },
+      {
+        "name": "Kaffeetabs/Tee",
+        "available": false
+      },
+      {
+        "name": "Handseife",
+        "available": false
+      },
+      {
+        "name": "Reinigungsmittel",
+        "available": false
+      },
+      {
+        "name": "Geschirrspülmittel",
+        "available": false
+      },
+      {
+        "name": "Spülschwämme",
+        "available": false
+      },
+      {
+        "name": "Zucker, Salz, Pfeffer",
+        "available": false
+      },
+      {
+        "name": "Essig, Öl",
+        "available": false
+      },
+      {
+        "name": "Duschgel/Shampoo",
+        "available": false
+      }
+    ],
+    "id": "22"
   },
   {
-    "id": "9",
-    "address": "Krausnickstraße 5, 10115 Berlin",
+    "address": "Granseer-8 APART | 10435",
     "nextCheckout": [],
-    "pickupNeeded": false,
+    "pickupNeeded": true,
     "linens": [
-      { "name": "Bettbezüge", "available": 0, "minimum": 0 },
-      { "name": "Kissenbezüge", "available": 0, "minimum": 0 },
-      { "name": "Laken grün", "available": 0, "minimum": 0 },
-      { "name": "Laken orange", "available": 0, "minimum": 0 },
-      { "name": "Duschtücher", "available": 0, "minimum": 0 },
-      { "name": "Handtücher", "available": 0, "minimum": 0 },
-      { "name": "Badvorleger", "available": 0, "minimum": 0 },
-      { "name": "Geschirrtücher", "available": 0, "minimum": 0 }
+      {
+        "name": "Bettbezüge",
+        "available": 0,
+        "minimum": 16
+      },
+      {
+        "name": "Kissenbezüge",
+        "available": 0,
+        "minimum": 16
+      },
+      {
+        "name": "Laken grün",
+        "available": 0,
+        "minimum": 10
+      },
+      {
+        "name": "Laken orange",
+        "available": 0,
+        "minimum": 0
+      },
+      {
+        "name": "Duschtücher",
+        "available": 0,
+        "minimum": 16
+      },
+      {
+        "name": "Handtücher",
+        "available": 0,
+        "minimum": 15
+      },
+      {
+        "name": "Badvorleger",
+        "available": 0,
+        "minimum": 8
+      },
+      {
+        "name": "Geschirrtücher",
+        "available": 0,
+        "minimum": 8
+      }
     ],
     "addOns": [
-      { "name": "Toilettenpapier", "available": 0, "minimum": 0 },
-      { "name": "Küchenrollen", "available": 0, "minimum": 0 },
-      { "name": "Geschirrspültabs", "available": 0, "minimum": 0 },
-      { "name": "Schwammtücher", "available": 0, "minimum": 0 },
-      { "name": "Kaffeetabs/Tee", "available": 0, "minimum": 0 },
-      { "name": "Handseife", "available": 0, "minimum": 0 },
-      { "name": "Reinigungsmittel", "available": 0, "minimum": 0 },
-      { "name": "Geschirrspülmittel", "available": 0, "minimum": 0 },
-      { "name": "Spülschwämme", "available": 0, "minimum": 0 },
-      { "name": "Zucker, Salz, Pfeffer", "available": 0, "minimum": 0 },
-      { "name": "Essig, Öl", "available": 0, "minimum": 0 },
-      { "name": "Duschgel/Shampoo", "available": 0, "minimum": 0 }
-    ]
+      {
+        "name": "Toilettenpapier",
+        "available": false
+      },
+      {
+        "name": "Küchenrollen",
+        "available": false
+      },
+      {
+        "name": "Geschirrspültabs",
+        "available": false
+      },
+      {
+        "name": "Schwammtücher",
+        "available": false
+      },
+      {
+        "name": "Kaffeetabs/Tee",
+        "available": false
+      },
+      {
+        "name": "Handseife",
+        "available": false
+      },
+      {
+        "name": "Reinigungsmittel",
+        "available": false
+      },
+      {
+        "name": "Geschirrspülmittel",
+        "available": false
+      },
+      {
+        "name": "Spülschwämme",
+        "available": false
+      },
+      {
+        "name": "Zucker, Salz, Pfeffer",
+        "available": false
+      },
+      {
+        "name": "Essig, Öl",
+        "available": false
+      },
+      {
+        "name": "Duschgel/Shampoo",
+        "available": false
+      }
+    ],
+    "id": "23"
   },
   {
-    "id": "10",
-    "address": "Hermannstraße 175, 12051 Berlin",
+    "address": "Christinen-16 | 10119",
     "nextCheckout": [],
     "pickupNeeded": false,
     "linens": [
-      { "name": "Bettbezüge", "available": 0, "minimum": 0 },
-      { "name": "Kissenbezüge", "available": 0, "minimum": 0 },
-      { "name": "Laken grün", "available": 0, "minimum": 0 },
-      { "name": "Laken orange", "available": 0, "minimum": 0 },
-      { "name": "Duschtücher", "available": 0, "minimum": 0 },
-      { "name": "Handtücher", "available": 0, "minimum": 0 },
-      { "name": "Badvorleger", "available": 0, "minimum": 0 },
-      { "name": "Geschirrtücher", "available": 0, "minimum": 0 }
+      {
+        "name": "Bettbezüge",
+        "available": 10,
+        "minimum": 24
+      },
+      {
+        "name": "Kissenbezüge",
+        "available": 7,
+        "minimum": 24
+      },
+      {
+        "name": "Laken grün",
+        "available": 6,
+        "minimum": 12
+      },
+      {
+        "name": "Laken orange",
+        "available": 25,
+        "minimum": 12
+      },
+      {
+        "name": "Duschtücher",
+        "available": 13,
+        "minimum": 24
+      },
+      {
+        "name": "Handtücher",
+        "available": 10,
+        "minimum": 24
+      },
+      {
+        "name": "Badvorleger",
+        "available": 13,
+        "minimum": 9
+      },
+      {
+        "name": "Geschirrtücher",
+        "available": 6,
+        "minimum": 10
+      }
     ],
     "addOns": [
-      { "name": "Toilettenpapier", "available": 0, "minimum": 0 },
-      { "name": "Küchenrollen", "available": 0, "minimum": 0 },
-      { "name": "Geschirrspültabs", "available": 0, "minimum": 0 },
-      { "name": "Schwammtücher", "available": 0, "minimum": 0 },
-      { "name": "Kaffeetabs/Tee", "available": 0, "minimum": 0 },
-      { "name": "Handseife", "available": 0, "minimum": 0 },
-      { "name": "Reinigungsmittel", "available": 0, "minimum": 0 },
-      { "name": "Geschirrspülmittel", "available": 0, "minimum": 0 },
-      { "name": "Spülschwämme", "available": 0, "minimum": 0 },
-      { "name": "Zucker, Salz, Pfeffer", "available": 0, "minimum": 0 },
-      { "name": "Essig, Öl", "available": 0, "minimum": 0 },
-      { "name": "Duschgel/Shampoo", "available": 0, "minimum": 0 }
-    ]
+      {
+        "name": "Toilettenpapier",
+        "available": false
+      },
+      {
+        "name": "Küchenrollen",
+        "available": false
+      },
+      {
+        "name": "Geschirrspültabs",
+        "available": false
+      },
+      {
+        "name": "Schwammtücher",
+        "available": false
+      },
+      {
+        "name": "Kaffeetabs/Tee",
+        "available": false
+      },
+      {
+        "name": "Handseife",
+        "available": false
+      },
+      {
+        "name": "Reinigungsmittel",
+        "available": false
+      },
+      {
+        "name": "Geschirrspülmittel",
+        "available": false
+      },
+      {
+        "name": "Spülschwämme",
+        "available": false
+      },
+      {
+        "name": "Zucker, Salz, Pfeffer",
+        "available": false
+      },
+      {
+        "name": "Essig, Öl",
+        "available": false
+      },
+      {
+        "name": "Duschgel/Shampoo",
+        "available": false
+      }
+    ],
+    "id": "24"
   },
   {
-    "id": "11",
-    "address": "Tempelherrenstraße 20, 10961 Berlin",
-    "nextCheckout": [],
+    "address": "Metzer-18 | 10405",
+    "nextCheckout": [1760905256989],
     "pickupNeeded": false,
     "linens": [
-      { "name": "Bettbezüge", "available": 0, "minimum": 0 },
-      { "name": "Kissenbezüge", "available": 0, "minimum": 0 },
-      { "name": "Laken grün", "available": 0, "minimum": 0 },
-      { "name": "Laken orange", "available": 0, "minimum": 0 },
-      { "name": "Duschtücher", "available": 0, "minimum": 0 },
-      { "name": "Handtücher", "available": 0, "minimum": 0 },
-      { "name": "Badvorleger", "available": 0, "minimum": 0 },
-      { "name": "Geschirrtücher", "available": 0, "minimum": 0 }
+      {
+        "name": "Bettbezüge",
+        "available": 19,
+        "minimum": 15
+      },
+      {
+        "name": "Kissenbezüge",
+        "available": 22,
+        "minimum": 16
+      },
+      {
+        "name": "Laken grün",
+        "available": 12,
+        "minimum": 9
+      },
+      {
+        "name": "Laken orange",
+        "available": 22,
+        "minimum": 10
+      },
+      {
+        "name": "Duschtücher",
+        "available": 9,
+        "minimum": 16
+      },
+      {
+        "name": "Handtücher",
+        "available": 11,
+        "minimum": 16
+      },
+      {
+        "name": "Badvorleger",
+        "available": 9,
+        "minimum": 8
+      },
+      {
+        "name": "Geschirrtücher",
+        "available": 18,
+        "minimum": 8
+      }
     ],
     "addOns": [
-      { "name": "Toilettenpapier", "available": 0, "minimum": 0 },
-      { "name": "Küchenrollen", "available": 0, "minimum": 0 },
-      { "name": "Geschirrspültabs", "available": 0, "minimum": 0 },
-      { "name": "Schwammtücher", "available": 0, "minimum": 0 },
-      { "name": "Kaffeetabs/Tee", "available": 0, "minimum": 0 },
-      { "name": "Handseife", "available": 0, "minimum": 0 },
-      { "name": "Reinigungsmittel", "available": 0, "minimum": 0 },
-      { "name": "Geschirrspülmittel", "available": 0, "minimum": 0 },
-      { "name": "Spülschwämme", "available": 0, "minimum": 0 },
-      { "name": "Zucker, Salz, Pfeffer", "available": 0, "minimum": 0 },
-      { "name": "Essig, Öl", "available": 0, "minimum": 0 },
-      { "name": "Duschgel/Shampoo", "available": 0, "minimum": 0 }
-    ]
+      {
+        "name": "Toilettenpapier",
+        "available": false
+      },
+      {
+        "name": "Küchenrollen",
+        "available": false
+      },
+      {
+        "name": "Geschirrspültabs",
+        "available": false
+      },
+      {
+        "name": "Schwammtücher",
+        "available": false
+      },
+      {
+        "name": "Kaffeetabs/Tee",
+        "available": false
+      },
+      {
+        "name": "Handseife",
+        "available": false
+      },
+      {
+        "name": "Reinigungsmittel",
+        "available": false
+      },
+      {
+        "name": "Geschirrspülmittel",
+        "available": false
+      },
+      {
+        "name": "Spülschwämme",
+        "available": false
+      },
+      {
+        "name": "Zucker, Salz, Pfeffer",
+        "available": false
+      },
+      {
+        "name": "Essig, Öl",
+        "available": false
+      },
+      {
+        "name": "Duschgel/Shampoo",
+        "available": false
+      }
+    ],
+    "id": "25"
   },
   {
-    "id": "12",
-    "address": "Burgherrenstraße 11, 12101 Berlin",
+    "address": "Neckar-6b | 12053",
     "nextCheckout": [],
     "pickupNeeded": false,
     "linens": [
-      { "name": "Bettbezüge", "available": 0, "minimum": 0 },
-      { "name": "Kissenbezüge", "available": 0, "minimum": 0 },
-      { "name": "Laken grün", "available": 0, "minimum": 0 },
-      { "name": "Laken orange", "available": 0, "minimum": 0 },
-      { "name": "Duschtücher", "available": 0, "minimum": 0 },
-      { "name": "Handtücher", "available": 0, "minimum": 0 },
-      { "name": "Badvorleger", "available": 0, "minimum": 0 },
-      { "name": "Geschirrtücher", "available": 0, "minimum": 0 }
+      {
+        "name": "Bettbezüge",
+        "available": 0,
+        "minimum": 0
+      },
+      {
+        "name": "Kissenbezüge",
+        "available": 0,
+        "minimum": 0
+      },
+      {
+        "name": "Laken grün",
+        "available": 0,
+        "minimum": 0
+      },
+      {
+        "name": "Laken orange",
+        "available": 0,
+        "minimum": 0
+      },
+      {
+        "name": "Duschtücher",
+        "available": 0,
+        "minimum": 0
+      },
+      {
+        "name": "Handtücher",
+        "available": 0,
+        "minimum": 0
+      },
+      {
+        "name": "Badvorleger",
+        "available": 0,
+        "minimum": 0
+      },
+      {
+        "name": "Geschirrtücher",
+        "available": 0,
+        "minimum": 0
+      }
     ],
     "addOns": [
-      { "name": "Toilettenpapier", "available": 0, "minimum": 0 },
-      { "name": "Küchenrollen", "available": 0, "minimum": 0 },
-      { "name": "Geschirrspültabs", "available": 0, "minimum": 0 },
-      { "name": "Schwammtücher", "available": 0, "minimum": 0 },
-      { "name": "Kaffeetabs/Tee", "available": 0, "minimum": 0 },
-      { "name": "Handseife", "available": 0, "minimum": 0 },
-      { "name": "Reinigungsmittel", "available": 0, "minimum": 0 },
-      { "name": "Geschirrspülmittel", "available": 0, "minimum": 0 },
-      { "name": "Spülschwämme", "available": 0, "minimum": 0 },
-      { "name": "Zucker, Salz, Pfeffer", "available": 0, "minimum": 0 },
-      { "name": "Essig, Öl", "available": 0, "minimum": 0 },
-      { "name": "Duschgel/Shampoo", "available": 0, "minimum": 0 }
-    ]
+      {
+        "name": "Toilettenpapier",
+        "available": false
+      },
+      {
+        "name": "Küchenrollen",
+        "available": false
+      },
+      {
+        "name": "Geschirrspültabs",
+        "available": false
+      },
+      {
+        "name": "Schwammtücher",
+        "available": false
+      },
+      {
+        "name": "Kaffeetabs/Tee",
+        "available": false
+      },
+      {
+        "name": "Handseife",
+        "available": false
+      },
+      {
+        "name": "Reinigungsmittel",
+        "available": false
+      },
+      {
+        "name": "Geschirrspülmittel",
+        "available": false
+      },
+      {
+        "name": "Spülschwämme",
+        "available": false
+      },
+      {
+        "name": "Zucker, Salz, Pfeffer",
+        "available": false
+      },
+      {
+        "name": "Essig, Öl",
+        "available": false
+      },
+      {
+        "name": "Duschgel/Shampoo",
+        "available": false
+      }
+    ],
+    "id": "26"
   },
   {
-    "id": "13",
-    "address": "Christinenstraße 16, 10119 Berlin",
-    "nextCheckout": [],
+    "address": "Hermann-175 | 12051",
+    "nextCheckout": [1760905283141],
     "pickupNeeded": false,
     "linens": [
-      { "name": "Bettbezüge", "available": 0, "minimum": 0 },
-      { "name": "Kissenbezüge", "available": 0, "minimum": 0 },
-      { "name": "Laken grün", "available": 0, "minimum": 0 },
-      { "name": "Laken orange", "available": 0, "minimum": 0 },
-      { "name": "Duschtücher", "available": 0, "minimum": 0 },
-      { "name": "Handtücher", "available": 0, "minimum": 0 },
-      { "name": "Badvorleger", "available": 0, "minimum": 0 },
-      { "name": "Geschirrtücher", "available": 0, "minimum": 0 }
+      {
+        "name": "Bettbezüge",
+        "available": 0,
+        "minimum": 25
+      },
+      {
+        "name": "Kissenbezüge",
+        "available": 0,
+        "minimum": 25
+      },
+      {
+        "name": "Laken grün",
+        "available": 0,
+        "minimum": 16
+      },
+      {
+        "name": "Laken orange",
+        "available": 0,
+        "minimum": 0
+      },
+      {
+        "name": "Duschtücher",
+        "available": 0,
+        "minimum": 24
+      },
+      {
+        "name": "Handtücher",
+        "available": 0,
+        "minimum": 24
+      },
+      {
+        "name": "Badvorleger",
+        "available": 0,
+        "minimum": 12
+      },
+      {
+        "name": "Geschirrtücher",
+        "available": 0,
+        "minimum": 12
+      }
     ],
     "addOns": [
-      { "name": "Toilettenpapier", "available": 0, "minimum": 0 },
-      { "name": "Küchenrollen", "available": 0, "minimum": 0 },
-      { "name": "Geschirrspültabs", "available": 0, "minimum": 0 },
-      { "name": "Schwammtücher", "available": 0, "minimum": 0 },
-      { "name": "Kaffeetabs/Tee", "available": 0, "minimum": 0 },
-      { "name": "Handseife", "available": 0, "minimum": 0 },
-      { "name": "Reinigungsmittel", "available": 0, "minimum": 0 },
-      { "name": "Geschirrspülmittel", "available": 0, "minimum": 0 },
-      { "name": "Spülschwämme", "available": 0, "minimum": 0 },
-      { "name": "Zucker, Salz, Pfeffer", "available": 0, "minimum": 0 },
-      { "name": "Essig, Öl", "available": 0, "minimum": 0 },
-      { "name": "Duschgel/Shampoo", "available": 0, "minimum": 0 }
-    ]
+      {
+        "name": "Toilettenpapier",
+        "available": false,
+        "minimum": 2
+      },
+      {
+        "name": "Küchenrollen",
+        "available": false
+      },
+      {
+        "name": "Geschirrspültabs",
+        "available": false
+      },
+      {
+        "name": "Schwammtücher",
+        "available": false
+      },
+      {
+        "name": "Kaffeetabs/Tee",
+        "available": false,
+        "minimum": 1
+      },
+      {
+        "name": "Handseife",
+        "available": false
+      },
+      {
+        "name": "Reinigungsmittel",
+        "available": false
+      },
+      {
+        "name": "Geschirrspülmittel",
+        "available": false
+      },
+      {
+        "name": "Spülschwämme",
+        "available": false,
+        "minimum": 2
+      },
+      {
+        "name": "Zucker, Salz, Pfeffer",
+        "available": false
+      },
+      {
+        "name": "Essig, Öl",
+        "available": false
+      },
+      {
+        "name": "Duschgel/Shampoo",
+        "available": false
+      }
+    ],
+    "id": "27"
   },
   {
-    "id": "14",
-    "address": "Metzerstraße 18, 10405 Berlin",
+    "address": "Siemens-18 | 10551",
+    "nextCheckout": [],
+    "pickupNeeded": true,
+    "linens": [
+      {
+        "name": "Bettbezüge",
+        "available": 0,
+        "minimum": 8
+      },
+      {
+        "name": "Kissenbezüge",
+        "available": 0,
+        "minimum": 6
+      },
+      {
+        "name": "Laken grün",
+        "available": 0,
+        "minimum": 4
+      },
+      {
+        "name": "Laken orange",
+        "available": 0,
+        "minimum": 0
+      },
+      {
+        "name": "Duschtücher",
+        "available": 0,
+        "minimum": 8
+      },
+      {
+        "name": "Handtücher",
+        "available": 0,
+        "minimum": 8
+      },
+      {
+        "name": "Badvorleger",
+        "available": 0,
+        "minimum": 4
+      },
+      {
+        "name": "Geschirrtücher",
+        "available": 0,
+        "minimum": 4
+      }
+    ],
+    "addOns": [
+      {
+        "name": "Toilettenpapier",
+        "available": false
+      },
+      {
+        "name": "Küchenrollen",
+        "available": false
+      },
+      {
+        "name": "Geschirrspültabs",
+        "available": false
+      },
+      {
+        "name": "Schwammtücher",
+        "available": false
+      },
+      {
+        "name": "Kaffeetabs/Tee",
+        "available": false
+      },
+      {
+        "name": "Handseife",
+        "available": false
+      },
+      {
+        "name": "Reinigungsmittel",
+        "available": false
+      },
+      {
+        "name": "Geschirrspülmittel",
+        "available": false
+      },
+      {
+        "name": "Spülschwämme",
+        "available": false
+      },
+      {
+        "name": "Zucker, Salz, Pfeffer",
+        "available": false
+      },
+      {
+        "name": "Essig, Öl",
+        "available": false
+      },
+      {
+        "name": "Duschgel/Shampoo",
+        "available": false
+      }
+    ],
+    "id": "28"
+  },
+  {
+    "address": "Urban-94 | 10967",
     "nextCheckout": [],
     "pickupNeeded": false,
     "linens": [
-      { "name": "Bettbezüge", "available": 0, "minimum": 0 },
-      { "name": "Kissenbezüge", "available": 0, "minimum": 0 },
-      { "name": "Laken grün", "available": 0, "minimum": 0 },
-      { "name": "Laken orange", "available": 0, "minimum": 0 },
-      { "name": "Duschtücher", "available": 0, "minimum": 0 },
-      { "name": "Handtücher", "available": 0, "minimum": 0 },
-      { "name": "Badvorleger", "available": 0, "minimum": 0 },
-      { "name": "Geschirrtücher", "available": 0, "minimum": 0 }
+      {
+        "name": "Bettbezüge",
+        "available": 0,
+        "minimum": 0
+      },
+      {
+        "name": "Kissenbezüge",
+        "available": 0,
+        "minimum": 0
+      },
+      {
+        "name": "Laken grün",
+        "available": 0,
+        "minimum": 0
+      },
+      {
+        "name": "Laken orange",
+        "available": 0,
+        "minimum": 0
+      },
+      {
+        "name": "Duschtücher",
+        "available": 0,
+        "minimum": 0
+      },
+      {
+        "name": "Handtücher",
+        "available": 0,
+        "minimum": 0
+      },
+      {
+        "name": "Badvorleger",
+        "available": 0,
+        "minimum": 0
+      },
+      {
+        "name": "Geschirrtücher",
+        "available": 0,
+        "minimum": 0
+      }
     ],
     "addOns": [
-      { "name": "Toilettenpapier", "available": 0, "minimum": 0 },
-      { "name": "Küchenrollen", "available": 0, "minimum": 0 },
-      { "name": "Geschirrspültabs", "available": 0, "minimum": 0 },
-      { "name": "Schwammtücher", "available": 0, "minimum": 0 },
-      { "name": "Kaffeetabs/Tee", "available": 0, "minimum": 0 },
-      { "name": "Handseife", "available": 0, "minimum": 0 },
-      { "name": "Reinigungsmittel", "available": 0, "minimum": 0 },
-      { "name": "Geschirrspülmittel", "available": 0, "minimum": 0 },
-      { "name": "Spülschwämme", "available": 0, "minimum": 0 },
-      { "name": "Zucker, Salz, Pfeffer", "available": 0, "minimum": 0 },
-      { "name": "Essig, Öl", "available": 0, "minimum": 0 },
-      { "name": "Duschgel/Shampoo", "available": 0, "minimum": 0 }
-    ]
+      {
+        "name": "Toilettenpapier",
+        "available": false
+      },
+      {
+        "name": "Küchenrollen",
+        "available": false
+      },
+      {
+        "name": "Geschirrspültabs",
+        "available": false
+      },
+      {
+        "name": "Schwammtücher",
+        "available": false
+      },
+      {
+        "name": "Kaffeetabs/Tee",
+        "available": false
+      },
+      {
+        "name": "Handseife",
+        "available": false
+      },
+      {
+        "name": "Reinigungsmittel",
+        "available": false
+      },
+      {
+        "name": "Geschirrspülmittel",
+        "available": false
+      },
+      {
+        "name": "Spülschwämme",
+        "available": false
+      },
+      {
+        "name": "Zucker, Salz, Pfeffer",
+        "available": false
+      },
+      {
+        "name": "Essig, Öl",
+        "available": false
+      },
+      {
+        "name": "Duschgel/Shampoo",
+        "available": false
+      }
+    ],
+    "id": "29"
+  },
+  {
+    "address": "Knesebeck-18 | 10623",
+    "nextCheckout": [],
+    "pickupNeeded": true,
+    "linens": [
+      {
+        "name": "Bettbezüge",
+        "available": 0,
+        "minimum": 6
+      },
+      {
+        "name": "Kissenbezüge",
+        "available": 0,
+        "minimum": 6
+      },
+      {
+        "name": "Laken grün",
+        "available": 0,
+        "minimum": 3
+      },
+      {
+        "name": "Laken orange",
+        "available": 0,
+        "minimum": 0
+      },
+      {
+        "name": "Duschtücher",
+        "available": 0,
+        "minimum": 5
+      },
+      {
+        "name": "Handtücher",
+        "available": 0,
+        "minimum": 6
+      },
+      {
+        "name": "Badvorleger",
+        "available": 0,
+        "minimum": 2
+      },
+      {
+        "name": "Geschirrtücher",
+        "available": 0,
+        "minimum": 2
+      }
+    ],
+    "addOns": [
+      {
+        "name": "Toilettenpapier",
+        "available": false
+      },
+      {
+        "name": "Küchenrollen",
+        "available": false
+      },
+      {
+        "name": "Geschirrspültabs",
+        "available": false
+      },
+      {
+        "name": "Schwammtücher",
+        "available": false
+      },
+      {
+        "name": "Kaffeetabs/Tee",
+        "available": false
+      },
+      {
+        "name": "Handseife",
+        "available": false
+      },
+      {
+        "name": "Reinigungsmittel",
+        "available": false
+      },
+      {
+        "name": "Geschirrspülmittel",
+        "available": false
+      },
+      {
+        "name": "Spülschwämme",
+        "available": false
+      },
+      {
+        "name": "Zucker, Salz, Pfeffer",
+        "available": false
+      },
+      {
+        "name": "Essig, Öl",
+        "available": false
+      },
+      {
+        "name": "Duschgel/Shampoo",
+        "available": false
+      }
+    ],
+    "id": "30"
+  },
+  {
+    "address": "Schliemann-41 | 10437",
+    "nextCheckout": [],
+    "pickupNeeded": false,
+    "linens": [
+      {
+        "name": "Bettbezüge",
+        "available": 0,
+        "minimum": 0
+      },
+      {
+        "name": "Kissenbezüge",
+        "available": 0,
+        "minimum": 0
+      },
+      {
+        "name": "Laken grün",
+        "available": 0,
+        "minimum": 0
+      },
+      {
+        "name": "Laken orange",
+        "available": 0,
+        "minimum": 0
+      },
+      {
+        "name": "Duschtücher",
+        "available": 0,
+        "minimum": 0
+      },
+      {
+        "name": "Handtücher",
+        "available": 0,
+        "minimum": 0
+      },
+      {
+        "name": "Badvorleger",
+        "available": 0,
+        "minimum": 0
+      },
+      {
+        "name": "Geschirrtücher",
+        "available": 0,
+        "minimum": 0
+      }
+    ],
+    "addOns": [
+      {
+        "name": "Toilettenpapier",
+        "available": false
+      },
+      {
+        "name": "Küchenrollen",
+        "available": false
+      },
+      {
+        "name": "Geschirrspültabs",
+        "available": false
+      },
+      {
+        "name": "Schwammtücher",
+        "available": false
+      },
+      {
+        "name": "Kaffeetabs/Tee",
+        "available": false
+      },
+      {
+        "name": "Handseife",
+        "available": false
+      },
+      {
+        "name": "Reinigungsmittel",
+        "available": false
+      },
+      {
+        "name": "Geschirrspülmittel",
+        "available": false
+      },
+      {
+        "name": "Spülschwämme",
+        "available": false
+      },
+      {
+        "name": "Zucker, Salz, Pfeffer",
+        "available": false
+      },
+      {
+        "name": "Essig, Öl",
+        "available": false
+      },
+      {
+        "name": "Duschgel/Shampoo",
+        "available": false
+      }
+    ],
+    "id": "31"
   }
 ]

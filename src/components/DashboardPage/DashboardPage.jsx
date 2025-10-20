@@ -14,7 +14,7 @@ import DatePicker from "react-multi-date-picker";
 import { TiDeleteOutline } from "react-icons/ti";
 import { countBags, getAllColums, getSortBy } from "~/helpers/dashboard";
 import { EmptyRow } from "./EmptyRow";
-import { PickUpCheckbox } from "../Common/PickUpCheckbox";
+import { SuppliesCheckbox, PickUpCheckbox } from "../Common/PickUpCheckbox";
 import { Container, Section } from "../SharedLayout/SharedLayout.styled";
 import { FaSortAmountDownAlt } from "react-icons/fa";
 import { StateIndicator } from "../Common/StateIndicator";
@@ -144,28 +144,15 @@ const DashboardPage = () => {
 
                     {getAllColums(data).allAddOns.map((name) => {
                       const found = item.addOns.find((a) => a.name === name);
+
                       return (
                         <Td key={name}>
                           {found ? (
-                            <TableInputWrapper>
-                              <QtyInput
-                                item={item}
-                                found={found}
-                                itemKey={"addOns"}
-                                column={"available"}
-                                handleChange={handleChange}
-                                defaultValue={found.available}
-                              />
-                              {" / "}
-                              <QtyInput
-                                item={item}
-                                found={found}
-                                itemKey={"addOns"}
-                                column={"minimum"}
-                                handleChange={handleChange}
-                                defaultValue={found.minimum}
-                              />
-                            </TableInputWrapper>
+                            <SuppliesCheckbox
+                              item={item}
+                              found={found}
+                              onChange={handleChange}
+                            />
                           ) : (
                             "—"
                           )}
