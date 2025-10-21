@@ -90,7 +90,7 @@ const DashboardPage = () => {
                         format="DD/MM/YY"
                         multiple
                         minDate={new Date()}
-                        value={item.nextCheckout}
+                        value={item.nextCheckout.filter((d) => d > Date.now())}
                         sort
                         onChange={(dates) => (item.nextCheckout = dates)}
                         onClose={() => {
