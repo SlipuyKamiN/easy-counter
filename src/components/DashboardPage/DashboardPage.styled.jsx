@@ -52,12 +52,33 @@ export const SortBtn = styled.button`
 `;
 
 export const TableWrapper = styled.div`
+  position: relative;
   overflow-x: scroll;
-  overflow-y: hidden;
+  height: 82vh;
 `;
 
 export const Table = styled.table`
   color: ${colors.light.lo200};
+
+  .sticky {
+    position: sticky;
+    backdrop-filter: blur(96px);
+  }
+
+  .sticky.left {
+    z-index: 1;
+    left: 0px;
+    text-align: left;
+
+    border-right: 1px solid ${colors.light.lo200};
+  }
+
+  .sticky.top {
+    z-index: 2;
+    top: 0px;
+
+    border-bottom: 1px solid ${colors.light.lo200};
+  }
 
   th,
   td {
@@ -96,10 +117,6 @@ export const Td = styled.td`
 
   &.id {
     width: 40px;
-  }
-
-  &.address {
-    text-align: left;
   }
 
   & .date-picker {
