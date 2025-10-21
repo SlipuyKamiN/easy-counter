@@ -54,7 +54,12 @@ export const SortBtn = styled.button`
 export const TableWrapper = styled.div`
   position: relative;
   overflow-x: scroll;
-  height: 82vh;
+  overflow-y: hidden;
+
+  @media screen and (min-width: 768px) {
+    height: 82vh;
+    overflow-y: scroll;
+  }
 `;
 
 export const Table = styled.table`
@@ -74,14 +79,15 @@ export const Table = styled.table`
   }
 
   .sticky.top {
+    border-bottom: 1px solid ${colors.light.lo200};
+
     z-index: 2;
     top: 0px;
-
-    border-bottom: 1px solid ${colors.light.lo200};
   }
 
   th,
   td {
+    margin: 0;
     text-transform: capitalize;
     border-bottom: 1px solid ${colors.light.hi100};
   }
