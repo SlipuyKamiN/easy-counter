@@ -8,15 +8,15 @@ export const CounterList = styled.ul`
 export const AddressesListItem = styled.li`
   margin: 0 auto;
   max-width: 375px;
-  padding: 10px;
   transition: ${transition.duration};
   border-radius: 12px;
   border: 1px solid ${colors.light.hi100};
 
   a {
+    display: block;
     width: 100%;
     height: 100%;
-    padding: 15px;
+    padding: 10px;
   }
 
   &:hover,
