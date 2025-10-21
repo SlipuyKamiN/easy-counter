@@ -373,15 +373,15 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 `,O3=dt.li`
   margin: 0 auto;
   max-width: 375px;
-  padding: 10px;
   transition: ${Ei.duration};
   border-radius: 12px;
   border: 1px solid ${vt.light.hi100};
 
   a {
+    display: block;
     width: 100%;
     height: 100%;
-    padding: 15px;
+    padding: 10px;
   }
 
   &:hover,
