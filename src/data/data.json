@@ -496,17 +496,17 @@
     "linens": [
       {
         "name": "Bettbezüge",
-        "available": 0,
+        "available": 10,
         "minimum": 20
       },
       {
         "name": "Kissenbezüge",
-        "available": 0,
+        "available": 13,
         "minimum": 20
       },
       {
         "name": "Laken grün",
-        "available": 0,
+        "available": 1,
         "minimum": 13
       },
       {
@@ -516,22 +516,22 @@
       },
       {
         "name": "Duschtücher",
-        "available": 0,
+        "available": 8,
         "minimum": 20
       },
       {
         "name": "Handtücher",
-        "available": 0,
+        "available": 10,
         "minimum": 20
       },
       {
         "name": "Badvorleger",
-        "available": 0,
+        "available": 2,
         "minimum": 10
       },
       {
         "name": "Geschirrtücher",
-        "available": 0,
+        "available": 7,
         "minimum": 10
       }
     ],
@@ -1224,8 +1224,7 @@
     "essentials": [
       {
         "name": "Toilettenpapier",
-        "available": false,
-        "minimum": 2
+        "available": false
       },
       {
         "name": "Küchenrollen",
@@ -1241,8 +1240,7 @@
       },
       {
         "name": "Kaffeetabs/Tee",
-        "available": false,
-        "minimum": 1
+        "available": false
       },
       {
         "name": "Handseife",
@@ -1258,8 +1256,7 @@
       },
       {
         "name": "Spülschwämme",
-        "available": false,
-        "minimum": 2
+        "available": false
       },
       {
         "name": "Zucker, Salz, Pfeffer",
