@@ -173,12 +173,12 @@ Please change the parent <Route path="${k}"> to <Route path="${k==="/"?"*":`${k}
 
   & .date-picker {
     max-width: 78px;
-    padding: 4px;
+    padding: 5px;
 
     border: none;
 
     font-size: inherit;
-    font-weight: 600;
+    font-family: inherit;
     background-color: transparent;
   }
 
@@ -391,7 +391,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
       opacity: 0;
     }
   }
-`,rc=({isLoading:l,isError:r,success:o=!1,size:i=30,text:s=""})=>L.jsxs(x3,{children:[L.jsx("span",{children:s}),l&&L.jsx(v3,{size:i,className:"spinner"}),r&&L.jsx(b3,{size:i}),o&&!l&&!r&&L.jsx(S3,{size:i,className:"hidden"})]}),E3=()=>{const[l,r,o,i]=kr(jr.getAll),[s]=kr(jr.update),[f]=kr(jr.delete),[h,y]=q.useState("id");q.useEffect(()=>{r||l()},[l,r]);const b=(m,v)=>{s({id:m,body:v}).then(()=>l())};return L.jsx(nd,{children:L.jsx(Lu,{children:L.jsxs(f2,{children:[L.jsx(rc,{isError:i,isLoading:o,success:r==null?void 0:r.length,text:i&&"Something went wrong..."}),r&&!i&&L.jsxs(d2,{children:[L.jsx("thead",{children:L.jsx("tr",{children:wu(r).allColumns.map((m,v)=>v<=2?L.jsx(Zp,{className:"sticky top",children:L.jsxs(s2,{type:"button",onClick:()=>y(m),children:[m,h===m&&L.jsx(m3,{size:16})]})},m):L.jsx(Zp,{className:"sticky top",children:m},m))})}),L.jsxs("tbody",{children:[r.sort(s3(h)).map(m=>L.jsxs("tr",{children:[L.jsx(ua,{className:"id",children:L.jsxs(c2,{type:"button",onClick:()=>f(m.id).then(l),children:[m.id,L.jsx("span",{children:L.jsx(o3,{size:30})})]})}),L.jsx(ua,{className:"sticky left",children:m.address}),L.jsx(ua,{children:L.jsx(Ny,{placeholder:" - ",inputClass:"date-picker",format:"DD/MM/YY",multiple:!0,minDate:new Date,value:m.nextCheckout.filter(v=>v>Date.now()),sort:!0,onChange:v=>m.nextCheckout=v,onClose:()=>{b(m.id,m)}})}),L.jsx(ua,{children:L.jsx(ed,{onChange:()=>b(m.id,{...m,pickupNeeded:!m.pickupNeeded}),item:m})}),L.jsx(ua,{className:"bags-needed",children:c3(m)}),wu(r).allLinens.map(v=>{const w=m.linens.find(M=>M.name===v);return L.jsx(ua,{children:w?L.jsxs(ty,{children:[L.jsx(x0,{item:m,found:w,itemKey:"linens",column:"available",defaultValue:w.available,handleChange:b})," / ",L.jsx(x0,{item:m,found:w,itemKey:"linens",column:"minimum",handleChange:b,defaultValue:w.minimum})]}):"—"},v)}),wu(r).allEssentials.map(v=>{const w=m.essentials.find(M=>M.name===v);return L.jsx(ua,{children:w?L.jsx(td,{item:m,found:w,onChange:b}):"—"},v)})]},m.id)),L.jsx(y3,{dispatch:l,data:r})]})]})]})})})},w3=ht.ul`
+`,rc=({isLoading:l,isError:r,success:o=!1,size:i=30,text:s=""})=>L.jsxs(x3,{children:[L.jsx("span",{children:s}),l&&L.jsx(v3,{size:i,className:"spinner"}),r&&L.jsx(b3,{size:i}),o&&!l&&!r&&L.jsx(S3,{size:i,className:"hidden"})]}),E3=()=>{const[l,r,o,i]=kr(jr.getAll),[s]=kr(jr.update),[f]=kr(jr.delete),[h,y]=q.useState("id");q.useEffect(()=>{r||l()},[l,r]);const b=(m,v)=>{s({id:m,body:v}).then(()=>l())};return L.jsx(nd,{children:L.jsx(Lu,{children:L.jsxs(f2,{children:[L.jsx(rc,{isError:i,isLoading:o,success:r==null?void 0:r.length,text:i&&"Something went wrong..."}),r&&!i&&L.jsxs(d2,{children:[L.jsx("thead",{children:L.jsx("tr",{children:wu(r).allColumns.map((m,v)=>v<=2?L.jsx(Zp,{className:"sticky top",children:L.jsxs(s2,{type:"button",onClick:()=>y(m),children:[m,h===m&&L.jsx(m3,{size:16})]})},m):L.jsx(Zp,{className:"sticky top",children:m},m))})}),L.jsxs("tbody",{children:[r.sort(s3(h)).map(m=>L.jsxs("tr",{children:[L.jsx(ua,{className:"id",children:L.jsxs(c2,{type:"button",onClick:()=>f(m.id).then(l),children:[m.id,L.jsx("span",{children:L.jsx(o3,{size:30})})]})}),L.jsx(ua,{className:"sticky left",children:m.address}),L.jsx(ua,{children:L.jsx(Ny,{name:"date",placeholder:" - ",inputClass:"date-picker",format:"DD.MM.YY",multiple:!0,minDate:new Date,value:m.nextCheckout.filter(v=>v>Date.now()),sort:!0,onChange:v=>m.nextCheckout=v,onClose:()=>{b(m.id,m)}})}),L.jsx(ua,{children:L.jsx(ed,{onChange:()=>b(m.id,{...m,pickupNeeded:!m.pickupNeeded}),item:m})}),L.jsx(ua,{className:"bags-needed",children:c3(m)}),wu(r).allLinens.map(v=>{const w=m.linens.find(M=>M.name===v);return L.jsx(ua,{children:w?L.jsxs(ty,{children:[L.jsx(x0,{item:m,found:w,itemKey:"linens",column:"available",defaultValue:w.available,handleChange:b})," / ",L.jsx(x0,{item:m,found:w,itemKey:"linens",column:"minimum",handleChange:b,defaultValue:w.minimum})]}):"—"},v)}),wu(r).allEssentials.map(v=>{const w=m.essentials.find(M=>M.name===v);return L.jsx(ua,{children:w?L.jsx(td,{item:m,found:w,onChange:b}):"—"},v)})]},m.id)),L.jsx(y3,{dispatch:l,data:r})]})]})]})})})},w3=ht.ul`
   margin: 0 auto;
 `,O3=ht.li`
   margin: 0 auto;
