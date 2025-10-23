@@ -53,7 +53,7 @@ const DashboardPage = () => {
                   {getAllColums(data).allColumns.map((col, i) => {
                     if (i <= 2) {
                       return (
-                        <Th key={col}>
+                        <Th key={col} className="sticky top">
                           <SortBtn type="button" onClick={() => setSortBy(col)}>
                             {col}
                             {sortBy === col && (
@@ -64,7 +64,11 @@ const DashboardPage = () => {
                       );
                     }
 
-                    return <Th key={col}>{col}</Th>;
+                    return (
+                      <Th key={col} className="sticky top">
+                        {col}
+                      </Th>
+                    );
                   })}
                 </tr>
               </thead>
@@ -82,7 +86,7 @@ const DashboardPage = () => {
                         </span>
                       </DeleteBtn>
                     </Td>
-                    <Td className="address">{item.address}</Td>
+                    <Td className="sticky left">{item.address}</Td>
                     <Td>
                       <DatePicker
                         placeholder=" - "
