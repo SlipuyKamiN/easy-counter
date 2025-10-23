@@ -18,7 +18,7 @@ export const countBags = (item) => {
     bagsNeeded = bagsNeeded > neededBagsLinen ? bagsNeeded : neededBagsLinen;
   });
 
-  return Math.floor(bagsNeeded);
+  return Math.ceil(bagsNeeded);
 };
 
 export const getAllColums = (data) => {
