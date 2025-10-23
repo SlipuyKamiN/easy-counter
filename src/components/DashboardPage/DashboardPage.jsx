@@ -99,6 +99,9 @@ const DashboardPage = () => {
                         sort
                         onChange={(dates) => (item.nextCheckout = dates)}
                         onClose={() => {
+                          item.nextCheckout = item.nextCheckout.filter(
+                            (d) => d > Date.now()
+                          );
                           handleChange(item.id, item);
                         }}
                       />

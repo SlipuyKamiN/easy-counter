@@ -56,6 +56,14 @@ export const getSortBy = (key) => {
           return aDate - bDate;
         }
 
+        if (aDate < Date.now()) {
+          return 1;
+        }
+
+        if (bDate < Date.now()) {
+          return -1;
+        }
+
         if (aDate && !bDate) {
           return -1;
         }
