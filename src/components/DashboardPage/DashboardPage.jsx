@@ -89,9 +89,10 @@ const DashboardPage = () => {
                     <Td className="sticky left">{item.address}</Td>
                     <Td>
                       <DatePicker
+                        name="date"
                         placeholder=" - "
                         inputClass="date-picker"
-                        format="DD/MM/YY"
+                        format="DD.MM.YY"
                         multiple
                         minDate={new Date()}
                         value={item.nextCheckout.filter((d) => d > Date.now())}
