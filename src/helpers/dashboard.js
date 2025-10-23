@@ -18,7 +18,7 @@ export const countBags = (item) => {
     bagsNeeded = bagsNeeded > neededBagsLinen ? bagsNeeded : neededBagsLinen;
   });
 
-  return Math.floor(bagsNeeded);
+  return Math.ceil(bagsNeeded);
 };
 
 export const getAllColums = (data) => {
@@ -54,6 +54,14 @@ export const getSortBy = (key) => {
 
         if (aDate && bDate) {
           return aDate - bDate;
+        }
+
+        if (aDate < Date.now()) {
+          return 1;
+        }
+
+        if (bDate < Date.now()) {
+          return -1;
         }
 
         if (aDate && !bDate) {
