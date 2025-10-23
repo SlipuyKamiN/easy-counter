@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { colors } from "~/styles/common/vars";
+import { colors, transition } from "~/styles/common/vars";
 
 export const CheckboxWrapper = styled.div`
   position: relative;
@@ -18,6 +18,8 @@ export const CheckboxWrapper = styled.div`
     left: 2px;
 
     pointer-events: none;
+
+    transition: ${transition.duration};
   }
 
   input {
