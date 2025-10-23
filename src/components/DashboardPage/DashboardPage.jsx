@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import {
+  BagsNeeded,
   DeleteBtn,
   SortBtn,
   Table,
@@ -12,7 +13,12 @@ import { API } from "~/API/API";
 import { useAPI } from "~/hooks/useAPI";
 import DatePicker from "react-multi-date-picker";
 import { TiDeleteOutline } from "react-icons/ti";
-import { countBags, getAllColums, getSortBy } from "~/helpers/dashboard";
+import {
+  countBags,
+  formatDate,
+  getAllColums,
+  getSortBy,
+} from "~/helpers/dashboard";
 import { EmptyRow } from "./EmptyRow";
 import { EssentialsCheckbox, PickUpCheckbox } from "../Common/PickUpCheckbox";
 import { Container, Section } from "../SharedLayout/SharedLayout.styled";
@@ -113,7 +119,12 @@ const DashboardPage = () => {
                         item={item}
                       />
                     </Td>
-                    <Td className="bags-needed">{countBags(item)}</Td>
+                    <Td>
+                      <BagsNeeded>{countBags(item)}</BagsNeeded>
+                      {item.updatedAt && (
+                        <span>{formatDate(item.updatedAt)}</span>
+                      )}
+                    </Td>
                     {getAllColums(data).allLinens.map((name) => {
                       const found = item.linens.find((l) => l.name === name);
 

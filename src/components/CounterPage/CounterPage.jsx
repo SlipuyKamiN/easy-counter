@@ -32,6 +32,7 @@ const CounterPage = () => {
           [itemKey]: currentRef.current[itemKey].map((l) =>
             l.name === name ? { ...l, available: qty } : l
           ),
+          updatedAt: new Date(),
         },
       }).then(() => dispatch(addressID));
     }, 1000)
@@ -63,6 +64,7 @@ const CounterPage = () => {
                     throttledCheckboxChange(current.id, {
                       ...current,
                       pickupNeeded: !current.pickupNeeded,
+                      updatedAt: new Date(),
                     })
                   }
                   item={current}

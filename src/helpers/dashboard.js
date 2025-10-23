@@ -71,3 +71,16 @@ export const getSortBy = (key) => {
       return (a, b) => Number(a.id) - Number(b.id);
   }
 };
+
+export const formatDate = (date) => {
+  if (!date) return;
+
+  const d = new Date(date);
+
+  const pad = (n) => n.toString().padStart(2, "0");
+  return (
+    `${pad(d.getDate())}.${pad(d.getMonth() + 1)}.${String(
+      d.getFullYear()
+    ).slice(2)} ` + `${pad(d.getHours())}:${pad(d.getMinutes())}`
+  );
+};

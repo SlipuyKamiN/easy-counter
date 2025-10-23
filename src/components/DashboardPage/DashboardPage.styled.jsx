@@ -118,6 +118,7 @@ export const Th = styled.th`
 `;
 
 export const Td = styled.td`
+  position: relative;
   text-align: center;
   padding: 0 4px;
 
@@ -135,9 +136,31 @@ export const Td = styled.td`
     font-weight: 600;
     background-color: transparent;
   }
+`;
 
-  &.bags-needed {
-    font-size: 28px;
+export const BagsNeeded = styled.span`
+  font-size: 28px;
+  cursor: pointer;
+
+  & + span {
+    pointer-events: none;
+    position: absolute;
+    top: 10px;
+    left: 75px;
+    z-index: 1;
+
+    padding: 5px 15px;
+    border-radius: 16px;
+
+    font-size: 20px;
+    opacity: 0;
+    background-color: ${colors.light.lo100};
+    color: ${colors.light.hi200};
+    backdrop-filter: blur(96px);
+  }
+
+  &:hover + span {
+    opacity: 0.9;
   }
 `;
 

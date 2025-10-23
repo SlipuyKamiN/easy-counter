@@ -55,7 +55,7 @@
         "available": false
       },
       {
-        "name": "Geschirrspültabs",
+        "name": "Geschirrspülmittel",
         "available": false
       },
       {
@@ -63,7 +63,15 @@
         "available": false
       },
       {
-        "name": "Kaffeetabs/Tee",
+        "name": "Spülschwämme",
+        "available": false
+      },
+      {
+        "name": "Geschirrspültabs",
+        "available": false
+      },
+      {
+        "name": "Kaffee",
         "available": false
       },
       {
@@ -71,31 +79,36 @@
         "available": false
       },
       {
-        "name": "Reinigungsmittel",
+        "name": "Shampoo",
         "available": false
       },
       {
-        "name": "Geschirrspülmittel",
+        "name": "Duschgel",
         "available": false
       },
       {
-        "name": "Spülschwämme",
+        "name": "Badreiniger",
         "available": false
       },
       {
-        "name": "Zucker, Salz, Pfeffer",
+        "name": "Küchenreiniger",
         "available": false
       },
       {
-        "name": "Essig, Öl",
+        "name": "Kalkreiniger",
         "available": false
       },
       {
-        "name": "Duschgel/Shampoo",
+        "name": "Toilettenreiniger",
+        "available": false
+      },
+      {
+        "name": "Sonstiges:",
         "available": false
       }
     ],
-    "id": "15"
+    "id": "1",
+    "updatedAt": "2025-10-23T18:04:46.228Z"
   },
   {
     "address": "Tempelherren-20 | 10961",
@@ -119,7 +132,7 @@
       },
       {
         "name": "Laken orange",
-        "available": 11,
+        "available": 0,
         "minimum": 0
       },
       {
@@ -153,7 +166,7 @@
         "available": false
       },
       {
-        "name": "Geschirrspültabs",
+        "name": "Geschirrspülmittel",
         "available": false
       },
       {
@@ -161,7 +174,15 @@
         "available": false
       },
       {
-        "name": "Kaffeetabs/Tee",
+        "name": "Spülschwämme",
+        "available": false
+      },
+      {
+        "name": "Geschirrspültabs",
+        "available": false
+      },
+      {
+        "name": "Kaffee",
         "available": false
       },
       {
@@ -169,31 +190,36 @@
         "available": false
       },
       {
-        "name": "Reinigungsmittel",
+        "name": "Shampoo",
         "available": false
       },
       {
-        "name": "Geschirrspülmittel",
+        "name": "Duschgel",
         "available": false
       },
       {
-        "name": "Spülschwämme",
+        "name": "Badreiniger",
         "available": false
       },
       {
-        "name": "Zucker, Salz, Pfeffer",
+        "name": "Küchenreiniger",
         "available": false
       },
       {
-        "name": "Essig, Öl",
+        "name": "Kalkreiniger",
         "available": false
       },
       {
-        "name": "Duschgel/Shampoo",
+        "name": "Toilettenreiniger",
+        "available": false
+      },
+      {
+        "name": "Sonstiges:",
         "available": false
       }
     ],
-    "id": "16"
+    "id": "2",
+    "updatedAt": "2025-10-23T18:04:47.689Z"
   },
   {
     "address": "Burgherren-11 | 12101",
@@ -251,7 +277,7 @@
         "available": false
       },
       {
-        "name": "Geschirrspültabs",
+        "name": "Geschirrspülmittel",
         "available": false
       },
       {
@@ -259,7 +285,15 @@
         "available": false
       },
       {
-        "name": "Kaffeetabs/Tee",
+        "name": "Spülschwämme",
+        "available": false
+      },
+      {
+        "name": "Geschirrspültabs",
+        "available": false
+      },
+      {
+        "name": "Kaffee",
         "available": false
       },
       {
@@ -267,45 +301,50 @@
         "available": false
       },
       {
-        "name": "Reinigungsmittel",
+        "name": "Shampoo",
         "available": false
       },
       {
-        "name": "Geschirrspülmittel",
+        "name": "Duschgel",
         "available": false
       },
       {
-        "name": "Spülschwämme",
+        "name": "Badreiniger",
         "available": false
       },
       {
-        "name": "Zucker, Salz, Pfeffer",
+        "name": "Küchenreiniger",
         "available": false
       },
       {
-        "name": "Essig, Öl",
+        "name": "Kalkreiniger",
         "available": false
       },
       {
-        "name": "Duschgel/Shampoo",
+        "name": "Toilettenreiniger",
+        "available": false
+      },
+      {
+        "name": "Sonstiges:",
         "available": false
       }
     ],
-    "id": "17"
+    "id": "3",
+    "updatedAt": "2025-10-23T18:04:49.580Z"
   },
   {
     "address": "Cherusker-3 STUDIO | 10829",
     "nextCheckout": [],
-    "pickupNeeded": true,
+    "pickupNeeded": false,
     "linens": [
       {
         "name": "Bettbezüge",
-        "available": 0,
+        "available": 5,
         "minimum": 16
       },
       {
         "name": "Kissenbezüge",
-        "available": 0,
+        "available": 8,
         "minimum": 16
       },
       {
@@ -320,22 +359,22 @@
       },
       {
         "name": "Duschtücher",
-        "available": 0,
+        "available": 11,
         "minimum": 16
       },
       {
         "name": "Handtücher",
-        "available": 0,
+        "available": 11,
         "minimum": 15
       },
       {
         "name": "Badvorleger",
-        "available": 0,
+        "available": 6,
         "minimum": 8
       },
       {
         "name": "Geschirrtücher",
-        "available": 0,
+        "available": 15,
         "minimum": 8
       }
     ],
@@ -349,7 +388,7 @@
         "available": false
       },
       {
-        "name": "Geschirrspültabs",
+        "name": "Geschirrspülmittel",
         "available": false
       },
       {
@@ -357,7 +396,15 @@
         "available": false
       },
       {
-        "name": "Kaffeetabs/Tee",
+        "name": "Spülschwämme",
+        "available": false
+      },
+      {
+        "name": "Geschirrspültabs",
+        "available": false
+      },
+      {
+        "name": "Kaffee",
         "available": false
       },
       {
@@ -365,45 +412,50 @@
         "available": false
       },
       {
-        "name": "Reinigungsmittel",
+        "name": "Shampoo",
         "available": false
       },
       {
-        "name": "Geschirrspülmittel",
+        "name": "Duschgel",
         "available": false
       },
       {
-        "name": "Spülschwämme",
+        "name": "Badreiniger",
         "available": false
       },
       {
-        "name": "Zucker, Salz, Pfeffer",
+        "name": "Küchenreiniger",
         "available": false
       },
       {
-        "name": "Essig, Öl",
+        "name": "Kalkreiniger",
         "available": false
       },
       {
-        "name": "Duschgel/Shampoo",
+        "name": "Toilettenreiniger",
+        "available": false
+      },
+      {
+        "name": "Sonstiges:",
         "available": false
       }
     ],
-    "id": "18"
+    "id": "4",
+    "updatedAt": "2025-10-23T18:04:51.048Z"
   },
   {
     "address": "Cherusker-3 APART2 | 10829",
     "nextCheckout": [],
-    "pickupNeeded": true,
+    "pickupNeeded": false,
     "linens": [
       {
         "name": "Bettbezüge",
-        "available": 0,
+        "available": 7,
         "minimum": 16
       },
       {
         "name": "Kissenbezüge",
-        "available": 0,
+        "available": 9,
         "minimum": 16
       },
       {
@@ -418,22 +470,22 @@
       },
       {
         "name": "Duschtücher",
-        "available": 0,
+        "available": 18,
         "minimum": 16
       },
       {
         "name": "Handtücher",
-        "available": 0,
+        "available": 17,
         "minimum": 16
       },
       {
         "name": "Badvorleger",
-        "available": 0,
+        "available": 7,
         "minimum": 8
       },
       {
         "name": "Geschirrtücher",
-        "available": 0,
+        "available": 16,
         "minimum": 8
       }
     ],
@@ -447,7 +499,7 @@
         "available": false
       },
       {
-        "name": "Geschirrspültabs",
+        "name": "Geschirrspülmittel",
         "available": false
       },
       {
@@ -455,7 +507,15 @@
         "available": false
       },
       {
-        "name": "Kaffeetabs/Tee",
+        "name": "Spülschwämme",
+        "available": false
+      },
+      {
+        "name": "Geschirrspültabs",
+        "available": false
+      },
+      {
+        "name": "Kaffee",
         "available": false
       },
       {
@@ -463,31 +523,36 @@
         "available": false
       },
       {
-        "name": "Reinigungsmittel",
+        "name": "Shampoo",
         "available": false
       },
       {
-        "name": "Geschirrspülmittel",
+        "name": "Duschgel",
         "available": false
       },
       {
-        "name": "Spülschwämme",
+        "name": "Badreiniger",
         "available": false
       },
       {
-        "name": "Zucker, Salz, Pfeffer",
+        "name": "Küchenreiniger",
         "available": false
       },
       {
-        "name": "Essig, Öl",
+        "name": "Kalkreiniger",
         "available": false
       },
       {
-        "name": "Duschgel/Shampoo",
+        "name": "Toilettenreiniger",
+        "available": false
+      },
+      {
+        "name": "Sonstiges:",
         "available": false
       }
     ],
-    "id": "19"
+    "id": "5",
+    "updatedAt": "2025-10-23T18:04:52.402Z"
   },
   {
     "address": "Cherusker-3 APART3 | 10829",
@@ -545,7 +610,7 @@
         "available": false
       },
       {
-        "name": "Geschirrspültabs",
+        "name": "Geschirrspülmittel",
         "available": false
       },
       {
@@ -553,7 +618,15 @@
         "available": false
       },
       {
-        "name": "Kaffeetabs/Tee",
+        "name": "Spülschwämme",
+        "available": false
+      },
+      {
+        "name": "Geschirrspültabs",
+        "available": false
+      },
+      {
+        "name": "Kaffee",
         "available": false
       },
       {
@@ -561,31 +634,36 @@
         "available": false
       },
       {
-        "name": "Reinigungsmittel",
+        "name": "Shampoo",
         "available": false
       },
       {
-        "name": "Geschirrspülmittel",
+        "name": "Duschgel",
         "available": false
       },
       {
-        "name": "Spülschwämme",
+        "name": "Badreiniger",
         "available": false
       },
       {
-        "name": "Zucker, Salz, Pfeffer",
+        "name": "Küchenreiniger",
         "available": false
       },
       {
-        "name": "Essig, Öl",
+        "name": "Kalkreiniger",
         "available": false
       },
       {
-        "name": "Duschgel/Shampoo",
+        "name": "Toilettenreiniger",
+        "available": false
+      },
+      {
+        "name": "Sonstiges:",
         "available": false
       }
     ],
-    "id": "20"
+    "id": "6",
+    "updatedAt": "2025-10-23T18:04:53.654Z"
   },
   {
     "address": "Krausnick-5 | 10115",
@@ -643,7 +721,7 @@
         "available": false
       },
       {
-        "name": "Geschirrspültabs",
+        "name": "Geschirrspülmittel",
         "available": false
       },
       {
@@ -651,7 +729,15 @@
         "available": false
       },
       {
-        "name": "Kaffeetabs/Tee",
+        "name": "Spülschwämme",
+        "available": false
+      },
+      {
+        "name": "Geschirrspültabs",
+        "available": false
+      },
+      {
+        "name": "Kaffee",
         "available": false
       },
       {
@@ -659,31 +745,36 @@
         "available": false
       },
       {
-        "name": "Reinigungsmittel",
+        "name": "Shampoo",
         "available": false
       },
       {
-        "name": "Geschirrspülmittel",
+        "name": "Duschgel",
         "available": false
       },
       {
-        "name": "Spülschwämme",
+        "name": "Badreiniger",
         "available": false
       },
       {
-        "name": "Zucker, Salz, Pfeffer",
+        "name": "Küchenreiniger",
         "available": false
       },
       {
-        "name": "Essig, Öl",
+        "name": "Kalkreiniger",
         "available": false
       },
       {
-        "name": "Duschgel/Shampoo",
+        "name": "Toilettenreiniger",
+        "available": false
+      },
+      {
+        "name": "Sonstiges:",
         "available": false
       }
     ],
-    "id": "21"
+    "id": "7",
+    "updatedAt": "2025-10-23T18:04:57.866Z"
   },
   {
     "address": "Granseer-8 STUDIO | 10435",
@@ -741,7 +832,7 @@
         "available": false
       },
       {
-        "name": "Geschirrspültabs",
+        "name": "Geschirrspülmittel",
         "available": false
       },
       {
@@ -749,7 +840,15 @@
         "available": false
       },
       {
-        "name": "Kaffeetabs/Tee",
+        "name": "Spülschwämme",
+        "available": false
+      },
+      {
+        "name": "Geschirrspültabs",
+        "available": false
+      },
+      {
+        "name": "Kaffee",
         "available": false
       },
       {
@@ -757,31 +856,36 @@
         "available": false
       },
       {
-        "name": "Reinigungsmittel",
+        "name": "Shampoo",
         "available": false
       },
       {
-        "name": "Geschirrspülmittel",
+        "name": "Duschgel",
         "available": false
       },
       {
-        "name": "Spülschwämme",
+        "name": "Badreiniger",
         "available": false
       },
       {
-        "name": "Zucker, Salz, Pfeffer",
+        "name": "Küchenreiniger",
         "available": false
       },
       {
-        "name": "Essig, Öl",
+        "name": "Kalkreiniger",
         "available": false
       },
       {
-        "name": "Duschgel/Shampoo",
+        "name": "Toilettenreiniger",
+        "available": false
+      },
+      {
+        "name": "Sonstiges:",
         "available": false
       }
     ],
-    "id": "22"
+    "id": "8",
+    "updatedAt": "2025-10-23T18:04:59.733Z"
   },
   {
     "address": "Granseer-8 APART | 10435",
@@ -790,17 +894,17 @@
     "linens": [
       {
         "name": "Bettbezüge",
-        "available": 0,
+        "available": 20,
         "minimum": 16
       },
       {
         "name": "Kissenbezüge",
-        "available": 0,
+        "available": 20,
         "minimum": 16
       },
       {
         "name": "Laken grün",
-        "available": 0,
+        "available": 10,
         "minimum": 10
       },
       {
@@ -810,22 +914,22 @@
       },
       {
         "name": "Duschtücher",
-        "available": 0,
+        "available": 20,
         "minimum": 16
       },
       {
         "name": "Handtücher",
-        "available": 0,
+        "available": 20,
         "minimum": 15
       },
       {
         "name": "Badvorleger",
-        "available": 0,
+        "available": 9,
         "minimum": 8
       },
       {
         "name": "Geschirrtücher",
-        "available": 0,
+        "available": 19,
         "minimum": 8
       }
     ],
@@ -839,7 +943,7 @@
         "available": false
       },
       {
-        "name": "Geschirrspültabs",
+        "name": "Geschirrspülmittel",
         "available": false
       },
       {
@@ -847,7 +951,15 @@
         "available": false
       },
       {
-        "name": "Kaffeetabs/Tee",
+        "name": "Spülschwämme",
+        "available": false
+      },
+      {
+        "name": "Geschirrspültabs",
+        "available": false
+      },
+      {
+        "name": "Kaffee",
         "available": false
       },
       {
@@ -855,31 +967,36 @@
         "available": false
       },
       {
-        "name": "Reinigungsmittel",
+        "name": "Shampoo",
         "available": false
       },
       {
-        "name": "Geschirrspülmittel",
+        "name": "Duschgel",
         "available": false
       },
       {
-        "name": "Spülschwämme",
+        "name": "Badreiniger",
         "available": false
       },
       {
-        "name": "Zucker, Salz, Pfeffer",
+        "name": "Küchenreiniger",
         "available": false
       },
       {
-        "name": "Essig, Öl",
+        "name": "Kalkreiniger",
         "available": false
       },
       {
-        "name": "Duschgel/Shampoo",
+        "name": "Toilettenreiniger",
+        "available": false
+      },
+      {
+        "name": "Sonstiges:",
         "available": false
       }
     ],
-    "id": "23"
+    "id": "9",
+    "updatedAt": "2025-10-23T18:05:00.842Z"
   },
   {
     "address": "Christinen-16 | 10119",
@@ -937,7 +1054,7 @@
         "available": false
       },
       {
-        "name": "Geschirrspültabs",
+        "name": "Geschirrspülmittel",
         "available": false
       },
       {
@@ -945,7 +1062,15 @@
         "available": false
       },
       {
-        "name": "Kaffeetabs/Tee",
+        "name": "Spülschwämme",
+        "available": false
+      },
+      {
+        "name": "Geschirrspültabs",
+        "available": false
+      },
+      {
+        "name": "Kaffee",
         "available": false
       },
       {
@@ -953,31 +1078,36 @@
         "available": false
       },
       {
-        "name": "Reinigungsmittel",
+        "name": "Shampoo",
         "available": false
       },
       {
-        "name": "Geschirrspülmittel",
+        "name": "Duschgel",
         "available": false
       },
       {
-        "name": "Spülschwämme",
+        "name": "Badreiniger",
         "available": false
       },
       {
-        "name": "Zucker, Salz, Pfeffer",
+        "name": "Küchenreiniger",
         "available": false
       },
       {
-        "name": "Essig, Öl",
+        "name": "Kalkreiniger",
         "available": false
       },
       {
-        "name": "Duschgel/Shampoo",
+        "name": "Toilettenreiniger",
+        "available": false
+      },
+      {
+        "name": "Sonstiges:",
         "available": false
       }
     ],
-    "id": "24"
+    "id": "10",
+    "updatedAt": "2025-10-23T18:05:01.820Z"
   },
   {
     "address": "Metzer-18 | 10405",
@@ -1035,7 +1165,7 @@
         "available": false
       },
       {
-        "name": "Geschirrspültabs",
+        "name": "Geschirrspülmittel",
         "available": false
       },
       {
@@ -1043,7 +1173,15 @@
         "available": false
       },
       {
-        "name": "Kaffeetabs/Tee",
+        "name": "Spülschwämme",
+        "available": false
+      },
+      {
+        "name": "Geschirrspültabs",
+        "available": false
+      },
+      {
+        "name": "Kaffee",
         "available": false
       },
       {
@@ -1051,31 +1189,36 @@
         "available": false
       },
       {
-        "name": "Reinigungsmittel",
+        "name": "Shampoo",
         "available": false
       },
       {
-        "name": "Geschirrspülmittel",
+        "name": "Duschgel",
         "available": false
       },
       {
-        "name": "Spülschwämme",
+        "name": "Badreiniger",
         "available": false
       },
       {
-        "name": "Zucker, Salz, Pfeffer",
+        "name": "Küchenreiniger",
         "available": false
       },
       {
-        "name": "Essig, Öl",
+        "name": "Kalkreiniger",
         "available": false
       },
       {
-        "name": "Duschgel/Shampoo",
+        "name": "Toilettenreiniger",
+        "available": false
+      },
+      {
+        "name": "Sonstiges:",
         "available": false
       }
     ],
-    "id": "25"
+    "id": "11",
+    "updatedAt": "2025-10-23T18:05:03.204Z"
   },
   {
     "address": "Neckar-6b | 12053",
@@ -1133,7 +1276,7 @@
         "available": false
       },
       {
-        "name": "Geschirrspültabs",
+        "name": "Geschirrspülmittel",
         "available": false
       },
       {
@@ -1141,7 +1284,15 @@
         "available": false
       },
       {
-        "name": "Kaffeetabs/Tee",
+        "name": "Spülschwämme",
+        "available": false
+      },
+      {
+        "name": "Geschirrspültabs",
+        "available": false
+      },
+      {
+        "name": "Kaffee",
         "available": false
       },
       {
@@ -1149,31 +1300,36 @@
         "available": false
       },
       {
-        "name": "Reinigungsmittel",
+        "name": "Shampoo",
         "available": false
       },
       {
-        "name": "Geschirrspülmittel",
+        "name": "Duschgel",
         "available": false
       },
       {
-        "name": "Spülschwämme",
+        "name": "Badreiniger",
         "available": false
       },
       {
-        "name": "Zucker, Salz, Pfeffer",
+        "name": "Küchenreiniger",
         "available": false
       },
       {
-        "name": "Essig, Öl",
+        "name": "Kalkreiniger",
         "available": false
       },
       {
-        "name": "Duschgel/Shampoo",
+        "name": "Toilettenreiniger",
+        "available": false
+      },
+      {
+        "name": "Sonstiges:",
         "available": false
       }
     ],
-    "id": "26"
+    "id": "12",
+    "updatedAt": "2025-10-23T18:05:04.825Z"
   },
   {
     "address": "Hermann-175 | 12051",
@@ -1231,7 +1387,7 @@
         "available": false
       },
       {
-        "name": "Geschirrspültabs",
+        "name": "Geschirrspülmittel",
         "available": false
       },
       {
@@ -1239,7 +1395,15 @@
         "available": false
       },
       {
-        "name": "Kaffeetabs/Tee",
+        "name": "Spülschwämme",
+        "available": false
+      },
+      {
+        "name": "Geschirrspültabs",
+        "available": false
+      },
+      {
+        "name": "Kaffee",
         "available": false
       },
       {
@@ -1247,31 +1411,36 @@
         "available": false
       },
       {
-        "name": "Reinigungsmittel",
+        "name": "Shampoo",
         "available": false
       },
       {
-        "name": "Geschirrspülmittel",
+        "name": "Duschgel",
         "available": false
       },
       {
-        "name": "Spülschwämme",
+        "name": "Badreiniger",
         "available": false
       },
       {
-        "name": "Zucker, Salz, Pfeffer",
+        "name": "Küchenreiniger",
         "available": false
       },
       {
-        "name": "Essig, Öl",
+        "name": "Kalkreiniger",
         "available": false
       },
       {
-        "name": "Duschgel/Shampoo",
+        "name": "Toilettenreiniger",
+        "available": false
+      },
+      {
+        "name": "Sonstiges:",
         "available": false
       }
     ],
-    "id": "27"
+    "id": "13",
+    "updatedAt": "2025-10-23T18:05:05.997Z"
   },
   {
     "address": "Siemens-18 | 10551",
@@ -1329,7 +1498,7 @@
         "available": false
       },
       {
-        "name": "Geschirrspültabs",
+        "name": "Geschirrspülmittel",
         "available": false
       },
       {
@@ -1337,7 +1506,15 @@
         "available": false
       },
       {
-        "name": "Kaffeetabs/Tee",
+        "name": "Spülschwämme",
+        "available": false
+      },
+      {
+        "name": "Geschirrspültabs",
+        "available": false
+      },
+      {
+        "name": "Kaffee",
         "available": false
       },
       {
@@ -1345,31 +1522,36 @@
         "available": false
       },
       {
-        "name": "Reinigungsmittel",
+        "name": "Shampoo",
         "available": false
       },
       {
-        "name": "Geschirrspülmittel",
+        "name": "Duschgel",
         "available": false
       },
       {
-        "name": "Spülschwämme",
+        "name": "Badreiniger",
         "available": false
       },
       {
-        "name": "Zucker, Salz, Pfeffer",
+        "name": "Küchenreiniger",
         "available": false
       },
       {
-        "name": "Essig, Öl",
+        "name": "Kalkreiniger",
         "available": false
       },
       {
-        "name": "Duschgel/Shampoo",
+        "name": "Toilettenreiniger",
+        "available": false
+      },
+      {
+        "name": "Sonstiges:",
         "available": false
       }
     ],
-    "id": "28"
+    "id": "14",
+    "updatedAt": "2025-10-23T18:05:07.242Z"
   },
   {
     "address": "Urban-94 | 10967",
@@ -1427,7 +1609,7 @@
         "available": false
       },
       {
-        "name": "Geschirrspültabs",
+        "name": "Geschirrspülmittel",
         "available": false
       },
       {
@@ -1435,7 +1617,15 @@
         "available": false
       },
       {
-        "name": "Kaffeetabs/Tee",
+        "name": "Spülschwämme",
+        "available": false
+      },
+      {
+        "name": "Geschirrspültabs",
+        "available": false
+      },
+      {
+        "name": "Kaffee",
         "available": false
       },
       {
@@ -1443,31 +1633,36 @@
         "available": false
       },
       {
-        "name": "Reinigungsmittel",
+        "name": "Shampoo",
         "available": false
       },
       {
-        "name": "Geschirrspülmittel",
+        "name": "Duschgel",
         "available": false
       },
       {
-        "name": "Spülschwämme",
+        "name": "Badreiniger",
         "available": false
       },
       {
-        "name": "Zucker, Salz, Pfeffer",
+        "name": "Küchenreiniger",
         "available": false
       },
       {
-        "name": "Essig, Öl",
+        "name": "Kalkreiniger",
         "available": false
       },
       {
-        "name": "Duschgel/Shampoo",
+        "name": "Toilettenreiniger",
+        "available": false
+      },
+      {
+        "name": "Sonstiges:",
         "available": false
       }
     ],
-    "id": "29"
+    "id": "15",
+    "updatedAt": "2025-10-23T18:05:08.879Z"
   },
   {
     "address": "Knesebeck-18 | 10623",
@@ -1525,7 +1720,7 @@
         "available": false
       },
       {
-        "name": "Geschirrspültabs",
+        "name": "Geschirrspülmittel",
         "available": false
       },
       {
@@ -1533,7 +1728,15 @@
         "available": false
       },
       {
-        "name": "Kaffeetabs/Tee",
+        "name": "Spülschwämme",
+        "available": false
+      },
+      {
+        "name": "Geschirrspültabs",
+        "available": false
+      },
+      {
+        "name": "Kaffee",
         "available": false
       },
       {
@@ -1541,31 +1744,36 @@
         "available": false
       },
       {
-        "name": "Reinigungsmittel",
+        "name": "Shampoo",
         "available": false
       },
       {
-        "name": "Geschirrspülmittel",
+        "name": "Duschgel",
         "available": false
       },
       {
-        "name": "Spülschwämme",
+        "name": "Badreiniger",
         "available": false
       },
       {
-        "name": "Zucker, Salz, Pfeffer",
+        "name": "Küchenreiniger",
         "available": false
       },
       {
-        "name": "Essig, Öl",
+        "name": "Kalkreiniger",
         "available": false
       },
       {
-        "name": "Duschgel/Shampoo",
+        "name": "Toilettenreiniger",
+        "available": false
+      },
+      {
+        "name": "Sonstiges:",
         "available": false
       }
     ],
-    "id": "30"
+    "id": "16",
+    "updatedAt": "2025-10-23T18:05:09.971Z"
   },
   {
     "address": "Schliemann-41 | 10437",
@@ -1623,7 +1831,7 @@
         "available": false
       },
       {
-        "name": "Geschirrspültabs",
+        "name": "Geschirrspülmittel",
         "available": false
       },
       {
@@ -1631,7 +1839,15 @@
         "available": false
       },
       {
-        "name": "Kaffeetabs/Tee",
+        "name": "Spülschwämme",
+        "available": false
+      },
+      {
+        "name": "Geschirrspültabs",
+        "available": false
+      },
+      {
+        "name": "Kaffee",
         "available": false
       },
       {
@@ -1639,30 +1855,35 @@
         "available": false
       },
       {
-        "name": "Reinigungsmittel",
+        "name": "Shampoo",
         "available": false
       },
       {
-        "name": "Geschirrspülmittel",
+        "name": "Duschgel",
         "available": false
       },
       {
-        "name": "Spülschwämme",
+        "name": "Badreiniger",
         "available": false
       },
       {
-        "name": "Zucker, Salz, Pfeffer",
+        "name": "Küchenreiniger",
         "available": false
       },
       {
-        "name": "Essig, Öl",
+        "name": "Kalkreiniger",
         "available": false
       },
       {
-        "name": "Duschgel/Shampoo",
+        "name": "Toilettenreiniger",
+        "available": false
+      },
+      {
+        "name": "Sonstiges:",
         "available": false
       }
     ],
-    "id": "31"
+    "id": "17",
+    "updatedAt": "2025-10-23T18:05:11.071Z"
   }
 ]
