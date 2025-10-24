@@ -27,6 +27,7 @@ export const EssentialsCheckbox = ({ item, found, onChange }) => {
         }
         return a;
       }),
+      updatedAt: new Date(),
     });
   };
 

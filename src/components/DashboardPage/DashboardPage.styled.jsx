@@ -118,8 +118,10 @@ export const Th = styled.th`
 `;
 
 export const Td = styled.td`
+  position: relative;
   text-align: center;
   padding: 0 4px;
+  background-color: transparent;
 
   &.id {
     width: 40px;
@@ -133,11 +135,35 @@ export const Td = styled.td`
 
     font-size: inherit;
     font-family: inherit;
-    background-color: transparent;
+  }
+`;
+
+export const BagsNeeded = styled.span`
+  font-size: 28px;
+  cursor: pointer;
+  background-color: transparent;
+
+  & + span {
+    pointer-events: none;
+    position: absolute;
+    top: 15px;
+    left: 75px;
+    z-index: 1;
+
+    padding: 5px 15px;
+    border-radius: 16px;
+
+    font-size: 20px;
+    opacity: 0;
+    color: ${colors.light.lo200};
+    box-shadow: 4px 4px 10px 0px ${colors.light.lo200};
+
+    transition: ${transition.duration};
+    backdrop-filter: blur(20px);
   }
 
-  &.bags-needed {
-    font-size: 28px;
+  &:hover + span {
+    opacity: 1;
   }
 `;
 
