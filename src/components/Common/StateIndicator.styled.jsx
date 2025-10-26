@@ -2,11 +2,6 @@ import styled from "@emotion/styled";
 import { colors } from "~/styles/common/vars";
 
 export const StateWrapper = styled.div`
-  position: fixed;
-  z-index: 11;
-  top: 15px;
-  right: 25px;
-
   display: flex;
   gap: 10px;
   align-items: center;
@@ -14,6 +9,13 @@ export const StateWrapper = styled.div`
   padding: 5px;
 
   color: ${colors.light.mid100};
+
+  &.fixed {
+    position: fixed;
+    z-index: 11;
+    top: 15px;
+    right: 25px;
+  }
 
   & .spinner {
     animation: spin 2s linear infinite;

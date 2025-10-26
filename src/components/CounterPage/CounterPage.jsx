@@ -47,12 +47,6 @@ const CounterPage = () => {
   return (
     <Section>
       <Container>
-        <StateIndicator
-          isLoading={isLoading}
-          isError={isError}
-          success={current}
-          text={isError && "Something went wrong... "}
-        />
         {current && !isError && (
           <>
             <Heading>{current.address}</Heading>
@@ -93,6 +87,13 @@ const CounterPage = () => {
           </>
         )}
       </Container>
+      <StateIndicator
+        isLoading={isLoading}
+        isError={isError}
+        success={current}
+        text={isError && "Something went wrong... "}
+        fixed
+      />
     </Section>
   );
 };

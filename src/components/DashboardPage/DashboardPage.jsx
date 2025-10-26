@@ -46,12 +46,6 @@ const DashboardPage = () => {
     <Section>
       <Container>
         <TableWrapper>
-          <StateIndicator
-            isError={isError}
-            isLoading={isLoading}
-            success={data?.length}
-            text={isError && "Something went wrong..."}
-          />
           {data && !isError && (
             <Table>
               <thead>
@@ -188,6 +182,12 @@ const DashboardPage = () => {
           )}
         </TableWrapper>
       </Container>
+      <StateIndicator
+        isError={isError}
+        isLoading={isLoading}
+        success={data}
+        fixed
+      />
     </Section>
   );
 };

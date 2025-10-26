@@ -15,32 +15,27 @@ const CounterListPage = () => {
     }
   }, [dispatch, data]);
 
-  if (!data || isLoading)
-    return (
-      <div>
-        <StateIndicator isLoading={isLoading} data={data} isError={isError} />
-      </div>
-    );
-  if (!data || isError)
-    return (
-      <div>
-        <StateIndicator isLoading={isLoading} data={data} isError={isError} />
-      </div>
-    );
-
   return (
     <Section>
       <Container>
         <CounterList>
-          {data.map(({ id, address }) => {
-            return (
-              <AddressesListItem key={id}>
-                <Link to={`${id}`}>{address}</Link>
-              </AddressesListItem>
-            );
-          })}
+          {data &&
+            !isError &&
+            data.map(({ id, address }) => {
+              return (
+                <AddressesListItem key={id}>
+                  <Link to={`${id}`}>{address}</Link>
+                </AddressesListItem>
+              );
+            })}
         </CounterList>
       </Container>
+      <StateIndicator
+        isError={isError}
+        isLoading={isLoading}
+        success={data}
+        fixed
+      />
     </Section>
   );
 };
