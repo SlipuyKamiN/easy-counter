@@ -8,6 +8,7 @@ import { Container, Section } from "../SharedLayout/SharedLayout.styled";
 import { CounterItem, Heading, PickupWrapper } from "./CounterPage.styled";
 import { StateIndicator } from "../Common/StateIndicator";
 import throttle from "lodash.throttle";
+import useWakeLock from "~/hooks/useWakeLock";
 
 const CounterPage = () => {
   const { addressID } = useParams();
@@ -43,6 +44,8 @@ const CounterPage = () => {
       update({ id, body }).then(() => dispatch(addressID));
     }, 200)
   ).current;
+
+  useWakeLock();
 
   return (
     <Section>
