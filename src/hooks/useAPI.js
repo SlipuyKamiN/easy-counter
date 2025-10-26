@@ -7,8 +7,6 @@ export const useAPI = (method) => {
   const [isLoading, setIsLoading] = useState(false);
   const [isError, setIsError] = useState(false);
 
-  console.log(data?.filter(({ users }) => users.includes(user)));
-
   const abortControllerRef = useRef(null);
   const isPendingRef = useRef(false); // блокування повторних викликів
 
@@ -32,7 +30,11 @@ export const useAPI = (method) => {
       const response = await method(payload, { signal: controller.signal });
 
       if (response.status >= 200 && response.status < 300) {
-        setData(response.data);
+        const data = response.data.length
+          ? response.data.filter(({ users }) => users.includes(user))
+          : response.data;
+
+        setData(data);
         setIsError(false);
       } else {
         setData({

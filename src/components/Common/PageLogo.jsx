@@ -7,7 +7,7 @@ import {
 
 export const PageLogo = () => {
   return (
-    <LogoLink to={"list"}>
+    <LogoLink to={"counters"}>
       <FirstLetterLogo>e</FirstLetterLogo>asyRing<ArrowLogo>↺</ArrowLogo>
       <SubLogo>counter</SubLogo>
     </LogoLink>

@@ -8,11 +8,11 @@ export const App = () => {
   return (
     <Routes>
       <Route path="/:user/" element={<SharedLayout />}>
-        <Route path="list" element={<CounterListPage />}></Route>
+        <Route path="counters" element={<CounterListPage />}></Route>
+        <Route path="counters/:addressID" element={<CounterPage />}></Route>
         <Route path="dashboard" element={<DashboardPage />}></Route>
-        <Route path="counter/:addressID" element={<CounterPage />}></Route>
-        <Route path="404" element={<div>404</div>} />
       </Route>
+      <Route path="*" errorElement={<CounterListPage />} />
     </Routes>
   );
 };
