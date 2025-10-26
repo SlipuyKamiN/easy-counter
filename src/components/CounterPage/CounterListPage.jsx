@@ -24,7 +24,7 @@ const CounterListPage = () => {
             data.map(({ id, address }) => {
               return (
                 <AddressesListItem key={id}>
-                  <Link to={`${id}`}>{address}</Link>
+                  <Link to={`counters/${id}`}>{address}</Link>
                 </AddressesListItem>
               );
             })}

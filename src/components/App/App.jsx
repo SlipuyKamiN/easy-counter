@@ -7,12 +7,12 @@ import CounterListPage from "../CounterPage/CounterListPage";
 export const App = () => {
   return (
     <Routes>
-      <Route path="/:user/" element={<SharedLayout />}>
-        <Route path="counters" element={<CounterListPage />}></Route>
-        <Route path="counters/:addressID" element={<CounterPage />}></Route>
-        <Route path="dashboard" element={<DashboardPage />}></Route>
+      <Route path=":user" element={<SharedLayout />}>
+        <Route index element={<CounterListPage />} />
+        <Route path="counters/:addressID" element={<CounterPage />} />
+        <Route path="dashboard" element={<DashboardPage />} />
+        <Route path="*" element={<div>Not found</div>} />
       </Route>
-      <Route path="*" errorElement={<CounterListPage />} />
     </Routes>
   );
 };

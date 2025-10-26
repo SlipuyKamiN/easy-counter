@@ -1,3 +1,4 @@
+import { useParams } from "react-router-dom";
 import {
   ArrowLogo,
   FirstLetterLogo,
@@ -6,8 +7,10 @@ import {
 } from "./PageLogo.styled";
 
 export const PageLogo = () => {
+  const { user } = useParams();
+
   return (
-    <LogoLink to={"counters"}>
+    <LogoLink to={`/${user}`}>
       <FirstLetterLogo>e</FirstLetterLogo>asyRing<ArrowLogo>↺</ArrowLogo>
       <SubLogo>counter</SubLogo>
     </LogoLink>

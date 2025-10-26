@@ -1,24 +1,28 @@
-import { Link, NavLink } from "react-router-dom";
+import { NavLink, useParams } from "react-router-dom";
 import { HeaderWrapper, NavList, PageHeader } from "./Header.styled";
 import { Container } from "../SharedLayout/SharedLayout.styled";
 import { PageLogo } from "../Common/PageLogo";
 
-const Header = () => (
-  <PageHeader>
-    <Container>
-      <HeaderWrapper>
-        <PageLogo />
-        <NavList>
-          <li>
-            <NavLink to={"counters"}>Counter list</NavLink>
-          </li>
-          <li>
-            <NavLink to={"dashboard"}>Dashboard</NavLink>
-          </li>
-        </NavList>
-      </HeaderWrapper>
-    </Container>
-  </PageHeader>
-);
+const Header = () => {
+  const { user } = useParams();
+
+  return (
+    <PageHeader>
+      <Container>
+        <HeaderWrapper>
+          <PageLogo />
+          <NavList>
+            <li>
+              <NavLink to={`/${user}`}>Counter list</NavLink>
+            </li>
+            <li>
+              <NavLink to={"dashboard"}>Dashboard</NavLink>
+            </li>
+          </NavList>
+        </HeaderWrapper>
+      </Container>
+    </PageHeader>
+  );
+};
 
 export default Header;
