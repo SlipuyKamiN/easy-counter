@@ -1,9 +1,13 @@
 import { useState, useRef } from "react";
+import { useParams } from "react-router-dom";
 
 export const useAPI = (method) => {
+  const { user } = useParams();
   const [data, setData] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
   const [isError, setIsError] = useState(false);
+
+  console.log(data?.filter(({ users }) => users.includes(user)));
 
   const abortControllerRef = useRef(null);
   const isPendingRef = useRef(false); // блокування повторних викликів
