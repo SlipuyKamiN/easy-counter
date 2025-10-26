@@ -28,18 +28,74 @@ const initialRow = {
     { name: "Geschirrtücher", available: 0, minimum: 0 },
   ],
   essentials: [
-    { name: "Toilettenpapier", available: false },
-    { name: "Küchenrollen", available: false },
-    { name: "Geschirrspültabs", available: false },
-    { name: "Schwammtücher", available: false },
-    { name: "Kaffeetabs/Tee", available: false },
-    { name: "Handseife", available: false },
-    { name: "Reinigungsmittel", available: false },
-    { name: "Geschirrspülmittel", available: false },
-    { name: "Spülschwämme", available: false },
-    { name: "Zucker, Salz, Pfeffer", available: false },
-    { name: "Essig, Öl", available: false },
-    { name: "Duschgel/Shampoo", available: false },
+    {
+      name: "Toilettenpapier",
+      available: false,
+    },
+    {
+      name: "Küchenrollen",
+      available: false,
+    },
+    {
+      name: "Geschirrspülmittel",
+      available: false,
+    },
+    {
+      name: "Schwammtücher",
+      available: true,
+    },
+    {
+      name: "Spülschwämme",
+      available: false,
+    },
+    {
+      name: "Geschirrspültabs",
+      available: false,
+    },
+    {
+      name: "Kaffee",
+      available: false,
+    },
+    {
+      name: "Handseife",
+      available: false,
+    },
+    {
+      name: "Shampoo",
+      available: false,
+    },
+    {
+      name: "Duschgel",
+      available: false,
+    },
+    {
+      name: "Badreiniger",
+      available: false,
+    },
+    {
+      name: "Küchenreiniger",
+      available: false,
+    },
+    {
+      name: "Kalkreiniger",
+      available: false,
+    },
+    {
+      name: "Toilettenreiniger",
+      available: false,
+    },
+    {
+      name: "Müllsäcke große",
+      available: false,
+    },
+    {
+      name: "Müllsäcke kleine",
+      available: false,
+    },
+    {
+      name: "Sonstiges:",
+      available: false,
+    },
   ],
 };
 
@@ -73,6 +129,7 @@ export const EmptyRow = ({ dispatch, data }) => {
       <Td>
         <AddressInput
           required
+          name="address"
           type="text"
           onBlur={({ target }) => {
             setNewRow((prev) => ({ ...prev, address: target.value }));

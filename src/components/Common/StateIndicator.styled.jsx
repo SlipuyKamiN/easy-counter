@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { colors } from "~/styles/common/vars";
+import { colors, transition } from "~/styles/common/vars";
 
 export const StateWrapper = styled.div`
   display: flex;
@@ -43,6 +43,58 @@ export const StateWrapper = styled.div`
 
     100% {
       opacity: 0;
+    }
+  }
+`;
+
+export const RedirectWrapper = styled.div`
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+
+  padding: 20px 0;
+
+  input {
+    display: block;
+
+    border: 1px solid ${colors.accent.cyan};
+    padding: 12px;
+    border-radius: 12px;
+
+    font-family: inherit;
+    font-size: inherit;
+
+    background-color: transparent;
+
+    &::placeholder {
+      font-size: inherit;
+    }
+
+    &:hover,
+    &:focus {
+      border-color: ${colors.accent.blue};
+    }
+  }
+
+  a {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: space-between;
+
+    border: 1px solid ${colors.accent.cyan};
+    padding: 10px;
+    border-radius: 12px;
+
+    transition: ${transition.duration};
+    color: ${colors.light.lo100};
+
+    &:hover,
+    &:focus {
+      color: ${colors.accent.blue};
+      border-color: ${colors.accent.blue};
     }
   }
 `;

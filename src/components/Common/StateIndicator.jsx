@@ -1,8 +1,12 @@
 import { ImSpinner3 } from "react-icons/im";
 import { BiError } from "react-icons/bi";
 import { BsCloudCheck } from "react-icons/bs";
-import { StateWrapper } from "./StateIndicator.styled";
+import { RedirectWrapper, StateWrapper } from "./StateIndicator.styled";
 import { Container, Section } from "../SharedLayout/SharedLayout.styled";
+import { AddressInput } from "../DashboardPage/DashboardPage.styled";
+import { Link } from "react-router-dom";
+import { useState } from "react";
+import { CiRoute } from "react-icons/ci";
 
 export const StateIndicator = ({
   isLoading = false,
@@ -24,11 +28,28 @@ export const StateIndicator = ({
   );
 };
 
-export const StateSection = (props) => {
+export const EmptyPage = () => {
+  const [username, setUsername] = useState("");
+
   return (
     <Section>
       <Container>
-        <StateIndicator {...props} />
+        <BiError size={60} />
+        <h1>Oops... Something went wrong.</h1>
+        <RedirectWrapper>
+          <input
+            type="text"
+            name="username"
+            placeholder="Input your username to"
+            onChange={({ target }) => setUsername(target.value.toLowerCase())}
+          />
+          <Link to={`/${username}`}>
+            <span>Redirect</span>
+            <CiRoute size={25} />
+          </Link>
+        </RedirectWrapper>
+        <p>or</p>
+        <p>contact support.</p>
       </Container>
     </Section>
   );
