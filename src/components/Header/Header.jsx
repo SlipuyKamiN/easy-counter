@@ -11,14 +11,16 @@ const Header = () => {
       <Container>
         <HeaderWrapper>
           <PageLogo />
-          <NavList>
-            <li>
-              <NavLink to={`/${user}`}>Counter list</NavLink>
-            </li>
-            <li>
-              <NavLink to={"dashboard"}>Dashboard</NavLink>
-            </li>
-          </NavList>
+          {user === "admin-1001" && (
+            <NavList>
+              <li>
+                <NavLink to={`/${user}`}>Counter list</NavLink>
+              </li>
+              <li>
+                <NavLink to={"dashboard"}>Dashboard</NavLink>
+              </li>
+            </NavList>
+          )}
         </HeaderWrapper>
       </Container>
     </PageHeader>
