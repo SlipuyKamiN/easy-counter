@@ -648,7 +648,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
     left: 28px;
     font-size: 11px;
   }
-`,By=()=>{const{user:l}=uc();return z.jsxs(Bx,{to:`/${l}`,children:[z.jsx(qx,{children:"e"}),"asyRing",z.jsx(Gx,{children:"↺"}),z.jsx(Vx,{children:"counter"})]})},Xx=()=>{const{user:l}=uc();return z.jsx(Lx,{children:z.jsx(Di,{children:z.jsxs(Hx,{children:[z.jsx(By,{}),z.jsxs(Yx,{children:[z.jsx("li",{children:z.jsx(zf,{to:`/${l}`,children:"Counter list"})}),z.jsx("li",{children:z.jsx(zf,{to:"dashboard",children:"Dashboard"})})]})]})})})},Qx=st.footer`
+`,By=()=>{const{user:l}=uc();return z.jsxs(Bx,{to:`/${l}`,children:[z.jsx(qx,{children:"e"}),"asyRing",z.jsx(Gx,{children:"↺"}),z.jsx(Vx,{children:"counter"})]})},Xx=()=>{const{user:l}=uc();return z.jsx(Lx,{children:z.jsx(Di,{children:z.jsxs(Hx,{children:[z.jsx(By,{}),l==="admin-1001"&&z.jsxs(Yx,{children:[z.jsx("li",{children:z.jsx(zf,{to:`/${l}`,children:"Counter list"})}),z.jsx("li",{children:z.jsx(zf,{to:"dashboard",children:"Dashboard"})})]})]})})})},Qx=st.footer`
   padding: 40px 0;
 `,Zx=st(Di)`
   display: flex;
