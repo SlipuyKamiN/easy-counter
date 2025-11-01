@@ -31,7 +31,7 @@ export const getAllColums = (data) => {
   const allColumns = [
     "id",
     "Adresse",
-    "Nächste Checkout",
+    "Tour-Datum",
     "Abholung",
     "Taschen benötigt",
     ...allLinens,
@@ -47,7 +47,7 @@ export const getSortBy = (key) => {
       return (a, b) => Number(a.id) - Number(b.id);
     case "adresse":
       return (a, b) => a.address.localeCompare(b.address);
-    case "nächste checkout":
+    case "tour-datum":
       return (a, b) => {
         const aDate = a.nextCheckout[0];
         const bDate = b.nextCheckout[0];
