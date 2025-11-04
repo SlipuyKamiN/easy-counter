@@ -8,13 +8,11 @@ export const useAPI = (method) => {
   const [isError, setIsError] = useState(false);
 
   const abortControllerRef = useRef(null);
-  const isPendingRef = useRef(false); // блокування повторних викликів
+  const isPendingRef = useRef(false);
 
   const dispatch = async (payload) => {
-    // блокуємо новий запит, якщо попередній ще не завершився
     if (isPendingRef.current) return;
 
-    // відміняємо попередній запит
     if (abortControllerRef.current) {
       abortControllerRef.current.abort();
     }
@@ -31,7 +29,7 @@ export const useAPI = (method) => {
 
       if (response.status >= 200 && response.status < 300) {
         const data = response.data.length
-          ? response.data.filter(({ users }) => users.includes(user))
+          ? response.data.filter(({ users }) => users?.includes(user))
           : response.data;
 
         setData(data);
@@ -44,7 +42,8 @@ export const useAPI = (method) => {
         setIsError(true);
       }
     } catch (error) {
-      // axios abort видає CanceledError
+      console.warn(error);
+
       if (error.name === "CanceledError" || error.name === "AbortError") return;
 
       setData({ message: error.message, status: error.status });

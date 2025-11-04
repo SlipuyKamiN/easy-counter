@@ -17,6 +17,7 @@ const initialRow = {
   address: "",
   nextCheckout: [],
   pickupNeeded: false,
+  users: ["admin-1001"],
   linens: [
     { name: "Bettbezüge", available: 0, minimum: 0 },
     { name: "Kissenbezüge", available: 0, minimum: 0 },
@@ -42,7 +43,7 @@ const initialRow = {
     },
     {
       name: "Schwammtücher",
-      available: true,
+      available: false,
     },
     {
       name: "Spülschwämme",
