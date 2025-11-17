@@ -56,11 +56,11 @@ export const getSortBy = (key) => {
           return aDate - bDate;
         }
 
-        if (aDate < Date.now()) {
+        if (aDate < new Date().setHours(0, 0, 0, 0)) {
           return 1;
         }
 
-        if (bDate < Date.now()) {
+        if (bDate < new Date().setHours(0, 0, 0, 0)) {
           return -1;
         }
 
@@ -91,4 +91,8 @@ export const formatDate = (date) => {
       d.getFullYear()
     ).slice(2)} ` + `${pad(d.getHours())}:${pad(d.getMinutes())}`
   );
+};
+
+export const filterPast = (dates) => {
+  return dates.filter((d) => d >= new Date().setHours(0, 0, 0, 0));
 };

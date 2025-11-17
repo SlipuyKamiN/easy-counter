@@ -15,6 +15,7 @@ import DatePicker from "react-multi-date-picker";
 import { TiDeleteOutline } from "react-icons/ti";
 import {
   countBags,
+  filterPast,
   formatDate,
   getAllColums,
   getSortBy,
@@ -95,13 +96,11 @@ const DashboardPage = () => {
                         format="DD.MM.YY"
                         multiple
                         minDate={new Date()}
-                        value={item.nextCheckout.filter((d) => d > Date.now())}
+                        value={filterPast(item.nextCheckout)}
                         sort
                         onChange={(dates) => (item.nextCheckout = dates)}
                         onClose={() => {
-                          item.nextCheckout = item.nextCheckout.filter(
-                            (d) => d > Date.now()
-                          );
+                          item.nextCheckout = filterPast(item.nextCheckout);
                           handleChange(item.id, item);
                         }}
                       />
