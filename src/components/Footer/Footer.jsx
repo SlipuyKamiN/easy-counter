@@ -1,5 +1,5 @@
 import { PageLogo } from "../Common/PageLogo";
-import { SocialsLinks } from "../Common/SocialsLinks.styled";
+import { SocialsLinks } from "../Common/SocialsLinks";
 import { AddressListItem, FooterContainer, PageFooter } from "./Footer.styled";
 
 export const Footer = () => {

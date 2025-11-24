@@ -11,7 +11,7 @@ export const TourerSwitchWrapper = styled.div`
     appearance: none;
     outline: none;
     width: 50px;
-    height: 27px;
+    height: 28px;
     background-color: ${colors.light.hi200};
     border: 1px solid ${colors.light.hi100};
     border-radius: 50px;
@@ -23,9 +23,10 @@ export const TourerSwitchWrapper = styled.div`
   input:after {
     position: absolute;
     content: "M";
+
     font-family: inherit;
 
-    top: 1px;
+    top: 2px;
     left: 0px;
 
     border-radius: 50%;
@@ -36,6 +37,11 @@ export const TourerSwitchWrapper = styled.div`
     line-height: 1;
     padding: 5px 7px;
     transition: all ${transition.duration};
+
+    @media screen and (min-width: 768px) {
+      top: 1px;
+      padding: 6px 7px;
+    }
   }
 
   input:checked {
