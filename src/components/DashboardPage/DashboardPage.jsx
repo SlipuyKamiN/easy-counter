@@ -11,7 +11,6 @@ import {
 } from "./DashboardPage.styled";
 import { API } from "~/API/API";
 import { useAPI } from "~/hooks/useAPI";
-import DatePicker from "react-multi-date-picker";
 import { TiDeleteOutline } from "react-icons/ti";
 import {
   countBags,
@@ -26,6 +25,7 @@ import { Container, Section } from "../SharedLayout/SharedLayout.styled";
 import { FaSortAmountDownAlt } from "react-icons/fa";
 import { StateIndicator } from "../Common/StateIndicator";
 import { QtyInput } from "../Common/QtyInput";
+import { TourDatePicker } from "./TourDatePicker";
 
 const DashboardPage = () => {
   const [dispatch, data, isLoading, isError] = useAPI(API.getAll);
@@ -89,7 +89,8 @@ const DashboardPage = () => {
                     </Td>
                     <Td className="sticky left">{item.address}</Td>
                     <Td>
-                      <DatePicker
+                      <TourDatePicker item={item} handleChange={handleChange} />
+                      {/* <DatePicker
                         name="date"
                         placeholder=" - "
                         inputClass="date-picker"
@@ -98,9 +99,13 @@ const DashboardPage = () => {
                         minDate={new Date()}
                         value={item.nextCheckout}
                         sort
-                        onChange={(dates) => (item.nextCheckout = dates)}
-                        onClose={() => handleChange(item.id, item)}
-                      />
+                        onChange={(dates) => {
+                          handleChange(item.id, {
+                            ...item,
+                            nextCheckout: dates,
+                          });
+                        }}
+                      /> */}
                     </Td>
                     <Td>
                       <PickUpCheckbox
