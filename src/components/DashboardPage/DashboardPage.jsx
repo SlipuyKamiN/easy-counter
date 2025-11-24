@@ -14,7 +14,6 @@ import { useAPI } from "~/hooks/useAPI";
 import { TiDeleteOutline } from "react-icons/ti";
 import {
   countBags,
-  // filterPast,
   formatDate,
   getAllColums,
   getSortBy,
@@ -90,22 +89,6 @@ const DashboardPage = () => {
                     <Td className="sticky left">{item.address}</Td>
                     <Td>
                       <TourDatePicker item={item} handleChange={handleChange} />
-                      {/* <DatePicker
-                        name="date"
-                        placeholder=" - "
-                        inputClass="date-picker"
-                        format="DD.MM.YY"
-                        multiple
-                        minDate={new Date()}
-                        value={item.nextCheckout}
-                        sort
-                        onChange={(dates) => {
-                          handleChange(item.id, {
-                            ...item,
-                            nextCheckout: dates,
-                          });
-                        }}
-                      /> */}
                     </Td>
                     <Td>
                       <PickUpCheckbox

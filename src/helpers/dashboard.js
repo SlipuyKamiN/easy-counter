@@ -32,7 +32,7 @@ export const getAllColums = (data) => {
     "id",
     "Adresse",
     "Tour-Datum",
-    "Abholung",
+    "Tourer",
     "Taschen benötigt",
     ...allLinens,
     ...allEssentials,
