@@ -11,7 +11,7 @@ import { getAllColums } from "~/helpers/dashboard";
 import { useState } from "react";
 import { IoIosAddCircleOutline } from "react-icons/io";
 import { EmptyQtyInput } from "../Common/QtyInput";
-import { EssentialsCheckbox, PickUpCheckbox } from "../Common/PickUpCheckbox";
+import { EssentialsCheckbox, TourerSwitcher } from "../Common/Checkboxes";
 
 const initialRow = {
   address: "",
@@ -153,7 +153,7 @@ export const EmptyRow = ({ dispatch, data }) => {
         />
       </Td>
       <Td>
-        <PickUpCheckbox
+        <TourerSwitcher
           required
           type="checkbox"
           checked={newRow.pickupNeeded}

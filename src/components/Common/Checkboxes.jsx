@@ -1,8 +1,12 @@
 import { useState } from "react";
-import { Checkbox, CheckboxWrapper, RiderSwitch } from "./Inputs.styled";
+import {
+  Checkbox,
+  CheckboxWrapper,
+  TourerSwitchWrapper,
+} from "./Inputs.styled";
 import { FaCheck } from "react-icons/fa";
 
-export const PickUpCheckbox = ({ item, onChange }) => {
+export const TourerSwitcher = ({ item, onChange }) => {
   const [isChecked, setIsChecked] = useState(item.pickupNeeded);
 
   const handleChange = () => {
@@ -12,14 +16,14 @@ export const PickUpCheckbox = ({ item, onChange }) => {
   };
 
   return (
-    <RiderSwitch>
+    <TourerSwitchWrapper>
       <Checkbox
         name="pick-up"
         type="checkbox"
         checked={isChecked}
         onChange={handleChange}
       />
-    </RiderSwitch>
+    </TourerSwitchWrapper>
   );
 };
 

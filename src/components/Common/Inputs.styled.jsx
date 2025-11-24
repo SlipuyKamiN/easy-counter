@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 import { colors, transition } from "~/styles/common/vars";
 
-export const RiderSwitch = styled.div`
+export const TourerSwitchWrapper = styled.div`
   position: relative;
   margin: auto;
 
@@ -11,7 +11,7 @@ export const RiderSwitch = styled.div`
     appearance: none;
     outline: none;
     width: 50px;
-    height: 30px;
+    height: 27px;
     background-color: ${colors.light.hi200};
     border: 1px solid ${colors.light.hi100};
     border-radius: 50px;
@@ -25,11 +25,11 @@ export const RiderSwitch = styled.div`
     content: "M";
     font-family: inherit;
 
-    top: 3px;
-    left: 2px;
+    top: 1px;
+    left: 0px;
 
     border-radius: 50%;
-    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.2);
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
     background-color: ${colors.classicWhite};
 
     text-align: center;
@@ -45,7 +45,7 @@ export const RiderSwitch = styled.div`
 
   input:checked:after {
     content: "A";
-    transform: translateX(20px);
+    transform: translateX(23px);
     box-shadow: -2px 4px 3px rgba(0, 0, 0, 0.05);
   }
 `;

@@ -2,10 +2,10 @@ import { useEffect, useRef } from "react";
 import { useParams } from "react-router-dom";
 import { API } from "~/API/API";
 import { useAPI } from "~/hooks/useAPI";
-import { PickUpCheckbox, EssentialsCheckbox } from "../Common/PickUpCheckbox";
+import { EssentialsCheckbox } from "../Common/Checkboxes";
 import { Counter } from "./Counter";
 import { Container, Section } from "../SharedLayout/SharedLayout.styled";
-import { CounterItem, Heading, PickupWrapper } from "./CounterPage.styled";
+import { CounterItem, Heading } from "./CounterPage.styled";
 import { StateIndicator } from "../Common/StateIndicator";
 import throttle from "lodash.throttle";
 import useWakeLock from "~/hooks/useWakeLock";
@@ -54,19 +54,6 @@ const CounterPage = () => {
           <>
             <Heading>{current.address}</Heading>
             <ul>
-              <PickupWrapper>
-                <h3>Abholung:</h3>
-                <PickUpCheckbox
-                  onChange={() =>
-                    throttledCheckboxChange(current.id, {
-                      ...current,
-                      pickupNeeded: !current.pickupNeeded,
-                      updatedAt: new Date(),
-                    })
-                  }
-                  item={current}
-                />
-              </PickupWrapper>
               {current.linens.map(({ name, available }) => (
                 <Counter
                   key={name}

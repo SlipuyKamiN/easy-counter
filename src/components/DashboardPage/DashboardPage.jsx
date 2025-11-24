@@ -19,7 +19,7 @@ import {
   getSortBy,
 } from "~/helpers/dashboard";
 import { EmptyRow } from "./EmptyRow";
-import { EssentialsCheckbox, PickUpCheckbox } from "../Common/PickUpCheckbox";
+import { EssentialsCheckbox, TourerSwitcher } from "../Common/Checkboxes";
 import { Container, Section } from "../SharedLayout/SharedLayout.styled";
 import { FaSortAmountDownAlt } from "react-icons/fa";
 import { StateIndicator } from "../Common/StateIndicator";
@@ -91,7 +91,7 @@ const DashboardPage = () => {
                       <TourDatePicker item={item} handleChange={handleChange} />
                     </Td>
                     <Td>
-                      <PickUpCheckbox
+                      <TourerSwitcher
                         onChange={() =>
                           handleChange(item.id, {
                             ...item,
