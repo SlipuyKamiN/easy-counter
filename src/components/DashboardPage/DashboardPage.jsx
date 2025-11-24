@@ -78,7 +78,14 @@ const DashboardPage = () => {
                     <Td className="id">
                       <DeleteBtn
                         type="button"
-                        onClick={() => deleteRow(item.id).then(dispatch)}
+                        onClick={() => {
+                          const text = `Do you want to delete this address: ${item.address}?`;
+                          if (window.confirm(text)) {
+                            deleteRow(item.id).then(dispatch);
+                          } else {
+                            console.log("Canceled");
+                          }
+                        }}
                       >
                         {item.id}
                         <span>
