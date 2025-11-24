@@ -4,13 +4,6 @@ import DatePicker from "react-multi-date-picker";
 export const TourDatePicker = ({ item, handleChange }) => {
   const [dates, setDates] = useState(item.nextCheckout);
 
-  //   useEffect(() => {
-  //     handleChange(item.id, {
-  //       ...item,
-  //       nextCheckout: dates,
-  //     });
-  //   }, [item, dates, handleChange]);
-
   return (
     <DatePicker
       name="date"
