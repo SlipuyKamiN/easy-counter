@@ -1,5 +1,6 @@
 import { useState, useRef } from "react";
 import { useParams } from "react-router-dom";
+import { filterPast } from "~/helpers/dashboard";
 
 export const useAPI = (method) => {
   const { user } = useParams();
@@ -29,7 +30,12 @@ export const useAPI = (method) => {
 
       if (response.status >= 200 && response.status < 300) {
         const data = response.data.length
-          ? response.data.filter(({ users }) => users?.includes(user))
+          ? response.data
+              .filter(({ users }) => users?.includes(user))
+              .map((item) => ({
+                ...item,
+                nextCheckout: filterPast(item.nextCheckout),
+              }))
           : response.data;
 
         setData(data);
