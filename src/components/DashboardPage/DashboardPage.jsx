@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import {
   BagsNeeded,
   DeleteBtn,
+  DirectionBtn,
+  DirectionsLink,
   SortBtn,
   Table,
   TableInputWrapper,
@@ -16,6 +18,7 @@ import {
   countBags,
   formatDate,
   getAllColums,
+  getRouteLink,
   getSortBy,
 } from "~/helpers/dashboard";
 import { EmptyRow } from "./EmptyRow";
@@ -25,12 +28,14 @@ import { FaSortAmountDownAlt } from "react-icons/fa";
 import { StateIndicator } from "../Common/StateIndicator";
 import { QtyInput } from "../Common/QtyInput";
 import { TourDatePicker } from "./TourDatePicker";
+import { MdOutlineDirections } from "react-icons/md";
 
 const DashboardPage = () => {
   const [dispatch, data, isLoading, isError] = useAPI(API.getAll);
   const [update] = useAPI(API.update);
   const [deleteRow] = useAPI(API.delete);
   const [sortBy, setSortBy] = useState("id");
+  const [selectedAddresses, setSellectedAddresses] = useState([]);
 
   useEffect(() => {
     if (!data) {
@@ -42,6 +47,20 @@ const DashboardPage = () => {
     update({ id, body }).then(() => dispatch());
   };
 
+  const selectAddress = (address) => {
+    let arr = [];
+
+    if (selectedAddresses.includes(address)) {
+      arr = selectedAddresses.filter((a) => a !== address);
+      setSellectedAddresses(arr);
+    } else {
+      arr = [...selectedAddresses, address];
+      setSellectedAddresses(arr);
+    }
+
+    return;
+  };
+
   return (
     <Section>
       <Container>
@@ -51,6 +70,28 @@ const DashboardPage = () => {
               <thead>
                 <tr>
                   {getAllColums(data).allColumns.map((col, i) => {
+                    if (col === "Adresse") {
+                      return (
+                        <Th key={col} className="sticky top">
+                          <DirectionsLink
+                            href={getRouteLink(selectedAddresses)}
+                            target="_blank"
+                            rel="noopener nofollow noreferrer"
+                            className={selectedAddresses.length && "active"}
+                          >
+                            {selectedAddresses.length ? (
+                              <>
+                                Route planen
+                                <MdOutlineDirections size={18} />
+                              </>
+                            ) : (
+                              col
+                            )}
+                          </DirectionsLink>
+                        </Th>
+                      );
+                    }
+
                     if (i <= 2) {
                       return (
                         <Th key={col} className="sticky top">
@@ -93,7 +134,18 @@ const DashboardPage = () => {
                         </span>
                       </DeleteBtn>
                     </Td>
-                    <Td className="sticky left">{item.address}</Td>
+                    <Td className="sticky left">
+                      <DirectionBtn
+                        className={
+                          selectedAddresses.includes(item.address) && "selected"
+                        }
+                        onClick={() => {
+                          selectAddress(item.address);
+                        }}
+                      >
+                        {item.address}
+                      </DirectionBtn>
+                    </Td>
                     <Td>
                       <TourDatePicker item={item} handleChange={handleChange} />
                     </Td>
