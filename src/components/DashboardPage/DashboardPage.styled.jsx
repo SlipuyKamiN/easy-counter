@@ -124,7 +124,7 @@ export const DirectionsLink = styled.a`
   &.active {
     cursor: pointer;
     pointer-events: all;
-    color: ${colors.accent.darkBlue};
+    color: ${colors.accent.blue};
   }
 `;
 
@@ -158,11 +158,11 @@ export const DirectionBtn = styled.button`
   transition: ${transition.duration};
 
   &.selected {
-    color: ${colors.accent.darkBlue};
+    color: ${colors.accent.blue};
   }
   @media screen and (min-width: 768px) {
     &:hover {
-      color: ${colors.accent.blue};
+      color: ${colors.light.mid100};
     }
   }
 `;

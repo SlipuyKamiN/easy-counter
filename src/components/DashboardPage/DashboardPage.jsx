@@ -82,7 +82,7 @@ const DashboardPage = () => {
                             {selectedAddresses.length ? (
                               <>
                                 Route planen
-                                <MdOutlineDirections size={18} />
+                                <MdOutlineDirections />
                               </>
                             ) : (
                               col
