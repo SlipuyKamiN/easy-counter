@@ -94,5 +94,7 @@ export const formatDate = (date) => {
 };
 
 export const filterPast = (dates) => {
+  if (!dates) return [];
+
   return dates.filter((d) => d >= new Date().setHours(0, 0, 0, 0));
 };
