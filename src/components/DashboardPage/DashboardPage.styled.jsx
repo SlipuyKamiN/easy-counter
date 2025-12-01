@@ -120,6 +120,7 @@ export const Th = styled.th`
 export const DirectionsLink = styled.a`
   pointer-events: none;
   cursor: auto;
+  display: block;
 
   &.active {
     cursor: pointer;
@@ -156,10 +157,12 @@ export const DirectionBtn = styled.button`
   margin: 0;
 
   transition: ${transition.duration};
+  outline: none;
 
   &.selected {
-    color: ${colors.accent.blue};
+    box-shadow: -7px 0px 1px -4px ${colors.accent.blue};
   }
+
   @media screen and (min-width: 768px) {
     &:hover {
       color: ${colors.light.mid100};
