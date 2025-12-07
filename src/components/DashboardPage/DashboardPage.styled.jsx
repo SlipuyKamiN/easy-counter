@@ -117,6 +117,18 @@ export const Th = styled.th`
   text-align: center;
 `;
 
+export const DirectionsLink = styled.a`
+  pointer-events: none;
+  cursor: auto;
+  display: block;
+
+  &.active {
+    cursor: pointer;
+    pointer-events: all;
+    color: ${colors.accent.blue};
+  }
+`;
+
 export const Td = styled.td`
   position: relative;
   text-align: center;
@@ -135,6 +147,26 @@ export const Td = styled.td`
 
     font-size: inherit;
     font-family: inherit;
+  }
+`;
+
+export const DirectionBtn = styled.button`
+  cursor: pointer;
+  pointer-events: all;
+  font-size: inherit;
+  margin: 0;
+
+  transition: ${transition.duration};
+  outline: none;
+
+  &.selected {
+    box-shadow: -7px 0px 1px -4px ${colors.accent.blue};
+  }
+
+  @media screen and (min-width: 768px) {
+    &:hover {
+      color: ${colors.light.mid100};
+    }
   }
 `;
 

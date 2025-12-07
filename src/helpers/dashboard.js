@@ -98,3 +98,29 @@ export const filterPast = (dates) => {
 
   return dates.filter((d) => d >= new Date().setHours(0, 0, 0, 0));
 };
+
+export const getRouteLink = (addresses) => {
+  if (!Array.isArray(addresses) || addresses.length === 0) return null;
+
+  const waypoints = addresses.map((addr) => {
+    let cleaned = addr;
+
+    cleaned = cleaned.replace(/\b(APART\w*|STUDIO\w*)\b/gi, "");
+
+    cleaned = cleaned.replace("-", "straße ");
+
+    cleaned = cleaned.replace(/\|/g, "");
+
+    cleaned = cleaned.replace(/\s+/g, " ").trim();
+
+    return encodeURIComponent(cleaned);
+  });
+
+  const origin = "Wexstra%C3%9Fe%2040%2010715";
+  const destination = "Wexstra%C3%9Fe%2040%2010715";
+
+  let url = `https://www.google.com/maps/dir/?api=1&origin=${origin}&destination=${destination}`;
+  if (waypoints) url += `&waypoints=${waypoints.join("|")}`;
+
+  return url;
+};
