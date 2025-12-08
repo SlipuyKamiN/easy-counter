@@ -29,6 +29,7 @@ import { StateIndicator } from "../Common/StateIndicator";
 import { QtyInput } from "../Common/QtyInput";
 import { TourDatePicker } from "./TourDatePicker";
 import { MdOutlineDirections } from "react-icons/md";
+import { CommentInput } from "../Common/CommentInput";
 
 const DashboardPage = () => {
   const [dispatch, data, isLoading, isError] = useAPI(API.getAll);
@@ -217,6 +218,9 @@ const DashboardPage = () => {
                         </Td>
                       );
                     })}
+                    <Td>
+                      <CommentInput item={item} handleChange={handleChange} />
+                    </Td>
                   </tr>
                 ))}
                 <EmptyRow dispatch={dispatch} data={data} />

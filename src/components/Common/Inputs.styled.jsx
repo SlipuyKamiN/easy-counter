@@ -92,3 +92,30 @@ export const Checkbox = styled.input`
 
   cursor: pointer;
 `;
+
+export const TextInput = styled.input`
+  width: calc(100dvw - 182px);
+  max-width: 240px;
+
+  height: 34px;
+  padding: 5px 10px;
+  border-radius: 12px;
+
+  margin: 0 auto;
+  font-size: 18px;
+  outline: none;
+
+  background-color: transparent;
+  border: 1px solid ${colors.light.hi100};
+  color: ${colors.light.lo200};
+  transition: all ${transition.duration};
+
+  &:focus {
+    box-shadow: 0px 0px 10px 0 ${colors.light.hi100};
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 240px;
+    max-width: none;
+  }
+`;

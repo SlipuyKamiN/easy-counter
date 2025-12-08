@@ -1,23 +1,23 @@
 [
   {
     "address": "Wex-40 | 10715",
-    "nextCheckout": [],
+    "nextTour": [],
     "pickupNeeded": false,
     "users": ["admin-1001"],
     "linens": [
       {
         "name": "Bettbezüge",
-        "available": 16,
+        "available": 21,
         "minimum": 0
       },
       {
         "name": "Kissenbezüge",
-        "available": 0,
+        "available": 4,
         "minimum": 0
       },
       {
         "name": "Laken grün",
-        "available": 0,
+        "available": 11,
         "minimum": 0
       },
       {
@@ -27,7 +27,7 @@
       },
       {
         "name": "Duschtücher",
-        "available": 5,
+        "available": 0,
         "minimum": 0
       },
       {
@@ -37,19 +37,19 @@
       },
       {
         "name": "Badvorleger",
-        "available": 23,
+        "available": 16,
         "minimum": 0
       },
       {
         "name": "Geschirrtücher",
-        "available": 36,
+        "available": 30,
         "minimum": 0
       }
     ],
     "essentials": [
       {
         "name": "Toilettenpapier",
-        "available": false
+        "available": true
       },
       {
         "name": "Küchenrollen",
@@ -65,7 +65,7 @@
       },
       {
         "name": "Spülschwämme",
-        "available": false
+        "available": true
       },
       {
         "name": "Geschirrspültabs",
@@ -110,29 +110,25 @@
       {
         "name": "Müllsäcke kleine",
         "available": true
-      },
-      {
-        "name": "Sonstiges:",
-        "available": false
       }
     ],
     "id": "1",
-    "updatedAt": "2025-11-26T17:59:31.863Z"
+    "updatedAt": "2025-12-07T11:38:01.705Z"
   },
   {
     "address": "Tempelherren-20 | 10961",
-    "nextCheckout": [1764522830100],
+    "nextTour": [1765453378017, 1765798978017],
     "pickupNeeded": false,
     "users": ["admin-1001", "be-0102", "re-1016"],
     "linens": [
       {
         "name": "Bettbezüge",
-        "available": 9,
+        "available": 8,
         "minimum": 4
       },
       {
         "name": "Kissenbezüge",
-        "available": 8,
+        "available": 9,
         "minimum": 4
       },
       {
@@ -147,22 +143,22 @@
       },
       {
         "name": "Duschtücher",
-        "available": 5,
+        "available": 7,
         "minimum": 4
       },
       {
         "name": "Handtücher",
-        "available": 4,
+        "available": 5,
         "minimum": 4
       },
       {
         "name": "Badvorleger",
-        "available": 8,
+        "available": 12,
         "minimum": 4
       },
       {
         "name": "Geschirrtücher",
-        "available": 7,
+        "available": 6,
         "minimum": 4
       }
     ],
@@ -181,11 +177,11 @@
       },
       {
         "name": "Schwammtücher",
-        "available": true
+        "available": false
       },
       {
         "name": "Spülschwämme",
-        "available": true
+        "available": false
       },
       {
         "name": "Geschirrspültabs",
@@ -193,7 +189,7 @@
       },
       {
         "name": "Kaffee",
-        "available": true
+        "available": false
       },
       {
         "name": "Handseife",
@@ -221,668 +217,64 @@
       },
       {
         "name": "Toilettenreiniger",
-        "available": true
-      },
-      {
-        "name": "Müllsäcke große",
-        "available": true
-      },
-      {
-        "name": "Müllsäcke kleine",
         "available": false
       },
       {
-        "name": "Sonstiges:",
+        "name": "Müllsäcke große",
+        "available": false
+      },
+      {
+        "name": "Müllsäcke kleine",
         "available": false
       }
     ],
     "id": "2",
-    "updatedAt": "2025-11-27T10:56:51.802Z"
+    "updatedAt": "2025-12-07T13:48:45.306Z"
   },
   {
     "address": "Burgherren-11 | 12101",
-    "nextCheckout": [1764354829657],
-    "pickupNeeded": false,
+    "nextTour": [1765799076792, 1766144676792],
+    "pickupNeeded": true,
     "users": ["admin-1001", "be-0102", "re-1016"],
     "linens": [
       {
         "name": "Bettbezüge",
-        "available": 12,
+        "available": 8,
         "minimum": 6
       },
       {
         "name": "Kissenbezüge",
-        "available": 12,
+        "available": 8,
         "minimum": 6
       },
       {
         "name": "Laken grün",
-        "available": 6,
-        "minimum": 4
-      },
-      {
-        "name": "Laken orange",
-        "available": 0,
-        "minimum": 0
-      },
-      {
-        "name": "Duschtücher",
-        "available": 11,
-        "minimum": 6
-      },
-      {
-        "name": "Handtücher",
-        "available": 10,
-        "minimum": 6
-      },
-      {
-        "name": "Badvorleger",
-        "available": 6,
-        "minimum": 4
-      },
-      {
-        "name": "Geschirrtücher",
-        "available": 5,
-        "minimum": 4
-      }
-    ],
-    "essentials": [
-      {
-        "name": "Toilettenpapier",
-        "available": false
-      },
-      {
-        "name": "Küchenrollen",
-        "available": false
-      },
-      {
-        "name": "Geschirrspülmittel",
-        "available": false
-      },
-      {
-        "name": "Schwammtücher",
-        "available": false
-      },
-      {
-        "name": "Spülschwämme",
-        "available": false
-      },
-      {
-        "name": "Geschirrspültabs",
-        "available": false
-      },
-      {
-        "name": "Kaffee",
-        "available": false
-      },
-      {
-        "name": "Handseife",
-        "available": false
-      },
-      {
-        "name": "Shampoo",
-        "available": false
-      },
-      {
-        "name": "Duschgel",
-        "available": false
-      },
-      {
-        "name": "Badreiniger",
-        "available": false
-      },
-      {
-        "name": "Küchenreiniger",
-        "available": false
-      },
-      {
-        "name": "Kalkreiniger",
-        "available": false
-      },
-      {
-        "name": "Toilettenreiniger",
-        "available": false
-      },
-      {
-        "name": "Müllsäcke große",
-        "available": false
-      },
-      {
-        "name": "Müllsäcke kleine",
-        "available": false
-      },
-      {
-        "name": "Sonstiges:",
-        "available": false
-      }
-    ],
-    "id": "3",
-    "updatedAt": "2025-11-24T11:19:32.302Z"
-  },
-  {
-    "address": "Cherusker-3 STUDIO | 10829",
-    "nextCheckout": [1764349594275],
-    "pickupNeeded": false,
-    "users": ["admin-1001", "wa-8201", "re-1016"],
-    "linens": [
-      {
-        "name": "Bettbezüge",
-        "available": 18,
-        "minimum": 8
-      },
-      {
-        "name": "Kissenbezüge",
-        "available": 19,
-        "minimum": 8
-      },
-      {
-        "name": "Laken grün",
-        "available": 7,
-        "minimum": 4
-      },
-      {
-        "name": "Laken orange",
-        "available": 0,
-        "minimum": 0
-      },
-      {
-        "name": "Duschtücher",
-        "available": 19,
-        "minimum": 8
-      },
-      {
-        "name": "Handtücher",
-        "available": 19,
-        "minimum": 8
-      },
-      {
-        "name": "Badvorleger",
-        "available": 15,
-        "minimum": 4
-      },
-      {
-        "name": "Geschirrtücher",
-        "available": 15,
-        "minimum": 4
-      }
-    ],
-    "essentials": [
-      {
-        "name": "Toilettenpapier",
-        "available": false
-      },
-      {
-        "name": "Küchenrollen",
-        "available": false
-      },
-      {
-        "name": "Geschirrspülmittel",
-        "available": false
-      },
-      {
-        "name": "Schwammtücher",
-        "available": false
-      },
-      {
-        "name": "Spülschwämme",
-        "available": false
-      },
-      {
-        "name": "Geschirrspültabs",
-        "available": false
-      },
-      {
-        "name": "Kaffee",
-        "available": false
-      },
-      {
-        "name": "Handseife",
-        "available": false
-      },
-      {
-        "name": "Shampoo",
-        "available": false
-      },
-      {
-        "name": "Duschgel",
-        "available": false
-      },
-      {
-        "name": "Badreiniger",
-        "available": false
-      },
-      {
-        "name": "Küchenreiniger",
-        "available": false
-      },
-      {
-        "name": "Kalkreiniger",
-        "available": false
-      },
-      {
-        "name": "Toilettenreiniger",
-        "available": false
-      },
-      {
-        "name": "Müllsäcke große",
-        "available": false
-      },
-      {
-        "name": "Müllsäcke kleine",
-        "available": false
-      },
-      {
-        "name": "Sonstiges:",
-        "available": false
-      }
-    ],
-    "id": "4",
-    "updatedAt": "2025-11-17T14:02:42.703Z"
-  },
-  {
-    "address": "Cherusker-3 APART2 | 10829",
-    "nextCheckout": [],
-    "pickupNeeded": false,
-    "users": ["admin-1001", "wa-8201", "re-1016"],
-    "linens": [
-      {
-        "name": "Bettbezüge",
-        "available": 13,
-        "minimum": 8
-      },
-      {
-        "name": "Kissenbezüge",
-        "available": 12,
-        "minimum": 8
-      },
-      {
-        "name": "Laken grün",
-        "available": 7,
-        "minimum": 4
-      },
-      {
-        "name": "Laken orange",
-        "available": 0,
-        "minimum": 0
-      },
-      {
-        "name": "Duschtücher",
-        "available": 12,
-        "minimum": 8
-      },
-      {
-        "name": "Handtücher",
-        "available": 12,
-        "minimum": 8
-      },
-      {
-        "name": "Badvorleger",
-        "available": 11,
-        "minimum": 4
-      },
-      {
-        "name": "Geschirrtücher",
-        "available": 15,
-        "minimum": 4
-      }
-    ],
-    "essentials": [
-      {
-        "name": "Toilettenpapier",
-        "available": true
-      },
-      {
-        "name": "Küchenrollen",
-        "available": true
-      },
-      {
-        "name": "Geschirrspülmittel",
-        "available": false
-      },
-      {
-        "name": "Schwammtücher",
-        "available": false
-      },
-      {
-        "name": "Spülschwämme",
-        "available": false
-      },
-      {
-        "name": "Geschirrspültabs",
-        "available": false
-      },
-      {
-        "name": "Kaffee",
-        "available": false
-      },
-      {
-        "name": "Handseife",
-        "available": false
-      },
-      {
-        "name": "Shampoo",
-        "available": false
-      },
-      {
-        "name": "Duschgel",
-        "available": false
-      },
-      {
-        "name": "Badreiniger",
-        "available": false
-      },
-      {
-        "name": "Küchenreiniger",
-        "available": false
-      },
-      {
-        "name": "Kalkreiniger",
-        "available": false
-      },
-      {
-        "name": "Toilettenreiniger",
-        "available": true
-      },
-      {
-        "name": "Müllsäcke große",
-        "available": false
-      },
-      {
-        "name": "Müllsäcke kleine",
-        "available": false
-      },
-      {
-        "name": "Sonstiges:",
-        "available": false
-      }
-    ],
-    "id": "5",
-    "updatedAt": "2025-11-23T12:48:54.502Z"
-  },
-  {
-    "address": "Cherusker-3 APART3 | 10829",
-    "nextCheckout": null,
-    "pickupNeeded": false,
-    "users": ["admin-1001", "wa-8201", "re-1016"],
-    "linens": [
-      {
-        "name": "Bettbezüge",
-        "available": 18,
-        "minimum": 12
-      },
-      {
-        "name": "Kissenbezüge",
-        "available": 20,
-        "minimum": 12
-      },
-      {
-        "name": "Laken grün",
-        "available": 7,
-        "minimum": 6
-      },
-      {
-        "name": "Laken orange",
-        "available": 0,
-        "minimum": 0
-      },
-      {
-        "name": "Duschtücher",
-        "available": 18,
-        "minimum": 12
-      },
-      {
-        "name": "Handtücher",
-        "available": 19,
-        "minimum": 12
-      },
-      {
-        "name": "Badvorleger",
-        "available": 7,
-        "minimum": 4
-      },
-      {
-        "name": "Geschirrtücher",
-        "available": 15,
-        "minimum": 4
-      }
-    ],
-    "essentials": [
-      {
-        "name": "Toilettenpapier",
-        "available": false
-      },
-      {
-        "name": "Küchenrollen",
-        "available": true
-      },
-      {
-        "name": "Geschirrspülmittel",
-        "available": false
-      },
-      {
-        "name": "Schwammtücher",
-        "available": true
-      },
-      {
-        "name": "Spülschwämme",
-        "available": false
-      },
-      {
-        "name": "Geschirrspültabs",
-        "available": true
-      },
-      {
-        "name": "Kaffee",
-        "available": true
-      },
-      {
-        "name": "Handseife",
-        "available": false
-      },
-      {
-        "name": "Shampoo",
-        "available": false
-      },
-      {
-        "name": "Duschgel",
-        "available": false
-      },
-      {
-        "name": "Badreiniger",
-        "available": false
-      },
-      {
-        "name": "Küchenreiniger",
-        "available": true
-      },
-      {
-        "name": "Kalkreiniger",
-        "available": false
-      },
-      {
-        "name": "Toilettenreiniger",
-        "available": false
-      },
-      {
-        "name": "Müllsäcke große",
-        "available": false
-      },
-      {
-        "name": "Müllsäcke kleine",
-        "available": false
-      },
-      {
-        "name": "Sonstiges:",
-        "available": false
-      }
-    ],
-    "id": "6",
-    "updatedAt": "2025-11-27T12:04:16.233Z"
-  },
-  {
-    "address": "Krausnick-5 | 10115",
-    "nextCheckout": [1764608991326],
-    "pickupNeeded": false,
-    "users": ["admin-1001", "be-0102", "wa-8201", "re-1016"],
-    "linens": [
-      {
-        "name": "Bettbezüge",
-        "available": 16,
-        "minimum": 12
-      },
-      {
-        "name": "Kissenbezüge",
-        "available": 17,
-        "minimum": 12
-      },
-      {
-        "name": "Laken grün",
-        "available": 11,
-        "minimum": 6
-      },
-      {
-        "name": "Laken orange",
-        "available": 0,
-        "minimum": 0
-      },
-      {
-        "name": "Duschtücher",
-        "available": 12,
-        "minimum": 12
-      },
-      {
-        "name": "Handtücher",
-        "available": 17,
-        "minimum": 12
-      },
-      {
-        "name": "Badvorleger",
-        "available": 12,
-        "minimum": 4
-      },
-      {
-        "name": "Geschirrtücher",
-        "available": 20,
-        "minimum": 4
-      }
-    ],
-    "essentials": [
-      {
-        "name": "Toilettenpapier",
-        "available": false
-      },
-      {
-        "name": "Küchenrollen",
-        "available": false
-      },
-      {
-        "name": "Geschirrspülmittel",
-        "available": false
-      },
-      {
-        "name": "Schwammtücher",
-        "available": false
-      },
-      {
-        "name": "Spülschwämme",
-        "available": false
-      },
-      {
-        "name": "Geschirrspültabs",
-        "available": false
-      },
-      {
-        "name": "Kaffee",
-        "available": true
-      },
-      {
-        "name": "Handseife",
-        "available": false
-      },
-      {
-        "name": "Shampoo",
-        "available": false
-      },
-      {
-        "name": "Duschgel",
-        "available": false
-      },
-      {
-        "name": "Badreiniger",
-        "available": false
-      },
-      {
-        "name": "Küchenreiniger",
-        "available": false
-      },
-      {
-        "name": "Kalkreiniger",
-        "available": false
-      },
-      {
-        "name": "Toilettenreiniger",
-        "available": false
-      },
-      {
-        "name": "Müllsäcke große",
-        "available": false
-      },
-      {
-        "name": "Müllsäcke kleine",
-        "available": false
-      },
-      {
-        "name": "Sonstiges:",
-        "available": false
-      }
-    ],
-    "id": "7",
-    "updatedAt": "2025-11-27T10:38:57.465Z"
-  },
-  {
-    "address": "Granseer-8 STUDIO | 10435",
-    "nextCheckout": [1764354812731],
-    "pickupNeeded": false,
-    "users": ["admin-1001", "wa-8201", "be-0102", "re-1016"],
-    "linens": [
-      {
-        "name": "Bettbezüge",
-        "available": 9,
-        "minimum": 4
-      },
-      {
-        "name": "Kissenbezüge",
-        "available": 9,
-        "minimum": 4
-      },
-      {
-        "name": "Laken grün",
-        "available": 2,
-        "minimum": 2
-      },
-      {
-        "name": "Laken orange",
-        "available": 0,
-        "minimum": 0
-      },
-      {
-        "name": "Duschtücher",
-        "available": 3,
-        "minimum": 4
-      },
-      {
-        "name": "Handtücher",
         "available": 4,
         "minimum": 4
       },
       {
+        "name": "Laken orange",
+        "available": 0,
+        "minimum": 0
+      },
+      {
+        "name": "Duschtücher",
+        "available": 6,
+        "minimum": 6
+      },
+      {
+        "name": "Handtücher",
+        "available": 3,
+        "minimum": 6
+      },
+      {
         "name": "Badvorleger",
-        "available": 10,
-        "minimum": 2
+        "available": 4,
+        "minimum": 4
       },
       {
         "name": "Geschirrtücher",
-        "available": 5,
+        "available": 2,
         "minimum": 4
       }
     ],
@@ -950,34 +342,30 @@
       {
         "name": "Müllsäcke kleine",
         "available": false
-      },
-      {
-        "name": "Sonstiges:",
-        "available": false
       }
     ],
-    "id": "8",
-    "updatedAt": "2025-11-26T15:06:24.833Z"
+    "id": "3",
+    "updatedAt": "2025-12-07T12:59:00.846Z"
   },
   {
-    "address": "Granseer-8 APART | 10435",
-    "nextCheckout": [1764354816953],
+    "address": "Cherusker-3 STUDIO | 10829",
+    "nextTour": [1765712623539],
     "pickupNeeded": false,
-    "users": ["admin-1001", "wa-8201", "be-0102", "re-1016"],
+    "users": ["admin-1001", "wa-8201", "re-1016"],
     "linens": [
       {
         "name": "Bettbezüge",
-        "available": 21,
+        "available": 14,
         "minimum": 8
       },
       {
         "name": "Kissenbezüge",
-        "available": 22,
+        "available": 12,
         "minimum": 8
       },
       {
         "name": "Laken grün",
-        "available": 11,
+        "available": 4,
         "minimum": 4
       },
       {
@@ -987,22 +375,22 @@
       },
       {
         "name": "Duschtücher",
-        "available": 16,
+        "available": 14,
         "minimum": 8
       },
       {
         "name": "Handtücher",
-        "available": 18,
+        "available": 12,
         "minimum": 8
       },
       {
         "name": "Badvorleger",
         "available": 12,
-        "minimum": 2
+        "minimum": 4
       },
       {
         "name": "Geschirrtücher",
-        "available": 19,
+        "available": 12,
         "minimum": 4
       }
     ],
@@ -1070,59 +458,287 @@
       {
         "name": "Müllsäcke kleine",
         "available": false
-      },
-      {
-        "name": "Sonstiges:",
-        "available": false
       }
     ],
-    "id": "9",
-    "updatedAt": "2025-11-23T12:03:53.098Z"
+    "id": "4",
+    "updatedAt": "2025-12-07T09:19:43.808Z"
   },
   {
-    "address": "Christinen-16 | 10119",
-    "nextCheckout": [1764273891361],
+    "address": "Cherusker-3 APART2 | 10829",
+    "nextTour": [1765453357077, 1765712557077],
     "pickupNeeded": false,
     "users": ["admin-1001", "wa-8201", "re-1016"],
     "linens": [
       {
         "name": "Bettbezüge",
-        "available": 19,
-        "minimum": 14
+        "available": 4,
+        "minimum": 8
       },
       {
         "name": "Kissenbezüge",
-        "available": 20,
-        "minimum": 14
+        "available": 3,
+        "minimum": 8
       },
       {
         "name": "Laken grün",
-        "available": 10,
+        "available": 1,
+        "minimum": 4
+      },
+      {
+        "name": "Laken orange",
+        "available": 0,
+        "minimum": 0
+      },
+      {
+        "name": "Duschtücher",
+        "available": 5,
+        "minimum": 8
+      },
+      {
+        "name": "Handtücher",
+        "available": 6,
+        "minimum": 8
+      },
+      {
+        "name": "Badvorleger",
+        "available": 8,
+        "minimum": 4
+      },
+      {
+        "name": "Geschirrtücher",
+        "available": 15,
+        "minimum": 4
+      }
+    ],
+    "essentials": [
+      {
+        "name": "Toilettenpapier",
+        "available": false
+      },
+      {
+        "name": "Küchenrollen",
+        "available": false
+      },
+      {
+        "name": "Geschirrspülmittel",
+        "available": false
+      },
+      {
+        "name": "Schwammtücher",
+        "available": false
+      },
+      {
+        "name": "Spülschwämme",
+        "available": false
+      },
+      {
+        "name": "Geschirrspültabs",
+        "available": false
+      },
+      {
+        "name": "Kaffee",
+        "available": false
+      },
+      {
+        "name": "Handseife",
+        "available": false
+      },
+      {
+        "name": "Shampoo",
+        "available": false
+      },
+      {
+        "name": "Duschgel",
+        "available": false
+      },
+      {
+        "name": "Badreiniger",
+        "available": false
+      },
+      {
+        "name": "Küchenreiniger",
+        "available": false
+      },
+      {
+        "name": "Kalkreiniger",
+        "available": false
+      },
+      {
+        "name": "Toilettenreiniger",
+        "available": false
+      },
+      {
+        "name": "Müllsäcke große",
+        "available": false
+      },
+      {
+        "name": "Müllsäcke kleine",
+        "available": false
+      }
+    ],
+    "id": "5",
+    "updatedAt": "2025-12-04T12:20:39.267Z"
+  },
+  {
+    "address": "Cherusker-3 APART3 | 10829",
+    "nextTour": [1766144759727],
+    "pickupNeeded": false,
+    "users": ["admin-1001", "wa-8201", "re-1016"],
+    "linens": [
+      {
+        "name": "Bettbezüge",
+        "available": 17,
+        "minimum": 12
+      },
+      {
+        "name": "Kissenbezüge",
+        "available": 17,
+        "minimum": 12
+      },
+      {
+        "name": "Laken grün",
+        "available": 8,
         "minimum": 6
       },
       {
         "name": "Laken orange",
-        "available": 28,
-        "minimum": 4
+        "available": 0,
+        "minimum": 0
       },
       {
         "name": "Duschtücher",
-        "available": 20,
-        "minimum": 14
+        "available": 16,
+        "minimum": 12
       },
       {
         "name": "Handtücher",
-        "available": 23,
-        "minimum": 14
+        "available": 19,
+        "minimum": 12
       },
       {
         "name": "Badvorleger",
-        "available": 17,
+        "available": 5,
         "minimum": 4
       },
       {
         "name": "Geschirrtücher",
+        "available": 15,
+        "minimum": 4
+      }
+    ],
+    "essentials": [
+      {
+        "name": "Toilettenpapier",
+        "available": true
+      },
+      {
+        "name": "Küchenrollen",
+        "available": false
+      },
+      {
+        "name": "Geschirrspülmittel",
+        "available": false
+      },
+      {
+        "name": "Schwammtücher",
+        "available": false
+      },
+      {
+        "name": "Spülschwämme",
+        "available": false
+      },
+      {
+        "name": "Geschirrspültabs",
+        "available": false
+      },
+      {
+        "name": "Kaffee",
+        "available": true
+      },
+      {
+        "name": "Handseife",
+        "available": false
+      },
+      {
+        "name": "Shampoo",
+        "available": false
+      },
+      {
+        "name": "Duschgel",
+        "available": false
+      },
+      {
+        "name": "Badreiniger",
+        "available": false
+      },
+      {
+        "name": "Küchenreiniger",
+        "available": true
+      },
+      {
+        "name": "Kalkreiniger",
+        "available": false
+      },
+      {
+        "name": "Toilettenreiniger",
+        "available": false
+      },
+      {
+        "name": "Müllsäcke große",
+        "available": true
+      },
+      {
+        "name": "Müllsäcke kleine",
+        "available": false
+      }
+    ],
+    "id": "6",
+    "updatedAt": "2025-12-06T10:29:36.557Z"
+  },
+  {
+    "address": "Krausnick-5 | 10115",
+    "nextTour": [1765366857385, 1765712457385],
+    "pickupNeeded": true,
+    "users": ["admin-1001", "be-0102", "wa-8201", "re-1016"],
+    "linens": [
+      {
+        "name": "Bettbezüge",
         "available": 13,
+        "minimum": 12
+      },
+      {
+        "name": "Kissenbezüge",
+        "available": 12,
+        "minimum": 12
+      },
+      {
+        "name": "Laken grün",
+        "available": 5,
+        "minimum": 6
+      },
+      {
+        "name": "Laken orange",
+        "available": 0,
+        "minimum": 0
+      },
+      {
+        "name": "Duschtücher",
+        "available": 12,
+        "minimum": 12
+      },
+      {
+        "name": "Handtücher",
+        "available": 12,
+        "minimum": 12
+      },
+      {
+        "name": "Badvorleger",
+        "available": 9,
+        "minimum": 4
+      },
+      {
+        "name": "Geschirrtücher",
+        "available": 18,
         "minimum": 4
       }
     ],
@@ -1190,59 +806,171 @@
       {
         "name": "Müllsäcke kleine",
         "available": false
-      },
-      {
-        "name": "Sonstiges:",
-        "available": false
       }
     ],
-    "id": "10",
-    "updatedAt": "2025-11-27T14:58:35.918Z"
+    "id": "7",
+    "updatedAt": "2025-12-07T11:26:16.988Z"
   },
   {
-    "address": "Metzer-18 | 10405",
-    "nextCheckout": [],
+    "address": "Granseer-8 STUDIO | 10435",
+    "nextTour": [1765453369180],
     "pickupNeeded": false,
-    "users": ["admin-1001", "wa-8201", "re-1016"],
+    "users": ["admin-1001", "wa-8201", "be-0102", "re-1016"],
     "linens": [
       {
         "name": "Bettbezüge",
-        "available": 0,
-        "minimum": 8
+        "available": 16,
+        "minimum": 4
       },
       {
         "name": "Kissenbezüge",
-        "available": 0,
-        "minimum": 8
+        "available": 17,
+        "minimum": 4
       },
       {
         "name": "Laken grün",
-        "available": 0,
+        "available": 3,
         "minimum": 2
       },
       {
         "name": "Laken orange",
         "available": 0,
-        "minimum": 4
+        "minimum": 0
       },
       {
         "name": "Duschtücher",
+        "available": 12,
+        "minimum": 4
+      },
+      {
+        "name": "Handtücher",
+        "available": 14,
+        "minimum": 4
+      },
+      {
+        "name": "Badvorleger",
+        "available": 11,
+        "minimum": 2
+      },
+      {
+        "name": "Geschirrtücher",
+        "available": 11,
+        "minimum": 4
+      }
+    ],
+    "essentials": [
+      {
+        "name": "Toilettenpapier",
+        "available": true
+      },
+      {
+        "name": "Küchenrollen",
+        "available": true
+      },
+      {
+        "name": "Geschirrspülmittel",
+        "available": false
+      },
+      {
+        "name": "Schwammtücher",
+        "available": true
+      },
+      {
+        "name": "Spülschwämme",
+        "available": false
+      },
+      {
+        "name": "Geschirrspültabs",
+        "available": true
+      },
+      {
+        "name": "Kaffee",
+        "available": false
+      },
+      {
+        "name": "Handseife",
+        "available": true
+      },
+      {
+        "name": "Shampoo",
+        "available": true
+      },
+      {
+        "name": "Duschgel",
+        "available": false
+      },
+      {
+        "name": "Badreiniger",
+        "available": false
+      },
+      {
+        "name": "Küchenreiniger",
+        "available": false
+      },
+      {
+        "name": "Kalkreiniger",
+        "available": false
+      },
+      {
+        "name": "Toilettenreiniger",
+        "available": true
+      },
+      {
+        "name": "Müllsäcke große",
+        "available": true
+      },
+      {
+        "name": "Müllsäcke kleine",
+        "available": false
+      }
+    ],
+    "id": "8",
+    "updatedAt": "2025-12-08T10:51:01.015Z"
+  },
+  {
+    "address": "Granseer-8 APART | 10435",
+    "nextTour": [1765453372653, 1765798972653],
+    "pickupNeeded": false,
+    "users": ["admin-1001", "wa-8201", "be-0102", "re-1016"],
+    "linens": [
+      {
+        "name": "Bettbezüge",
+        "available": 10,
+        "minimum": 8
+      },
+      {
+        "name": "Kissenbezüge",
+        "available": 10,
+        "minimum": 8
+      },
+      {
+        "name": "Laken grün",
+        "available": 2,
+        "minimum": 4
+      },
+      {
+        "name": "Laken orange",
         "available": 0,
+        "minimum": 0
+      },
+      {
+        "name": "Duschtücher",
+        "available": 2,
         "minimum": 8
       },
       {
         "name": "Handtücher",
-        "available": 0,
+        "available": 5,
         "minimum": 8
       },
       {
         "name": "Badvorleger",
-        "available": 0,
-        "minimum": 4
+        "available": 7,
+        "minimum": 2
       },
       {
         "name": "Geschirrtücher",
-        "available": 0,
+        "available": 8,
         "minimum": 4
       }
     ],
@@ -1310,18 +1038,246 @@
       {
         "name": "Müllsäcke kleine",
         "available": false
+      }
+    ],
+    "id": "9",
+    "updatedAt": "2025-12-05T10:29:48.797Z"
+  },
+  {
+    "address": "Christinen-16 | 10119",
+    "nextTour": [1765453343076, 1765712543076, 1766144543076],
+    "pickupNeeded": false,
+    "users": ["admin-1001", "wa-8201", "re-1016"],
+    "linens": [
+      {
+        "name": "Bettbezüge",
+        "available": 15,
+        "minimum": 14
       },
       {
-        "name": "Sonstiges:",
+        "name": "Kissenbezüge",
+        "available": 16,
+        "minimum": 14
+      },
+      {
+        "name": "Laken grün",
+        "available": 7,
+        "minimum": 6
+      },
+      {
+        "name": "Laken orange",
+        "available": 31,
+        "minimum": 4
+      },
+      {
+        "name": "Duschtücher",
+        "available": 12,
+        "minimum": 14
+      },
+      {
+        "name": "Handtücher",
+        "available": 14,
+        "minimum": 14
+      },
+      {
+        "name": "Badvorleger",
+        "available": 14,
+        "minimum": 4
+      },
+      {
+        "name": "Geschirrtücher",
+        "available": 10,
+        "minimum": 4
+      }
+    ],
+    "essentials": [
+      {
+        "name": "Toilettenpapier",
+        "available": false
+      },
+      {
+        "name": "Küchenrollen",
+        "available": false
+      },
+      {
+        "name": "Geschirrspülmittel",
+        "available": false
+      },
+      {
+        "name": "Schwammtücher",
+        "available": false
+      },
+      {
+        "name": "Spülschwämme",
+        "available": false
+      },
+      {
+        "name": "Geschirrspültabs",
+        "available": false
+      },
+      {
+        "name": "Kaffee",
+        "available": false
+      },
+      {
+        "name": "Handseife",
+        "available": false
+      },
+      {
+        "name": "Shampoo",
+        "available": false
+      },
+      {
+        "name": "Duschgel",
+        "available": false
+      },
+      {
+        "name": "Badreiniger",
+        "available": false
+      },
+      {
+        "name": "Küchenreiniger",
+        "available": false
+      },
+      {
+        "name": "Kalkreiniger",
+        "available": false
+      },
+      {
+        "name": "Toilettenreiniger",
+        "available": false
+      },
+      {
+        "name": "Müllsäcke große",
+        "available": false
+      },
+      {
+        "name": "Müllsäcke kleine",
         "available": false
       }
     ],
+    "id": "10",
+    "updatedAt": "2025-12-08T17:52:42.631Z"
+  },
+  {
+    "address": "Metzer-18 | 10405",
+    "nextTour": [1765453348854],
+    "pickupNeeded": false,
+    "users": ["admin-1001", "wa-8201", "re-1016"],
+    "linens": [
+      {
+        "name": "Bettbezüge",
+        "available": 10,
+        "minimum": 8
+      },
+      {
+        "name": "Kissenbezüge",
+        "available": 8,
+        "minimum": 8
+      },
+      {
+        "name": "Laken grün",
+        "available": 7,
+        "minimum": 2
+      },
+      {
+        "name": "Laken orange",
+        "available": 11,
+        "minimum": 4
+      },
+      {
+        "name": "Duschtücher",
+        "available": 5,
+        "minimum": 8
+      },
+      {
+        "name": "Handtücher",
+        "available": 0,
+        "minimum": 8
+      },
+      {
+        "name": "Badvorleger",
+        "available": 0,
+        "minimum": 4
+      },
+      {
+        "name": "Geschirrtücher",
+        "available": 2,
+        "minimum": 4
+      }
+    ],
+    "essentials": [
+      {
+        "name": "Toilettenpapier",
+        "available": true
+      },
+      {
+        "name": "Küchenrollen",
+        "available": false
+      },
+      {
+        "name": "Geschirrspülmittel",
+        "available": false
+      },
+      {
+        "name": "Schwammtücher",
+        "available": true
+      },
+      {
+        "name": "Spülschwämme",
+        "available": false
+      },
+      {
+        "name": "Geschirrspültabs",
+        "available": false
+      },
+      {
+        "name": "Kaffee",
+        "available": false
+      },
+      {
+        "name": "Handseife",
+        "available": false
+      },
+      {
+        "name": "Shampoo",
+        "available": false
+      },
+      {
+        "name": "Duschgel",
+        "available": false
+      },
+      {
+        "name": "Badreiniger",
+        "available": false
+      },
+      {
+        "name": "Küchenreiniger",
+        "available": false
+      },
+      {
+        "name": "Kalkreiniger",
+        "available": false
+      },
+      {
+        "name": "Toilettenreiniger",
+        "available": false
+      },
+      {
+        "name": "Müllsäcke große",
+        "available": true
+      },
+      {
+        "name": "Müllsäcke kleine",
+        "available": true
+      }
+    ],
     "id": "11",
-    "updatedAt": "2025-11-03T09:58:07.572Z"
+    "updatedAt": "2025-12-07T12:12:17.953Z"
   },
   {
     "address": "Neckar-6b | 12053",
-    "nextCheckout": [],
+    "nextTour": [],
     "pickupNeeded": false,
     "users": ["admin-1001"],
     "linens": [
@@ -1430,10 +1386,6 @@
       {
         "name": "Müllsäcke kleine",
         "available": false
-      },
-      {
-        "name": "Sonstiges:",
-        "available": false
       }
     ],
     "id": "12",
@@ -1441,23 +1393,23 @@
   },
   {
     "address": "Hermann-175 | 12051",
-    "nextCheckout": [1764613921144],
+    "nextTour": [1765712611561],
     "pickupNeeded": false,
     "users": ["admin-1001", "wa-8201", "re-1016"],
     "linens": [
       {
         "name": "Bettbezüge",
-        "available": 18,
+        "available": 8,
         "minimum": 12
       },
       {
         "name": "Kissenbezüge",
-        "available": 18,
+        "available": 8,
         "minimum": 12
       },
       {
         "name": "Laken grün",
-        "available": 10,
+        "available": 4,
         "minimum": 6
       },
       {
@@ -1467,17 +1419,17 @@
       },
       {
         "name": "Duschtücher",
-        "available": 18,
+        "available": 9,
         "minimum": 12
       },
       {
         "name": "Handtücher",
-        "available": 20,
+        "available": 11,
         "minimum": 12
       },
       {
         "name": "Badvorleger",
-        "available": 14,
+        "available": 11,
         "minimum": 4
       },
       {
@@ -1521,11 +1473,11 @@
       },
       {
         "name": "Shampoo",
-        "available": false
+        "available": true
       },
       {
         "name": "Duschgel",
-        "available": false
+        "available": true
       },
       {
         "name": "Badreiniger",
@@ -1550,34 +1502,30 @@
       {
         "name": "Müllsäcke kleine",
         "available": false
-      },
-      {
-        "name": "Sonstiges:",
-        "available": true
       }
     ],
     "id": "13",
-    "updatedAt": "2025-11-27T10:28:43.731Z"
+    "updatedAt": "2025-12-08T17:52:43.707Z"
   },
   {
     "address": "Siemens-18 | 10551",
-    "nextCheckout": [1764349729883],
+    "nextTour": [1765712590527],
     "pickupNeeded": false,
     "users": ["admin-1001", "re-1016"],
     "linens": [
       {
         "name": "Bettbezüge",
-        "available": 11,
+        "available": 17,
         "minimum": 6
       },
       {
         "name": "Kissenbezüge",
-        "available": 10,
+        "available": 16,
         "minimum": 6
       },
       {
         "name": "Laken grün",
-        "available": 0,
+        "available": 6,
         "minimum": 6
       },
       {
@@ -1587,22 +1535,22 @@
       },
       {
         "name": "Duschtücher",
-        "available": 10,
+        "available": 17,
         "minimum": 6
       },
       {
         "name": "Handtücher",
-        "available": 11,
+        "available": 18,
         "minimum": 6
       },
       {
         "name": "Badvorleger",
-        "available": 2,
+        "available": 4,
         "minimum": 4
       },
       {
         "name": "Geschirrtücher",
-        "available": 4,
+        "available": 6,
         "minimum": 4
       }
     ],
@@ -1617,7 +1565,7 @@
       },
       {
         "name": "Geschirrspülmittel",
-        "available": false
+        "available": true
       },
       {
         "name": "Schwammtücher",
@@ -1670,18 +1618,14 @@
       {
         "name": "Müllsäcke kleine",
         "available": false
-      },
-      {
-        "name": "Sonstiges:",
-        "available": true
       }
     ],
     "id": "14",
-    "updatedAt": "2025-11-17T08:30:33.283Z"
+    "updatedAt": "2025-11-28T11:46:55.449Z"
   },
   {
     "address": "Urban-94 | 10967",
-    "nextCheckout": [],
+    "nextTour": [],
     "pickupNeeded": false,
     "users": ["admin-1001", "wa-8201"],
     "linens": [
@@ -1790,10 +1734,6 @@
       {
         "name": "Müllsäcke kleine",
         "available": false
-      },
-      {
-        "name": "Sonstiges:",
-        "available": false
       }
     ],
     "id": "15",
@@ -1801,7 +1741,7 @@
   },
   {
     "address": "Knesebeck-18 | 10623",
-    "nextCheckout": [1766330966153],
+    "nextTour": [1766330966153],
     "pickupNeeded": false,
     "users": ["admin-1001", "re-1016"],
     "linens": [
@@ -1910,10 +1850,6 @@
       {
         "name": "Müllsäcke kleine",
         "available": false
-      },
-      {
-        "name": "Sonstiges:",
-        "available": false
       }
     ],
     "id": "16",
@@ -1921,8 +1857,8 @@
   },
   {
     "address": "Schliemann-41 | 10437",
-    "nextCheckout": [1764573737117],
-    "pickupNeeded": false,
+    "nextTour": [1765366843721, 1765798843721],
+    "pickupNeeded": true,
     "users": ["admin-1001", "wa-8201", "re-1016"],
     "linens": [
       {
@@ -2029,10 +1965,6 @@
       },
       {
         "name": "Müllsäcke kleine",
-        "available": false
-      },
-      {
-        "name": "Sonstiges:",
         "available": false
       }
     ],

@@ -2,8 +2,8 @@ import { useRef, useState } from "react";
 import DatePicker from "react-multi-date-picker";
 
 export const TourDatePicker = ({ item, handleChange }) => {
-  const [dates, setDates] = useState(item.nextCheckout || []);
-  const ref = useRef(item.nextCheckout || []);
+  const [dates, setDates] = useState(item.nextTour || []);
+  const ref = useRef(item.nextTour || []);
 
   return (
     <DatePicker
@@ -22,7 +22,7 @@ export const TourDatePicker = ({ item, handleChange }) => {
       onClose={() =>
         handleChange(item.id, {
           ...item,
-          nextCheckout: Array.isArray(ref.current) ? ref.current : [],
+          nextTour: Array.isArray(ref.current) ? ref.current : [],
         })
       }
       sort

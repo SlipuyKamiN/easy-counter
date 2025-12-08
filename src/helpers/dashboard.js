@@ -7,7 +7,7 @@ export const countBags = (item) => {
     ["Duschtücher"]: 6,
     ["Handtücher"]: 6,
     ["Badvorleger"]: 2,
-    ["Geschirrtücher"]: 5,
+    ["Geschirrtücher"]: 3,
   };
 
   let bagsNeeded = 0;
@@ -36,6 +36,7 @@ export const getAllColums = (data) => {
     "Taschen benötigt",
     ...allLinens,
     ...allEssentials,
+    "Sonstiges:",
   ];
 
   return { allColumns, allLinens, allEssentials };
@@ -49,8 +50,8 @@ export const getSortBy = (key) => {
       return (a, b) => a.address.localeCompare(b.address);
     case "tour-datum":
       return (a, b) => {
-        const aDate = a.nextCheckout[0];
-        const bDate = b.nextCheckout[0];
+        const aDate = a.nextTour[0];
+        const bDate = b.nextTour[0];
 
         if (aDate && bDate) {
           return aDate - bDate;
