@@ -12,10 +12,11 @@ import { useState } from "react";
 import { IoIosAddCircleOutline } from "react-icons/io";
 import { EmptyQtyInput } from "../Common/QtyInput";
 import { EssentialsCheckbox, TourerSwitcher } from "../Common/Checkboxes";
+import { CommentInput } from "../Common/CommentInput";
 
 const initialRow = {
   address: "",
-  nextCheckout: [],
+  nextTour: [],
   pickupNeeded: false,
   users: ["admin-1001"],
   linens: [
@@ -145,10 +146,10 @@ export const EmptyRow = ({ dispatch, data }) => {
           format="DD/MM/YYYY"
           multiple
           minDate={new Date()}
-          value={newRow.nextCheckout}
+          value={newRow.nextTour}
           sort
           onChange={(dates) => {
-            setNewRow((prev) => ({ ...prev, nextCheckout: dates }));
+            setNewRow((prev) => ({ ...prev, nextTour: dates }));
           }}
         />
       </Td>
@@ -214,6 +215,12 @@ export const EmptyRow = ({ dispatch, data }) => {
           </Td>
         );
       })}
+      <Td>
+        <CommentInput
+          item={newRow}
+          handleChange={(_, body) => setNewRow(body)}
+        />
+      </Td>
     </tr>
   );
 };
