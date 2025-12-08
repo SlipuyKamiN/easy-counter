@@ -9,6 +9,7 @@ import { CounterItem, Heading } from "./CounterPage.styled";
 import { StateIndicator } from "../Common/StateIndicator";
 import throttle from "lodash.throttle";
 import useWakeLock from "~/hooks/useWakeLock";
+import { CommentInput } from "../Common/CommentInput";
 
 const CounterPage = () => {
   const { addressID } = useParams();
@@ -23,6 +24,10 @@ const CounterPage = () => {
       dispatch(addressID);
     }
   }, [dispatch, current, addressID]);
+
+  const commentChange = (id, body) => {
+    update({ id, body }).then(() => dispatch(addressID));
+  };
 
   const throttledHandleChange = useRef(
     throttle(({ name, qty, itemKey }) => {
@@ -73,6 +78,10 @@ const CounterPage = () => {
                   />
                 </CounterItem>
               ))}
+              <CounterItem>
+                <h3>Sonstiges:</h3>
+                <CommentInput item={current} handleChange={commentChange} />
+              </CounterItem>
             </ul>
           </>
         )}

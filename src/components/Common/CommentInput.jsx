@@ -1,7 +1,7 @@
 import { useState } from "react";
-import { Text } from "./Inputs.styled";
+import { TextInput } from "./Inputs.styled";
 
-export const TextInput = ({ item, handleChange }) => {
+export const CommentInput = ({ item, handleChange }) => {
   const [value, setValue] = useState(item.comment || "");
 
   const onBlur = () => {
@@ -13,7 +13,8 @@ export const TextInput = ({ item, handleChange }) => {
     });
   };
   return (
-    <Text
+    <TextInput
+      name="comment"
       type="text"
       value={value}
       onChange={({ target }) => setValue(target.value)}

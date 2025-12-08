@@ -3,7 +3,6 @@
     "address": "Wex-40 | 10715",
     "nextCheckout": [],
     "pickupNeeded": false,
-    "comment": "",
     "users": ["admin-1001"],
     "linens": [
       {
@@ -120,7 +119,6 @@
     "address": "Tempelherren-20 | 10961",
     "nextCheckout": [1765453378017, 1765798978017],
     "pickupNeeded": false,
-    "comment": "",
     "users": ["admin-1001", "be-0102", "re-1016"],
     "linens": [
       {
@@ -237,7 +235,6 @@
     "address": "Burgherren-11 | 12101",
     "nextCheckout": [1765799076792, 1766144676792],
     "pickupNeeded": true,
-    "comment": "",
     "users": ["admin-1001", "be-0102", "re-1016"],
     "linens": [
       {
@@ -354,7 +351,6 @@
     "address": "Cherusker-3 STUDIO | 10829",
     "nextCheckout": [1765712623539],
     "pickupNeeded": false,
-    "comment": "",
     "users": ["admin-1001", "wa-8201", "re-1016"],
     "linens": [
       {
@@ -471,7 +467,6 @@
     "address": "Cherusker-3 APART2 | 10829",
     "nextCheckout": [1765453357077, 1765712557077],
     "pickupNeeded": false,
-    "comment": "",
     "users": ["admin-1001", "wa-8201", "re-1016"],
     "linens": [
       {
@@ -588,7 +583,6 @@
     "address": "Cherusker-3 APART3 | 10829",
     "nextCheckout": [1766144759727],
     "pickupNeeded": false,
-    "comment": "",
     "users": ["admin-1001", "wa-8201", "re-1016"],
     "linens": [
       {
@@ -705,7 +699,6 @@
     "address": "Krausnick-5 | 10115",
     "nextCheckout": [1765366857385, 1765712457385],
     "pickupNeeded": true,
-    "comment": "",
     "users": ["admin-1001", "be-0102", "wa-8201", "re-1016"],
     "linens": [
       {
@@ -822,7 +815,6 @@
     "address": "Granseer-8 STUDIO | 10435",
     "nextCheckout": [1765453369180],
     "pickupNeeded": false,
-    "comment": "",
     "users": ["admin-1001", "wa-8201", "be-0102", "re-1016"],
     "linens": [
       {
@@ -939,7 +931,6 @@
     "address": "Granseer-8 APART | 10435",
     "nextCheckout": [1765453372653, 1765798972653],
     "pickupNeeded": false,
-    "comment": "",
     "users": ["admin-1001", "wa-8201", "be-0102", "re-1016"],
     "linens": [
       {
@@ -1056,7 +1047,6 @@
     "address": "Christinen-16 | 10119",
     "nextCheckout": [1765453343076, 1765712543076, 1766144543076],
     "pickupNeeded": false,
-    "comment": "",
     "users": ["admin-1001", "wa-8201", "re-1016"],
     "linens": [
       {
@@ -1173,7 +1163,6 @@
     "address": "Metzer-18 | 10405",
     "nextCheckout": [1765453348854],
     "pickupNeeded": false,
-    "comment": "",
     "users": ["admin-1001", "wa-8201", "re-1016"],
     "linens": [
       {
@@ -1290,7 +1279,6 @@
     "address": "Neckar-6b | 12053",
     "nextCheckout": [],
     "pickupNeeded": false,
-    "comment": "",
     "users": ["admin-1001"],
     "linens": [
       {
@@ -1407,7 +1395,6 @@
     "address": "Hermann-175 | 12051",
     "nextCheckout": [1765712611561],
     "pickupNeeded": false,
-    "comment": "",
     "users": ["admin-1001", "wa-8201", "re-1016"],
     "linens": [
       {
@@ -1524,7 +1511,6 @@
     "address": "Siemens-18 | 10551",
     "nextCheckout": [1765712590527],
     "pickupNeeded": false,
-    "comment": "",
     "users": ["admin-1001", "re-1016"],
     "linens": [
       {
@@ -1641,7 +1627,6 @@
     "address": "Urban-94 | 10967",
     "nextCheckout": [],
     "pickupNeeded": false,
-    "comment": "",
     "users": ["admin-1001", "wa-8201"],
     "linens": [
       {
@@ -1758,7 +1743,6 @@
     "address": "Knesebeck-18 | 10623",
     "nextCheckout": [1766330966153],
     "pickupNeeded": false,
-    "comment": "",
     "users": ["admin-1001", "re-1016"],
     "linens": [
       {
@@ -1875,7 +1859,6 @@
     "address": "Schliemann-41 | 10437",
     "nextCheckout": [1765366843721, 1765798843721],
     "pickupNeeded": true,
-    "comment": "",
     "users": ["admin-1001", "wa-8201", "re-1016"],
     "linens": [
       {
