@@ -92,3 +92,17 @@ export const Checkbox = styled.input`
 
   cursor: pointer;
 `;
+
+export const Text = styled.input`
+  height: 34px;
+  padding: 10px 5px;
+  border-radius: 12px;
+  outline: none;
+  font-size: inherit;
+
+  margin: 0 auto;
+
+  border: 1px solid ${colors.light.hi100};
+  color: ${colors.light.lo200};
+  background-color: transparent;
+`;

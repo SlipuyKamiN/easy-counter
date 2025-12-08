@@ -7,7 +7,7 @@ export const countBags = (item) => {
     ["Duschtücher"]: 6,
     ["Handtücher"]: 6,
     ["Badvorleger"]: 2,
-    ["Geschirrtücher"]: 5,
+    ["Geschirrtücher"]: 3,
   };
 
   let bagsNeeded = 0;
@@ -36,6 +36,7 @@ export const getAllColums = (data) => {
     "Taschen benötigt",
     ...allLinens,
     ...allEssentials,
+    "Sonstiges:",
   ];
 
   return { allColumns, allLinens, allEssentials };
