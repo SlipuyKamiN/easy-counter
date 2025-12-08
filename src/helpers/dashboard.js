@@ -50,8 +50,8 @@ export const getSortBy = (key) => {
       return (a, b) => a.address.localeCompare(b.address);
     case "tour-datum":
       return (a, b) => {
-        const aDate = a.nextCheckout[0];
-        const bDate = b.nextCheckout[0];
+        const aDate = a.nextTour[0];
+        const bDate = b.nextTour[0];
 
         if (aDate && bDate) {
           return aDate - bDate;
