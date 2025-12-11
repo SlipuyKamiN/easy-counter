@@ -34,7 +34,7 @@ export const useAPI = (method) => {
               .filter(({ users }) => users?.includes(user))
               .map((item) => ({
                 ...item,
-                nextCheckout: filterPast(item.nextCheckout),
+                nextTour: filterPast(item.nextTour),
               }))
           : response.data;
 
