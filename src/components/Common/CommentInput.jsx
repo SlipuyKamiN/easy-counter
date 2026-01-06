@@ -7,7 +7,7 @@ import {
   TextInputWrapper,
 } from "../CounterPage/CounterPage.styled";
 
-export const CommentInput = ({ item, handleChange }) => {
+export const CommentInput = ({ item, handleChange, clearable = false }) => {
   const [value, setValue] = useState(item.comment || "");
 
   const onBlur = () => {
@@ -27,7 +27,7 @@ export const CommentInput = ({ item, handleChange }) => {
         onChange={({ target }) => setValue(target.value)}
         onBlur={onBlur}
       />
-      {value && (
+      {value && clearable && (
         <ClearInputButton
           type="button"
           onClick={() => {
