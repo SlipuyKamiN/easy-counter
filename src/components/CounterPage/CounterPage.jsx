@@ -80,7 +80,11 @@ const CounterPage = () => {
               ))}
               <CounterItem>
                 <h3>Sonstiges:</h3>
-                <CommentInput item={current} handleChange={commentChange} />
+                <CommentInput
+                  item={current}
+                  handleChange={commentChange}
+                  clearable
+                />
               </CounterItem>
             </ul>
           </>
