@@ -2,12 +2,17 @@ import { EssentialsCheckbox } from "../Common/Checkboxes";
 import { Counter } from "./Counter";
 import { CommentInput } from "../Common/CommentInput";
 import throttle from "lodash.throttle";
-import { CounterItem } from "./CounterList.styled";
+import { CounterButton, CounterItem } from "./CounterList.styled";
 import { useAPI } from "~/hooks/useAPI";
 import { API } from "~/API/API";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 
-export const CounterList = ({ addressID, dispatch, current }) => {
+export const CounterList = ({
+  addressID,
+  dispatch,
+  current,
+  updateProgress,
+}) => {
   const [update] = useAPI(API.update);
 
   const currentRef = useRef(current);
@@ -38,6 +43,10 @@ export const CounterList = ({ addressID, dispatch, current }) => {
     }, 200)
   ).current;
 
+  useEffect(() => {
+    updateProgress({ done: 0, total: 1 });
+  }, [updateProgress]);
+
   return (
     <ul>
       {current.linens.map(({ name, available }) => (
@@ -62,6 +71,14 @@ export const CounterList = ({ addressID, dispatch, current }) => {
       <CounterItem>
         <h3>Sonstiges:</h3>
         <CommentInput item={current} handleChange={commentChange} />
+      </CounterItem>
+      <CounterItem>
+        <CounterButton
+          type="button"
+          onClick={() => updateProgress({ done: 1, total: 1 })}
+        >
+          Update
+        </CounterButton>
       </CounterItem>
     </ul>
   );

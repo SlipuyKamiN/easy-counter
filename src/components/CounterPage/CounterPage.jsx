@@ -14,18 +14,23 @@ import useWakeLock from "~/hooks/useWakeLock";
 import { CheckList } from "./CheckList";
 import { CounterList } from "./CounterList";
 
+const initialProgress = {
+  done: 0,
+  total: null,
+};
+
 const CounterPage = () => {
   const { addressID } = useParams();
   const [dispatch, current, isLoading, isError] = useAPI(API.getAddress);
   const [activeId, setActiveId] = useState("");
+  const [counterProgress, setCounterProgress] = useState(initialProgress);
+  const [checkListProgress, setCheckListProgress] = useState(initialProgress);
 
   useEffect(() => {
     if (!current) {
       dispatch(addressID);
     }
   }, [dispatch, current, addressID]);
-
-  useWakeLock();
 
   const toggleActive = (listName) => {
     if (listName === activeId) {
@@ -34,6 +39,8 @@ const CounterPage = () => {
 
     setActiveId(listName);
   };
+
+  useWakeLock();
 
   return (
     <Section>
@@ -48,6 +55,7 @@ const CounterPage = () => {
                   onClick={() => toggleActive("counter")}
                 >
                   counter
+                  <p>{counterProgress.done + "/" + counterProgress.total}</p>
                 </SectionSwitch>
                 <ActiveSectionWrapper
                   className={activeId === "counter" && "active"}
@@ -56,6 +64,7 @@ const CounterPage = () => {
                     addressID={addressID}
                     dispatch={dispatch}
                     current={current}
+                    updateProgress={setCounterProgress}
                   />
                 </ActiveSectionWrapper>
               </SectionListItem>
@@ -65,11 +74,14 @@ const CounterPage = () => {
                   onClick={() => toggleActive("checklist")}
                 >
                   checklist
+                  <p>
+                    {checkListProgress.done + "/" + checkListProgress.total}
+                  </p>
                 </SectionSwitch>
                 <ActiveSectionWrapper
                   className={activeId === "checklist" && "active"}
                 >
-                  <CheckList />
+                  <CheckList updateProgress={setCheckListProgress} />
                 </ActiveSectionWrapper>
               </SectionListItem>
               <SectionSwitch type="button">Confirm</SectionSwitch>

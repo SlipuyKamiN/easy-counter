@@ -1,9 +1,9 @@
 import checklist from "~/data/checklist";
 import { Checkbox, CheckboxWrapper } from "../Common/Inputs.styled";
 import { FaCheck } from "react-icons/fa";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
-export const CheckList = () => {
+export const CheckList = ({ updateProgress }) => {
   const [data, setData] = useState(checklist);
 
   const handleCheck = ({ sectionName, itemTitle }) => {
@@ -26,7 +26,7 @@ export const CheckList = () => {
     setData(updatedData);
   };
 
-  const countChecked = () => {
+  const countCheckedFromList = (data) => {
     const totalSections = data.length;
     const checkedSectionsQty = data.filter(({ items }) => {
       const total = items.length;
@@ -37,13 +37,20 @@ export const CheckList = () => {
 
     return {
       isAllChecked: totalSections === checkedSectionsQty,
-      indicator: `${checkedSectionsQty}/${totalSections}`,
+      progress: {
+        done: checkedSectionsQty,
+        total: totalSections,
+      },
     };
   };
 
+  useEffect(() => {
+    updateProgress(countCheckedFromList(data).progress);
+  }, [data, updateProgress]);
+
   return (
     <>
-      <h3>{countChecked().indicator}</h3>
+      <h3>{countCheckedFromList(data).indicator}</h3>
       <ul>
         {data.map(({ section, items }) => {
           return (
