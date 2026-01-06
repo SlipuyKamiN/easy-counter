@@ -5,6 +5,7 @@ import { useAPI } from "~/hooks/useAPI";
 import { Container, Section } from "../SharedLayout/SharedLayout.styled";
 import {
   ActiveSectionWrapper,
+  ConfirmButton,
   Heading,
   SectionListItem,
   SectionSwitch,
@@ -16,7 +17,7 @@ import { CounterList } from "./CounterList";
 
 const initialProgress = {
   done: 0,
-  total: null,
+  total: 1,
 };
 
 const CounterPage = () => {
@@ -25,6 +26,8 @@ const CounterPage = () => {
   const [activeId, setActiveId] = useState("");
   const [counterProgress, setCounterProgress] = useState(initialProgress);
   const [checkListProgress, setCheckListProgress] = useState(initialProgress);
+  const isCounterDone = counterProgress.done === counterProgress.total;
+  const isCheckListDone = checkListProgress.done === checkListProgress.total;
 
   useEffect(() => {
     if (!current) {
@@ -54,8 +57,8 @@ const CounterPage = () => {
                   type="button"
                   onClick={() => toggleActive("counter")}
                 >
-                  counter
-                  <p>{counterProgress.done + "/" + counterProgress.total}</p>
+                  Counter
+                  <p>{counterProgress.done + " / " + counterProgress.total}</p>
                 </SectionSwitch>
                 <ActiveSectionWrapper
                   className={activeId === "counter" && "active"}
@@ -73,9 +76,9 @@ const CounterPage = () => {
                   type="button"
                   onClick={() => toggleActive("checklist")}
                 >
-                  checklist
+                  Checklist
                   <p>
-                    {checkListProgress.done + "/" + checkListProgress.total}
+                    {checkListProgress.done + " / " + checkListProgress.total}
                   </p>
                 </SectionSwitch>
                 <ActiveSectionWrapper
@@ -84,7 +87,12 @@ const CounterPage = () => {
                   <CheckList updateProgress={setCheckListProgress} />
                 </ActiveSectionWrapper>
               </SectionListItem>
-              <SectionSwitch type="button">Confirm</SectionSwitch>
+              <ConfirmButton
+                type="button"
+                disabled={!isCounterDone || !isCheckListDone}
+              >
+                Confirm
+              </ConfirmButton>
             </ul>
           </>
         )}

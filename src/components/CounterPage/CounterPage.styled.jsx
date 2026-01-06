@@ -83,16 +83,31 @@ export const ActiveSectionWrapper = styled.div`
 `;
 
 export const SectionSwitch = styled.button`
-  margin: 0 auto;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  justify-content: space-between;
+
   width: 100%;
   max-width: 375px;
-  transition: ${transition.duration};
-  border-radius: 12px;
-  border: 1px solid ${colors.light.hi100};
   padding: 10px;
+  margin: 0 auto;
+  border-radius: 12px;
+
+  border: 1px solid ${colors.light.hi100};
+  transition: ${transition.duration};
 
   &:hover,
   &:focus {
     background-color: ${colors.light.hi200};
+  }
+`;
+
+export const ConfirmButton = styled(SectionSwitch)`
+  justify-content: center;
+
+  &:disabled {
+    background-color: ${colors.light.hi100};
+    cursor: not-allowed;
   }
 `;

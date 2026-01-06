@@ -54,12 +54,12 @@ export const CheckList = ({ updateProgress }) => {
       <ul>
         {data.map(({ section, items }) => {
           return (
-            <li>
+            <li key={section}>
               <h3>{section}</h3>
               <ul>
                 {items.map(({ title, isChecked }) => {
                   return (
-                    <li>
+                    <li key={title}>
                       <p>{title}</p>
                       <CheckboxWrapper>
                         <Checkbox

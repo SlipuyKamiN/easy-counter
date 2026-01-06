@@ -2,10 +2,11 @@ import { EssentialsCheckbox } from "../Common/Checkboxes";
 import { Counter } from "./Counter";
 import { CommentInput } from "../Common/CommentInput";
 import throttle from "lodash.throttle";
-import { CounterButton, CounterItem } from "./CounterList.styled";
+import { CounterItem } from "./CounterList.styled";
 import { useAPI } from "~/hooks/useAPI";
 import { API } from "~/API/API";
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
+import { SectionSwitch } from "./CounterPage.styled";
 
 export const CounterList = ({
   addressID,
@@ -18,8 +19,13 @@ export const CounterList = ({
   const currentRef = useRef(current);
   currentRef.current = current;
 
+  const updateData = () => {
+    dispatch(addressID);
+    updateProgress({ done: 1, total: 1 });
+  };
+
   const commentChange = (id, body) => {
-    update({ id, body }).then(() => dispatch(addressID));
+    update({ id, body }).then(updateData);
   };
 
   const throttledHandleChange = useRef(
@@ -33,19 +39,15 @@ export const CounterList = ({
           ),
           updatedAt: new Date(),
         },
-      }).then(() => dispatch(addressID));
-    }, 1000)
+      }).then(updateData);
+    }, 200)
   ).current;
 
   const throttledCheckboxChange = useRef(
     throttle((id, body) => {
-      update({ id, body }).then(() => dispatch(addressID));
+      update({ id, body }).then(updateData);
     }, 200)
   ).current;
-
-  useEffect(() => {
-    updateProgress({ done: 0, total: 1 });
-  }, [updateProgress]);
 
   return (
     <ul>
@@ -73,12 +75,12 @@ export const CounterList = ({
         <CommentInput item={current} handleChange={commentChange} />
       </CounterItem>
       <CounterItem>
-        <CounterButton
+        <SectionSwitch
           type="button"
           onClick={() => updateProgress({ done: 1, total: 1 })}
         >
           Update
-        </CounterButton>
+        </SectionSwitch>
       </CounterItem>
     </ul>
   );
