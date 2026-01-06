@@ -127,3 +127,43 @@ export const ClearInputButton = styled(CounterButton)`
   border: none;
   background-color: ${colors.classicWhite};
 `;
+
+export const SectionListItem = styled.li`
+  overflow: hidden;
+  position: relative;
+`;
+
+export const ActiveSectionWrapper = styled.div`
+  overflow: hidden;
+  max-height: 0;
+  transform: translateY(-100%);
+  opacity: 0;
+  transition: all ${transition.duration};
+  pointer-events: none;
+
+  &.active {
+    pointer-events: auto;
+    transform: translateY(0%);
+    max-height: none;
+    opacity: 1;
+
+    transition: all ${transition.duration};
+  }
+`;
+
+export const SectionSwitch = styled.button`
+  margin: 0 auto;
+  max-width: 375px;
+  transition: ${transition.duration};
+  border-radius: 12px;
+  border: 1px solid ${colors.light.hi100};
+
+  &:hover,
+  &:focus {
+    background-color: ${colors.light.hi200};
+  }
+
+  &:not(:last-of-type) {
+    margin-bottom: 10px;
+  }
+`;

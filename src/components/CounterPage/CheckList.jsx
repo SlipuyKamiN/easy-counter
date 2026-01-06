@@ -26,39 +26,57 @@ export const CheckList = () => {
     setData(updatedData);
   };
 
+  const countChecked = () => {
+    const totalSections = data.length;
+    const checkedSectionsQty = data.filter(({ items }) => {
+      const total = items.length;
+      const checkedQty = items.filter(({ isChecked }) => isChecked).length;
+
+      return total === checkedQty;
+    }).length;
+
+    return {
+      isAllChecked: totalSections === checkedSectionsQty,
+      indicator: `${checkedSectionsQty}/${totalSections}`,
+    };
+  };
+
   return (
-    <ul>
-      {data.map(({ section, items }) => {
-        return (
-          <li>
-            <h3>{section}</h3>
-            <ul>
-              {items.map(({ title, isChecked }) => {
-                return (
-                  <li>
-                    <p>{title}</p>
-                    <CheckboxWrapper>
-                      <Checkbox
-                        type="checkbox"
-                        checked={isChecked}
-                        onChange={() =>
-                          handleCheck({
-                            sectionName: section,
-                            itemTitle: title,
-                          })
-                        }
-                      />
-                      <span>
-                        <FaCheck size={28} />
-                      </span>
-                    </CheckboxWrapper>
-                  </li>
-                );
-              })}
-            </ul>
-          </li>
-        );
-      })}
-    </ul>
+    <>
+      <h3>{countChecked().indicator}</h3>
+      <ul>
+        {data.map(({ section, items }) => {
+          return (
+            <li>
+              <h3>{section}</h3>
+              <ul>
+                {items.map(({ title, isChecked }) => {
+                  return (
+                    <li>
+                      <p>{title}</p>
+                      <CheckboxWrapper>
+                        <Checkbox
+                          type="checkbox"
+                          checked={isChecked}
+                          onChange={() =>
+                            handleCheck({
+                              sectionName: section,
+                              itemTitle: title,
+                            })
+                          }
+                        />
+                        <span>
+                          <FaCheck size={28} />
+                        </span>
+                      </CheckboxWrapper>
+                    </li>
+                  );
+                })}
+              </ul>
+            </li>
+          );
+        })}
+      </ul>
+    </>
   );
 };
