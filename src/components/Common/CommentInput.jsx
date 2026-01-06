@@ -1,11 +1,10 @@
 import { useState } from "react";
 import { TextInput } from "./Inputs.styled";
 import { RxCross2 } from "react-icons/rx";
-
 import {
   ClearInputButton,
   TextInputWrapper,
-} from "../CounterPage/CounterPage.styled";
+} from "../CounterPage/CounterList.styled";
 
 export const CommentInput = ({ item, handleChange }) => {
   const [value, setValue] = useState(item.comment || "");
