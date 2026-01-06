@@ -1,0 +1,64 @@
+[
+  {
+    "section": "Müll",
+    "items": [
+      {
+        "title": "Müll sauber und mit Müllbeutel versehen?",
+        "isChecked": false
+      }
+    ]
+  },
+  {
+    "section": "Betten & Wäsche",
+    "items": [
+      { "title": "Betten frisch bezogen und ohne Haare?", "isChecked": false },
+      { "title": "Handtücher bereitgelegt?", "isChecked": false },
+      { "title": "Wäsche gezählt und in App eingetragen?", "isChecked": false }
+    ]
+  },
+  {
+    "section": "Küche",
+    "items": [
+      { "title": "Geschirrspüler leer und sauber?", "isChecked": false },
+      { "title": "Kühlschrank leer und sauber?", "isChecked": false },
+      {
+        "title": "Backofen, Mikrowelle, Toaster und Wasserkocher gecheckt?",
+        "isChecked": false
+      },
+      {
+        "title": "Spüle, Armatur und Arbeitsflächen glänzen?",
+        "isChecked": false
+      },
+      { "title": "Schränke gecheckt und ok?", "isChecked": false },
+      {
+        "title": "Verbrauchsmaterial gecheckt und bereitgestellt und in App eingetragen? (Kaffeetabs, Geschirrspültabs, Spülmittel, Spülschwamm, Schwammtuch)",
+        "isChecked": false
+      }
+    ]
+  },
+  {
+    "section": "Bad",
+    "items": [
+      { "title": "WC, Dusche und Waschbecken glänzen?", "isChecked": false },
+      {
+        "title": "Glasflächen, Spiegel und Armaturen glänzen?",
+        "isChecked": false
+      },
+      {
+        "title": "Verbrauchsmaterial gecheckt und zur Verfügung gestellt und in App eingetragen? (Handseife, Duschgel, Shampoo, Toilettenpapier)",
+        "isChecked": false
+      }
+    ]
+  },
+  {
+    "section": "Böden",
+    "items": [{ "title": "Böden gesaugt und gewischt?", "isChecked": false }]
+  },
+  {
+    "section": "Abschluss",
+    "items": [
+      { "title": "Alle Fenster zu?", "isChecked": false },
+      { "title": "Von jedem Zimmer ein Foto gemacht?", "isChecked": false }
+    ]
+  }
+]

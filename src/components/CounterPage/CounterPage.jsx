@@ -10,6 +10,7 @@ import { StateIndicator } from "../Common/StateIndicator";
 import throttle from "lodash.throttle";
 import useWakeLock from "~/hooks/useWakeLock";
 import { CommentInput } from "../Common/CommentInput";
+import { CheckList } from "./CheckList";
 
 const CounterPage = () => {
   const { addressID } = useParams();
@@ -83,6 +84,7 @@ const CounterPage = () => {
                 <CommentInput item={current} handleChange={commentChange} />
               </CounterItem>
             </ul>
+            <CheckList />
           </>
         )}
       </Container>
