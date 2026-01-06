@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { CounterItem } from "./CounterPage.styled";
+import { CounterButton, CounterInput, CounterItem } from "./CounterPage.styled";
 
 export const Counter = ({ name, available, handleChange, itemKey }) => {
   const [qty, setQty] = useState(available);
@@ -15,23 +15,23 @@ export const Counter = ({ name, available, handleChange, itemKey }) => {
     <CounterItem>
       <h3>{name}</h3>
       <div>
-        <button
+        <CounterButton
           type="button"
           disabled={qty <= 0}
           onClick={() => setQty((prev) => prev - 1)}
         >
           -
-        </button>
-        <input
+        </CounterButton>
+        <CounterInput
           type="tel"
           min={0}
           value={qty}
           onChange={(e) => setQty(Number(e.target.value))}
           onFocus={(e) => e.target.select()}
         />
-        <button type="button" onClick={() => setQty((prev) => prev + 1)}>
+        <CounterButton type="button" onClick={() => setQty((prev) => prev + 1)}>
           +
-        </button>
+        </CounterButton>
       </div>
     </CounterItem>
   );

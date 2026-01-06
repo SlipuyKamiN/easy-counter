@@ -110,6 +110,8 @@ export const TextInput = styled.input`
   color: ${colors.light.lo200};
   transition: all ${transition.duration};
 
+  pointer-events: stroke;
+
   &:focus {
     box-shadow: 0px 0px 10px 0 ${colors.light.hi100};
   }
