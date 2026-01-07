@@ -23,7 +23,7 @@ const initialProgress = {
 const CounterPage = () => {
   const { addressID } = useParams();
   const [dispatch, current, isLoading, isError] = useAPI(API.getAddress);
-  const [sendSMS, isSending] = useAPI(API.sendSMS);
+  const [sendSMS, smsData, isSending] = useAPI(API.sendSMS);
   const [activeId, setActiveId] = useState("");
   const [counterProgress, setCounterProgress] = useState(initialProgress);
   const [checkListProgress, setCheckListProgress] = useState(initialProgress);
@@ -50,7 +50,7 @@ const CounterPage = () => {
       body: `${current.address} – erledigt.\n Counter – aktualisiert. \n Checkliste – abgehakt.`,
     }).then(() => {
       if (!isSending) {
-        console.log("is sent");
+        console.log(smsData);
       }
     });
   };
