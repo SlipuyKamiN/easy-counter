@@ -23,7 +23,7 @@ const initialProgress = {
 const CounterPage = () => {
   const { addressID } = useParams();
   const [dispatch, current, isLoading, isError] = useAPI(API.getAddress);
-  const [sendSMS] = useAPI(API.sendSMS);
+  const [sendSMS, sms, isSending] = useAPI(API.sendSMS);
   const [activeId, setActiveId] = useState("");
   const [counterProgress, setCounterProgress] = useState(initialProgress);
   const [checkListProgress, setCheckListProgress] = useState(initialProgress);
@@ -44,10 +44,14 @@ const CounterPage = () => {
     setActiveId(listName);
   };
 
+  console.log(sms, isSending);
+
   const handleSMS = () => {
     sendSMS({
       to: "+491781516236",
       body: `${current.address} – erledigt.\n Counter – aktualisiert. \n Checkliste – abgehakt.`,
+    }).then(() => {
+      console.log("qwe:", sms, isSending);
     });
   };
 
@@ -97,17 +101,17 @@ const CounterPage = () => {
               </SectionListItem>
               <ConfirmButton
                 type="button"
-                disabled={!isCounterDone || !isCheckListDone}
+                disabled={!isCounterDone || !isCheckListDone || isSending}
                 onClick={handleSMS}
               >
-                Confirm
+                Bestätigen
               </ConfirmButton>
             </ul>
           </>
         )}
       </Container>
       <StateIndicator
-        isLoading={isLoading}
+        isLoading={isLoading || isSending}
         isError={isError}
         success={current}
         text={isError && "Something went wrong... "}

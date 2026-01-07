@@ -92,9 +92,10 @@ export const SectionSwitch = styled.button`
   max-width: 375px;
   padding: 10px;
   margin: 0 auto;
-  border-radius: 12px;
 
-  border: 1px solid ${colors.light.hi100};
+  font-size: inherit;
+
+  border-bottom: 1px solid ${colors.light.hi100};
   transition: ${transition.duration};
 
   &:hover,
@@ -106,7 +107,11 @@ export const SectionSwitch = styled.button`
 export const ConfirmButton = styled(SectionSwitch)`
   justify-content: center;
 
+  border-radius: 12px;
+  border: 1px solid ${colors.light.hi100};
+
   &:disabled {
+    color: ${colors.light.hi200};
     background-color: ${colors.light.hi100};
     cursor: not-allowed;
   }

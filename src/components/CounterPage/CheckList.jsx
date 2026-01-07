@@ -2,6 +2,7 @@ import checklist from "~/data/checklist";
 import { Checkbox, CheckboxWrapper } from "../Common/Inputs.styled";
 import { FaCheck } from "react-icons/fa";
 import { useEffect, useState } from "react";
+import { CheckItem, SectionItem, SectionsList } from "./CheckList.styled";
 
 export const CheckList = ({ updateProgress }) => {
   const [data, setData] = useState(checklist);
@@ -51,15 +52,15 @@ export const CheckList = ({ updateProgress }) => {
   return (
     <>
       <h3>{countCheckedFromList(data).indicator}</h3>
-      <ul>
+      <SectionsList>
         {data.map(({ section, items }) => {
           return (
-            <li key={section}>
+            <SectionItem key={section}>
               <h3>{section}</h3>
               <ul>
                 {items.map(({ title, isChecked }) => {
                   return (
-                    <li key={title}>
+                    <CheckItem key={title}>
                       <p>{title}</p>
                       <CheckboxWrapper>
                         <Checkbox
@@ -76,14 +77,14 @@ export const CheckList = ({ updateProgress }) => {
                           <FaCheck size={28} />
                         </span>
                       </CheckboxWrapper>
-                    </li>
+                    </CheckItem>
                   );
                 })}
               </ul>
-            </li>
+            </SectionItem>
           );
         })}
-      </ul>
+      </SectionsList>
     </>
   );
 };
