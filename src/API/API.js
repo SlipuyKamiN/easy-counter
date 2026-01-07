@@ -1,5 +1,7 @@
 import { supabase } from "./supabaseClient";
 
+const EDGE_FUNCTION_URL = import.meta.env.VITE_EDGE_FUNCTION_URL;
+
 export const API = {
   getAll: async () => {
     return await supabase
@@ -23,5 +25,19 @@ export const API = {
   delete: async (id) => {
     if (!id) throw new Error("ID missed");
     return supabase.from("apartments").delete().eq("id", id);
+  },
+  sendSMS: async ({ to, body }) => {
+    if (!to || !body) throw new Error("Missing 'to' or 'body'");
+
+    const res = await fetch(EDGE_FUNCTION_URL, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ to, body }),
+    });
+
+    const data = await res.json();
+
+    if (!res.ok) throw new Error(data?.error || "Failed to send SMS");
+    return data;
   },
 };

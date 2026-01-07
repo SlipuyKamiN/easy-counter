@@ -58,8 +58,6 @@ export const TextInputWrapper = styled.div`
 
   max-width: 240px;
   margin: 0 auto;
-
-  overflow: hidden;
 `;
 
 export const ClearInputButton = styled(CounterButton)`

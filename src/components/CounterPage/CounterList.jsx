@@ -74,14 +74,14 @@ export const CounterList = ({
         <h3>Sonstiges:</h3>
         <CommentInput item={current} handleChange={commentChange} />
       </CounterItem>
-      <CounterItem>
+      {/* <CounterItem>
         <SectionSwitch
           type="button"
           onClick={() => updateProgress({ done: 1, total: 1 })}
         >
           Update
         </SectionSwitch>
-      </CounterItem>
+      </CounterItem> */}
     </ul>
   );
 };
