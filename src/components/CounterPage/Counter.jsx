@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { CounterButton, CounterInput, CounterItem } from "./CounterPage.styled";
+import { CounterButton, CounterInput, CounterItem } from "./CounterList.styled";
 
 export const Counter = ({ name, available, handleChange, itemKey }) => {
   const [qty, setQty] = useState(available);

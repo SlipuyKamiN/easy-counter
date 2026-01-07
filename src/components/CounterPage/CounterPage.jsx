@@ -1,23 +1,34 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { API } from "~/API/API";
 import { useAPI } from "~/hooks/useAPI";
-import { EssentialsCheckbox } from "../Common/Checkboxes";
-import { Counter } from "./Counter";
 import { Container, Section } from "../SharedLayout/SharedLayout.styled";
-import { CounterItem, Heading } from "./CounterPage.styled";
+import {
+  ActiveSectionWrapper,
+  ConfirmButton,
+  Heading,
+  SectionListItem,
+  SectionSwitch,
+} from "./CounterPage.styled";
 import { StateIndicator } from "../Common/StateIndicator";
-import throttle from "lodash.throttle";
 import useWakeLock from "~/hooks/useWakeLock";
-import { CommentInput } from "../Common/CommentInput";
+import { CheckList } from "./CheckList";
+import { CounterList } from "./CounterList";
+
+const initialProgress = {
+  done: 0,
+  total: 1,
+};
 
 const CounterPage = () => {
   const { addressID } = useParams();
   const [dispatch, current, isLoading, isError] = useAPI(API.getAddress);
-  const [update] = useAPI(API.update);
-
-  const currentRef = useRef(current);
-  currentRef.current = current;
+  const [sendSMS, sms, isSending] = useAPI(API.sendSMS);
+  const [activeId, setActiveId] = useState("");
+  const [counterProgress, setCounterProgress] = useState(initialProgress);
+  const [checkListProgress, setCheckListProgress] = useState(initialProgress);
+  const isCounterDone = counterProgress.done === counterProgress.total;
+  const isCheckListDone = checkListProgress.done === checkListProgress.total;
 
   useEffect(() => {
     if (!current) {
@@ -25,30 +36,24 @@ const CounterPage = () => {
     }
   }, [dispatch, current, addressID]);
 
-  const commentChange = (id, body) => {
-    update({ id, body }).then(() => dispatch(addressID));
+  const toggleActive = (listName) => {
+    if (listName === activeId) {
+      return setActiveId("");
+    }
+
+    setActiveId(listName);
   };
 
-  const throttledHandleChange = useRef(
-    throttle(({ name, qty, itemKey }) => {
-      update({
-        id: addressID,
-        body: {
-          ...currentRef.current,
-          [itemKey]: currentRef.current[itemKey].map((l) =>
-            l.name === name ? { ...l, available: qty } : l
-          ),
-          updatedAt: new Date(),
-        },
-      }).then(() => dispatch(addressID));
-    }, 1000)
-  ).current;
+  console.log(sms, isSending);
 
-  const throttledCheckboxChange = useRef(
-    throttle((id, body) => {
-      update({ id, body }).then(() => dispatch(addressID));
-    }, 200)
-  ).current;
+  const handleSMS = () => {
+    sendSMS({
+      to: "+491781516236",
+      body: `${current.address} – erledigt.\n Counter – aktualisiert. \n Checkliste – abgehakt.`,
+    }).then(() => {
+      console.log("qwe:", sms, isSending);
+    });
+  };
 
   useWakeLock();
 
@@ -59,39 +64,54 @@ const CounterPage = () => {
           <>
             <Heading>{current.address}</Heading>
             <ul>
-              {current.linens.map(({ name, available }) => (
-                <Counter
-                  key={name}
-                  name={name}
-                  available={available}
-                  handleChange={throttledHandleChange}
-                  itemKey={"linens"}
-                />
-              ))}
-              {current.essentials.map((found) => (
-                <CounterItem key={found.name}>
-                  <h3>{found.name}</h3>
-                  <EssentialsCheckbox
-                    item={current}
-                    found={found}
-                    onChange={throttledCheckboxChange}
+              <SectionListItem>
+                <SectionSwitch
+                  type="button"
+                  onClick={() => toggleActive("counter")}
+                >
+                  Counter
+                  <p>{counterProgress.done + " / " + counterProgress.total}</p>
+                </SectionSwitch>
+                <ActiveSectionWrapper
+                  className={activeId === "counter" && "active"}
+                >
+                  <CounterList
+                    addressID={addressID}
+                    dispatch={dispatch}
+                    current={current}
+                    updateProgress={setCounterProgress}
                   />
-                </CounterItem>
-              ))}
-              <CounterItem>
-                <h3>Sonstiges:</h3>
-                <CommentInput
-                  item={current}
-                  handleChange={commentChange}
-                  clearable
-                />
-              </CounterItem>
+                </ActiveSectionWrapper>
+              </SectionListItem>
+              <SectionListItem>
+                <SectionSwitch
+                  type="button"
+                  onClick={() => toggleActive("checklist")}
+                >
+                  Checklist
+                  <p>
+                    {checkListProgress.done + " / " + checkListProgress.total}
+                  </p>
+                </SectionSwitch>
+                <ActiveSectionWrapper
+                  className={activeId === "checklist" && "active"}
+                >
+                  <CheckList updateProgress={setCheckListProgress} />
+                </ActiveSectionWrapper>
+              </SectionListItem>
+              <ConfirmButton
+                type="button"
+                disabled={!isCounterDone || !isCheckListDone || isSending}
+                onClick={handleSMS}
+              >
+                Bestätigen
+              </ConfirmButton>
             </ul>
           </>
         )}
       </Container>
       <StateIndicator
-        isLoading={isLoading}
+        isLoading={isLoading || isSending}
         isError={isError}
         success={current}
         text={isError && "Something went wrong... "}

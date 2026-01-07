@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 import { colors, transition } from "~/styles/common/vars";
 
-export const CounterList = styled.ul`
+export const AddressesList = styled.ul`
   margin: 0 auto;
 `;
 
@@ -55,73 +55,64 @@ export const PickupWrapper = styled.li`
   justify-content: space-between;
 `;
 
-export const CounterItem = styled.li`
-  margin-bottom: 20px;
+export const SectionListItem = styled.li`
+  overflow: hidden;
+  position: relative;
 
-  h3 {
-    text-transform: capitalize;
-    margin-bottom: 5px;
-  }
-
-  div {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
+  &:not(:last-child) {
+    margin-bottom: 10px;
   }
 `;
 
-export const CounterInput = styled.input`
-  font-size: 30px;
-  width: 90px;
-  text-align: center;
-  border: none;
-  padding: 0;
+export const ActiveSectionWrapper = styled.div`
+  overflow: hidden;
+  max-height: 0;
+  transform: translateY(-100%);
+  opacity: 0;
+  transition: all ${transition.duration};
+  pointer-events: none;
 
-  background-color: transparent;
+  &.active {
+    pointer-events: auto;
+    transform: translateY(0%);
+    max-height: none;
+    opacity: 1;
+
+    transition: all ${transition.duration};
+  }
+`;
+
+export const SectionSwitch = styled.button`
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 100%;
+  max-width: 375px;
+  padding: 10px;
+  margin: 0 auto;
+
+  font-size: inherit;
+
   border-bottom: 1px solid ${colors.light.hi100};
-`;
-
-export const CounterButton = styled.button`
-  width: 40px;
-  height: 40px;
-  padding: 0;
-
-  color: ${colors.light.lo200};
-  background-color: transparent;
-  border-radius: 50%;
-  font-size: 36px;
-  font-weight: 600;
-  line-height: 0;
-
-  border: 1px solid ${colors.light.hi100};
   transition: ${transition.duration};
 
   &:hover,
   &:focus {
-    color: ${colors.light.hi200};
-    background-color: ${colors.light.mid100};
+    background-color: ${colors.light.hi200};
   }
+`;
+
+export const ConfirmButton = styled(SectionSwitch)`
+  justify-content: center;
+
+  border-radius: 12px;
+  border: 1px solid ${colors.light.hi100};
 
   &:disabled {
     color: ${colors.light.hi200};
+    background-color: ${colors.light.hi100};
+    cursor: not-allowed;
   }
-`;
-
-export const TextInputWrapper = styled.div`
-  position: relative;
-
-  max-width: 240px;
-  margin: 0 auto;
-`;
-
-export const ClearInputButton = styled(CounterButton)`
-  position: absolute;
-  right: 1px;
-  top: 1px;
-
-  height: 32px;
-  width: 32px;
-
-  border: none;
-  background-color: ${colors.classicWhite};
 `;

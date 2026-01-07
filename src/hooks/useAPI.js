@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState } from "react";
 import { useParams } from "react-router-dom";
 import { filterPast } from "~/helpers/dashboard";
 
@@ -8,25 +8,12 @@ export const useAPI = (method) => {
   const [isLoading, setIsLoading] = useState(false);
   const [isError, setIsError] = useState(false);
 
-  const abortControllerRef = useRef(null);
-  const isPendingRef = useRef(false);
-
   const dispatch = async (payload) => {
-    if (isPendingRef.current) return;
-
-    if (abortControllerRef.current) {
-      abortControllerRef.current.abort();
-    }
-
-    const controller = new AbortController();
-    abortControllerRef.current = controller;
-    isPendingRef.current = true;
-
     setIsLoading(true);
     setIsError(false);
 
     try {
-      const response = await method(payload, { signal: controller.signal });
+      const response = await method(payload);
 
       if (response.status >= 200 && response.status < 300) {
         const data = response.data.length
@@ -56,7 +43,6 @@ export const useAPI = (method) => {
       setIsError(true);
     } finally {
       setIsLoading(false);
-      isPendingRef.current = false;
     }
   };
 

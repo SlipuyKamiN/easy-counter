@@ -114,7 +114,6 @@
     ],
     "id": "1",
     "updatedAt": "2026-01-04T11:24:33.820Z",
-    "nextCheckout": [],
     "comment": ""
   },
   {
@@ -349,8 +348,7 @@
     ],
     "id": "3",
     "updatedAt": "2025-12-28T11:27:56.035Z",
-    "comment": "Entkalker",
-    "nextCheckout": []
+    "comment": "Entkalker"
   },
   {
     "address": "Cherusker-3 STUDIO | 10829",
@@ -466,8 +464,7 @@
       }
     ],
     "id": "4",
-    "updatedAt": "2026-01-03T11:00:31.644Z",
-    "nextCheckout": []
+    "updatedAt": "2026-01-03T11:00:31.644Z"
   },
   {
     "address": "Cherusker-3 APART2 | 10829",
@@ -584,7 +581,6 @@
     ],
     "id": "5",
     "updatedAt": "2025-12-29T12:35:18.045Z",
-    "nextCheckout": [],
     "comment": "Entkalker"
   },
   {
@@ -1168,7 +1164,6 @@
     ],
     "id": "10",
     "updatedAt": "2026-01-04T12:53:23.455Z",
-    "nextCheckout": [],
     "comment": "Staubsaugbeutel "
   },
   {
@@ -1635,8 +1630,7 @@
       }
     ],
     "id": "14",
-    "updatedAt": "2025-12-11T18:05:00.890Z",
-    "nextCheckout": []
+    "updatedAt": "2025-12-11T18:05:00.890Z"
   },
   {
     "address": "Urban-94 | 10967",
@@ -1985,7 +1979,6 @@
     ],
     "id": "17",
     "updatedAt": "2025-11-21T07:43:22.924Z",
-    "nextCheckout": [],
     "comment": ""
   }
 ]
