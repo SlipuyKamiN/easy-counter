@@ -1,25 +1,27 @@
-import axios from "axios";
-
-const BASE_URL = import.meta.env.VITE_BASE_URL;
+import { supabase } from "./supabaseClient";
 
 export const API = {
-  getAll: async (config) => {
-    return axios.get(BASE_URL, config);
+  getAll: async () => {
+    return await supabase
+      .from("apartments")
+      .select("*")
+      .order("id", { ascending: true });
   },
-  getAddress: async (id, config) => {
+  getAddress: async (id) => {
     if (!id) throw new Error("ID missed");
-    return axios.get(`${BASE_URL}/${id}`, config);
+    return supabase.from("apartments").select("*").eq("id", id).single();
   },
-  create: async (body, config) => {
+  create: async (body) => {
     if (!body) throw new Error("body missed");
-    return axios.post(BASE_URL, body, config);
+    return supabase.from("apartments").insert([body]);
   },
-  update: async ({ id, body }, config) => {
+  update: async ({ id, body }) => {
     if (!id || !body) throw new Error("ID or body missed");
-    return axios.put(`${BASE_URL}/${id}`, body, config);
+    const { id: _omit, ...clearBody } = body;
+    return supabase.from("apartments").update(clearBody).eq("id", id);
   },
-  delete: async (id, config) => {
+  delete: async (id) => {
     if (!id) throw new Error("ID missed");
-    return axios.delete(`${BASE_URL}/${id}`, config);
+    return supabase.from("apartments").delete().eq("id", id);
   },
 };

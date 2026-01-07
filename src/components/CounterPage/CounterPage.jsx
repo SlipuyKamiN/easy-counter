@@ -90,6 +90,9 @@ const CounterPage = () => {
               <ConfirmButton
                 type="button"
                 disabled={!isCounterDone || !isCheckListDone}
+                onClick={() => {
+                  console.log({ counterProgress, checkListProgress });
+                }}
               >
                 Confirm
               </ConfirmButton>
