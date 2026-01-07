@@ -23,7 +23,7 @@ const initialProgress = {
 const CounterPage = () => {
   const { addressID } = useParams();
   const [dispatch, current, isLoading, isError] = useAPI(API.getAddress);
-  const [sendSMS, sms, isSending] = useAPI(API.sendSMS);
+  const [sendSMS, isSending] = useAPI(API.sendSMS);
   const [activeId, setActiveId] = useState("");
   const [counterProgress, setCounterProgress] = useState(initialProgress);
   const [checkListProgress, setCheckListProgress] = useState(initialProgress);
@@ -44,14 +44,14 @@ const CounterPage = () => {
     setActiveId(listName);
   };
 
-  console.log(sms, isSending);
-
   const handleSMS = () => {
     sendSMS({
       to: "+491781516236",
       body: `${current.address} – erledigt.\n Counter – aktualisiert. \n Checkliste – abgehakt.`,
     }).then(() => {
-      console.log("qwe:", sms, isSending);
+      if (!isSending) {
+        console.log("is sent");
+      }
     });
   };
 
