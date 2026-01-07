@@ -23,6 +23,7 @@ const initialProgress = {
 const CounterPage = () => {
   const { addressID } = useParams();
   const [dispatch, current, isLoading, isError] = useAPI(API.getAddress);
+  const [sendSMS] = useAPI(API.sendSMS);
   const [activeId, setActiveId] = useState("");
   const [counterProgress, setCounterProgress] = useState(initialProgress);
   const [checkListProgress, setCheckListProgress] = useState(initialProgress);
@@ -41,6 +42,13 @@ const CounterPage = () => {
     }
 
     setActiveId(listName);
+  };
+
+  const handleSMS = () => {
+    sendSMS({
+      to: "+491781516236",
+      body: `${current.address} – erledigt.\n Counter – aktualisiert. \n Checkliste – abgehakt.`,
+    });
   };
 
   useWakeLock();
@@ -90,9 +98,7 @@ const CounterPage = () => {
               <ConfirmButton
                 type="button"
                 disabled={!isCounterDone || !isCheckListDone}
-                onClick={() => {
-                  console.log({ counterProgress, checkListProgress });
-                }}
+                onClick={handleSMS}
               >
                 Confirm
               </ConfirmButton>

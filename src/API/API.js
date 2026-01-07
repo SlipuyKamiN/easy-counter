@@ -29,15 +29,12 @@ export const API = {
   sendSMS: async ({ to, body }) => {
     if (!to || !body) throw new Error("Missing 'to' or 'body'");
 
-    const res = await fetch(EDGE_FUNCTION_URL, {
+    const { data, error } = await supabase.functions.invoke("sendSMS", {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ to, body }),
+      body: { to, body },
     });
 
-    const data = await res.json();
-
-    if (!res.ok) throw new Error(data?.error || "Failed to send SMS");
+    if (error) throw new Error(error.message || "Failed to send SMS");
     return data;
   },
 };
