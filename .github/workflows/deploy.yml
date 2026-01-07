@@ -18,6 +18,9 @@ jobs:
           npm run build
         env:
           VITE_BASE_URL: ${{ vars.VITE_BASE_URL }}
+          VITE_SUPABASE_URL: ${{ vars.VITE_SUPABASE_URL }}
+          VITE_SUPABASE_ANON_KEY: ${{ vars.VITE_SUPABASE_ANON_KEY }}
+          VITE_EDGE_FUNCTION_URL: ${{ vars.VITE_EDGE_FUNCTION_URL }}
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.0
