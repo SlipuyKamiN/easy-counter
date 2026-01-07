@@ -48,14 +48,22 @@ const CounterPage = () => {
 
   const handleSMS = () => {
     sendSMS({
-      to: "+491781516236",
+      to: "+491732058328",
       body: `${current.address} – erledigt.\n Counter – aktualisiert. \n Checkliste – abgehakt.`,
-    }).then(() => {
-      if (!isSending) {
-        console.log(smsData);
-        scrollToTop();
-      }
-    });
+    })
+      .then(() => {
+        sendSMS({
+          to: "+491781516236",
+          body: `${current.address} – erledigt.\n Counter – aktualisiert. \n Checkliste – abgehakt.`,
+        });
+      })
+      .then(() => {
+        if (!isSending) {
+          console.log(smsData);
+          scrollToTop();
+          setActiveId("");
+        }
+      });
   };
 
   useWakeLock();
