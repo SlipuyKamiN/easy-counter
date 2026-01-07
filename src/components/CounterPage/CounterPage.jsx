@@ -14,6 +14,7 @@ import { StateIndicator } from "../Common/StateIndicator";
 import useWakeLock from "~/hooks/useWakeLock";
 import { CheckList } from "./CheckList";
 import { CounterList } from "./CounterList";
+import { scrollToTop } from "~/helpers/scrollToTop";
 
 const initialProgress = {
   done: 0,
@@ -42,6 +43,7 @@ const CounterPage = () => {
     }
 
     setActiveId(listName);
+    scrollToTop();
   };
 
   const handleSMS = () => {
@@ -51,6 +53,7 @@ const CounterPage = () => {
     }).then(() => {
       if (!isSending) {
         console.log(smsData);
+        scrollToTop();
       }
     });
   };
