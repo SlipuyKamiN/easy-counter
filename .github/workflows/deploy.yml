@@ -17,10 +17,9 @@ jobs:
           npm run lint
           npm run build
         env:
-          VITE_BASE_URL: ${{ vars.VITE_BASE_URL }}
           VITE_SUPABASE_URL: ${{ vars.VITE_SUPABASE_URL }}
           VITE_SUPABASE_ANON_KEY: ${{ vars.VITE_SUPABASE_ANON_KEY }}
-          VITE_EDGE_FUNCTION_URL: ${{ vars.VITE_EDGE_FUNCTION_URL }}
+          VITE_TWILIO_RECIPIENT_PHONE: ${{ vars.VITE_TWILIO_RECIPIENT_PHONE }}
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.0
