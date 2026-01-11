@@ -16,6 +16,8 @@ import { CheckList } from "./CheckList";
 import { CounterList } from "./CounterList";
 import { scrollToTop } from "~/helpers/scrollToTop";
 
+const TWILIO_RECIPIENT_PHONE = import.meta.env.VITE_TWILIO_RECIPIENT_PHONE;
+
 const initialProgress = {
   done: 0,
   total: 1,
@@ -28,6 +30,7 @@ const CounterPage = () => {
   const [activeId, setActiveId] = useState("");
   const [counterProgress, setCounterProgress] = useState(initialProgress);
   const [checkListProgress, setCheckListProgress] = useState(initialProgress);
+  const [key, setKey] = useState(0);
   const isCounterDone = counterProgress.done === counterProgress.total;
   const isCheckListDone = checkListProgress.done === checkListProgress.total;
 
@@ -46,24 +49,24 @@ const CounterPage = () => {
     scrollToTop();
   };
 
+  const reset = () => {
+    scrollToTop();
+    setActiveId("");
+    setKey((k) => k + 1);
+    setCounterProgress(initialProgress);
+  };
+
   const handleSMS = () => {
     sendSMS({
-      to: "+491732058328",
+      to: TWILIO_RECIPIENT_PHONE,
       body: `${current.address} – erledigt.\n Counter – aktualisiert. \n Checkliste – abgehakt.`,
-    })
-      .then(() => {
-        sendSMS({
-          to: "+491781516236",
-          body: `${current.address} – erledigt.\n Counter – aktualisiert. \n Checkliste – abgehakt.`,
-        });
-      })
-      .then(() => {
-        if (!isSending) {
-          console.log(smsData);
-          scrollToTop();
-          setActiveId("");
-        }
-      });
+    }).then(() => {
+      if (!isSending) {
+        console.log(smsData);
+      }
+    });
+
+    reset();
   };
 
   useWakeLock();
@@ -107,7 +110,11 @@ const CounterPage = () => {
                 <ActiveSectionWrapper
                   className={activeId === "checklist" && "active"}
                 >
-                  <CheckList updateProgress={setCheckListProgress} />
+                  <CheckList
+                    key={key}
+                    updateProgress={setCheckListProgress}
+                    checklist={current.checklist}
+                  />
                 </ActiveSectionWrapper>
               </SectionListItem>
               <ConfirmButton

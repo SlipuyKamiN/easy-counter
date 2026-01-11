@@ -1,7 +1,5 @@
 import { supabase } from "./supabaseClient";
 
-const EDGE_FUNCTION_URL = import.meta.env.VITE_EDGE_FUNCTION_URL;
-
 export const API = {
   getAll: async () => {
     return await supabase
