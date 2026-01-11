@@ -1,10 +1,9 @@
-import checklist from "~/data/checklist";
 import { Checkbox, CheckboxWrapper } from "../Common/Inputs.styled";
 import { FaCheck } from "react-icons/fa";
 import { useEffect, useState } from "react";
 import { CheckItem, SectionItem, SectionsList } from "./CheckList.styled";
 
-export const CheckList = ({ updateProgress }) => {
+export const CheckList = ({ updateProgress, checklist }) => {
   const [data, setData] = useState(checklist);
 
   const handleCheck = ({ sectionName, itemTitle }) => {
