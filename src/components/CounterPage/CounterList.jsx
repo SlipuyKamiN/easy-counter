@@ -72,7 +72,7 @@ export const CounterList = ({
       ))}
       <CounterItem>
         <h3>Sonstiges:</h3>
-        <CommentInput item={current} handleChange={commentChange} />
+        <CommentInput item={current} handleChange={commentChange} clearable />
       </CounterItem>
       {/* <CounterItem>
         <SectionSwitch
