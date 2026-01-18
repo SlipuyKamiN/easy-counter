@@ -24,12 +24,12 @@ export const API = {
     if (!id) throw new Error("ID missed");
     return supabase.from("apartments").delete().eq("id", id);
   },
-  sendSMS: async ({ to, body }) => {
-    if (!to || !body) throw new Error("Missing 'to' or 'body'");
+  sendSMS: async ({ body }) => {
+    if (!body) throw new Error("Missing 'body'");
 
     const { data, error } = await supabase.functions.invoke("sendSMS", {
       method: "POST",
-      body: { to, body },
+      body: { body },
     });
 
     if (error) throw new Error(error.message || "Failed to send SMS");
