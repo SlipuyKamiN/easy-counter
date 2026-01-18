@@ -16,8 +16,6 @@ import { CheckList } from "./CheckList";
 import { CounterList } from "./CounterList";
 import { scrollToTop } from "~/helpers/scrollToTop";
 
-const TWILIO_RECIPIENT_PHONE = import.meta.env.VITE_TWILIO_RECIPIENT_PHONE;
-
 const initialProgress = {
   done: 0,
   total: 1,
@@ -58,7 +56,6 @@ const CounterPage = () => {
 
   const handleSMS = () => {
     sendSMS({
-      to: TWILIO_RECIPIENT_PHONE,
       body: `${current.address} – erledigt.\n Counter – aktualisiert. \n Checkliste – abgehakt.`,
     }).then(() => {
       if (!isSending) {
