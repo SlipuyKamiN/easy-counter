@@ -5,6 +5,7 @@ import { useAPI } from "~/hooks/useAPI";
 import { Container, Section } from "../SharedLayout/SharedLayout.styled";
 import { AddressesListItem, AddressesList } from "./CounterPage.styled";
 import { StateIndicator } from "../Common/StateIndicator";
+import { getSortBy } from "~/helpers/dashboard";
 
 const AddressesListPage = () => {
   const [dispatch, data, isLoading, isError] = useAPI(API.getAll);
@@ -21,7 +22,7 @@ const AddressesListPage = () => {
         <AddressesList>
           {data &&
             !isError &&
-            data.map(({ id, address }) => {
+            data.sort(getSortBy("id")).map(({ id, address }) => {
               return (
                 <AddressesListItem key={id}>
                   <Link to={`counters/${id}`}>{address}</Link>
