@@ -1,0 +1,82 @@
+[
+  {
+    "name": "Toilettenpapier",
+    "price": 5,
+    "available": false
+  },
+  {
+    "name": "Küchenrollen",
+    "price": 4,
+    "available": false
+  },
+  {
+    "name": "Geschirrspülmittel",
+    "price": 3,
+    "available": false
+  },
+  {
+    "name": "Schwammtücher",
+    "price": 2,
+    "available": false
+  },
+  {
+    "name": "Spülschwämme",
+    "price": 2,
+    "available": false
+  },
+  {
+    "name": "Geschirrspültabs",
+    "price": 10,
+    "available": false
+  },
+  {
+    "name": "Kaffee",
+    "price": 12.5,
+    "available": false
+  },
+  {
+    "name": "Handseife",
+    "price": 2,
+    "available": false
+  },
+  {
+    "name": "Shampoo",
+    "price": 2,
+    "available": false
+  },
+  {
+    "name": "Duschgel",
+    "price": 2,
+    "available": false
+  },
+  {
+    "name": "Badreiniger",
+    "price": 4,
+    "available": false
+  },
+  {
+    "name": "Küchenreiniger",
+    "price": 1,
+    "available": false
+  },
+  {
+    "name": "Kalkreiniger",
+    "price": 4,
+    "available": false
+  },
+  {
+    "name": "Toilettenreiniger",
+    "price": 4,
+    "available": false
+  },
+  {
+    "name": "Müllsäcke große",
+    "price": 2,
+    "available": false
+  },
+  {
+    "name": "Müllsäcke kleine",
+    "price": 2,
+    "available": false
+  }
+]

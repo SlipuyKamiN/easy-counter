@@ -23,10 +23,10 @@ export const countBags = (item) => {
 
 export const getAllColums = (data) => {
   const allLinens = Array.from(
-    new Set(data.flatMap((item) => item.linens.map((l) => l.name)))
+    new Set(data.flatMap((item) => item.linens.map((l) => l.name))),
   );
   const allEssentials = Array.from(
-    new Set(data.flatMap((item) => item.essentials.map((a) => a.name)))
+    new Set(data.flatMap((item) => item.essentials.map((a) => a.name))),
   );
   const allColumns = [
     "id",
@@ -37,6 +37,7 @@ export const getAllColums = (data) => {
     ...allLinens,
     ...allEssentials,
     "Sonstiges:",
+    "Warenkorb",
   ];
 
   return { allColumns, allLinens, allEssentials };
@@ -45,7 +46,7 @@ export const getAllColums = (data) => {
 export const getSortBy = (key) => {
   switch (key.toLowerCase()) {
     case "id":
-      return (a, b) => Number(a.id) - Number(b.id);
+      return (a, b) => Number(a.position) - Number(b.position);
     case "adresse":
       return (a, b) => a.address.localeCompare(b.address);
     case "tour-datum":
@@ -89,7 +90,7 @@ export const formatDate = (date) => {
   const pad = (n) => n.toString().padStart(2, "0");
   return (
     `${pad(d.getDate())}.${pad(d.getMonth() + 1)}.${String(
-      d.getFullYear()
+      d.getFullYear(),
     ).slice(2)} ` + `${pad(d.getHours())}:${pad(d.getMinutes())}`
   );
 };

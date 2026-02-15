@@ -30,6 +30,7 @@ import { QtyInput } from "../Common/QtyInput";
 import { TourDatePicker } from "./TourDatePicker";
 import { MdOutlineDirections } from "react-icons/md";
 import { CommentInput } from "../Common/CommentInput";
+import { CartContoller } from "./CartContoller";
 
 const DashboardPage = () => {
   const [dispatch, data, isLoading, isError] = useAPI(API.getAll);
@@ -116,7 +117,7 @@ const DashboardPage = () => {
               </thead>
               <tbody>
                 {data.sort(getSortBy(sortBy)).map((item) => (
-                  <tr key={item.id}>
+                  <tr key={item.position}>
                     <Td className="id">
                       <DeleteBtn
                         type="button"
@@ -129,7 +130,7 @@ const DashboardPage = () => {
                           }
                         }}
                       >
-                        {item.id}
+                        {item.position}
                         <span>
                           <TiDeleteOutline size={30} />
                         </span>
@@ -201,7 +202,7 @@ const DashboardPage = () => {
 
                     {getAllColums(data).allEssentials.map((name) => {
                       const found = item.essentials.find(
-                        (a) => a.name === name
+                        (a) => a.name === name,
                       );
 
                       return (
@@ -220,6 +221,9 @@ const DashboardPage = () => {
                     })}
                     <Td>
                       <CommentInput item={item} handleChange={handleChange} />
+                    </Td>
+                    <Td>
+                      <CartContoller item={item} handleChange={handleChange} />
                     </Td>
                   </tr>
                 ))}
