@@ -1914,67 +1914,83 @@
     "essentials": [
       {
         "name": "Toilettenpapier",
-        "available": false
+        "available": false,
+        "price": 0
       },
       {
         "name": "Küchenrollen",
-        "available": false
+        "available": false,
+        "price": 0
       },
       {
         "name": "Geschirrspülmittel",
-        "available": false
+        "available": false,
+        "price": 0
       },
       {
         "name": "Schwammtücher",
-        "available": false
+        "available": false,
+        "price": 0
       },
       {
         "name": "Spülschwämme",
-        "available": false
+        "available": false,
+        "price": 0
       },
       {
         "name": "Geschirrspültabs",
-        "available": false
+        "available": false,
+        "price": 0
       },
       {
         "name": "Kaffee",
-        "available": false
+        "available": false,
+        "price": 0
       },
       {
         "name": "Handseife",
-        "available": false
+        "available": false,
+        "price": 0
       },
       {
         "name": "Shampoo",
-        "available": false
+        "available": false,
+        "price": 0
       },
       {
         "name": "Duschgel",
-        "available": false
+        "available": false,
+        "price": 0
       },
       {
         "name": "Badreiniger",
-        "available": false
+        "available": false,
+        "price": 0
       },
       {
         "name": "Küchenreiniger",
-        "available": false
+        "available": false,
+        "price": 0
       },
       {
         "name": "Kalkreiniger",
-        "available": false
+        "available": false,
+        "price": 0
       },
       {
         "name": "Toilettenreiniger",
-        "available": false
+        "available": false,
+        "price": 0
       },
       {
         "name": "Müllsäcke große",
-        "available": false
+        "available": false,
+        "price": 0
       },
       {
         "name": "Müllsäcke kleine",
-        "available": false
+        "available": false,
+        "price": 0
       }
     ],
     "id": "17",
