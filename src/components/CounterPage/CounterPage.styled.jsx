@@ -110,6 +110,8 @@ export const ConfirmButton = styled(SectionSwitch)`
   border-radius: 12px;
   border: 1px solid ${colors.light.hi100};
 
+  color: inherit;
+
   &:disabled {
     color: ${colors.light.hi200};
     background-color: ${colors.light.hi100};

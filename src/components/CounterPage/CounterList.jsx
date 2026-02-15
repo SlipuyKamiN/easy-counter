@@ -7,6 +7,8 @@ import { useAPI } from "~/hooks/useAPI";
 import { API } from "~/API/API";
 import { useRef } from "react";
 import initialEssentials from "~/data/essentials.json";
+import { CartButton } from "../DashboardPage/CartContoller.styled";
+import { TbShoppingCartShare } from "react-icons/tb";
 
 export const CounterList = ({ dispatch, current, updateProgress }) => {
   const [update] = useAPI(API.update);
@@ -24,9 +26,13 @@ export const CounterList = ({ dispatch, current, updateProgress }) => {
   };
 
   const updateCart = () => {
+    const checkedEssentials = current.essentials.filter((e) => e.available);
+
+    if (!checkedEssentials.length) return;
+
     currentChange(current.id, {
       ...current,
-      cart: [...current.cart, ...current.essentials.filter((e) => e.available)],
+      cart: [...current.cart, ...checkedEssentials],
       essentials: initialEssentials,
     });
   };
@@ -78,7 +84,9 @@ export const CounterList = ({ dispatch, current, updateProgress }) => {
         <CommentInput item={current} handleChange={currentChange} clearable />
       </CounterItem>
       <CounterItem>
-        <button onClick={updateCart}>Update cart</button>
+        <CartButton onClick={updateCart}>
+          <TbShoppingCartShare size={24} />
+        </CartButton>
       </CounterItem>
     </ul>
   );
