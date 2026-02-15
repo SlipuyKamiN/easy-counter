@@ -13,92 +13,17 @@ import { IoIosAddCircleOutline } from "react-icons/io";
 import { EmptyQtyInput } from "../Common/QtyInput";
 import { EssentialsCheckbox, TourerSwitcher } from "../Common/Checkboxes";
 import { CommentInput } from "../Common/CommentInput";
+import initialEssentials from "~/data/essentials.json";
+import initialLinens from "~/data/linens.json";
 
 const initialRow = {
   address: "",
   nextTour: [],
   pickupNeeded: false,
   users: ["admin-1001"],
-  linens: [
-    { name: "Bettbezüge", available: 0, minimum: 0 },
-    { name: "Kissenbezüge", available: 0, minimum: 0 },
-    { name: "Laken grün", available: 0, minimum: 0 },
-    { name: "Laken orange", available: 0, minimum: 0 },
-    { name: "Duschtücher", available: 0, minimum: 0 },
-    { name: "Handtücher", available: 0, minimum: 0 },
-    { name: "Badvorleger", available: 0, minimum: 0 },
-    { name: "Geschirrtücher", available: 0, minimum: 0 },
-  ],
-  essentials: [
-    {
-      name: "Toilettenpapier",
-      available: false,
-    },
-    {
-      name: "Küchenrollen",
-      available: false,
-    },
-    {
-      name: "Geschirrspülmittel",
-      available: false,
-    },
-    {
-      name: "Schwammtücher",
-      available: false,
-    },
-    {
-      name: "Spülschwämme",
-      available: false,
-    },
-    {
-      name: "Geschirrspültabs",
-      available: false,
-    },
-    {
-      name: "Kaffee",
-      available: false,
-    },
-    {
-      name: "Handseife",
-      available: false,
-    },
-    {
-      name: "Shampoo",
-      available: false,
-    },
-    {
-      name: "Duschgel",
-      available: false,
-    },
-    {
-      name: "Badreiniger",
-      available: false,
-    },
-    {
-      name: "Küchenreiniger",
-      available: false,
-    },
-    {
-      name: "Kalkreiniger",
-      available: false,
-    },
-    {
-      name: "Toilettenreiniger",
-      available: false,
-    },
-    {
-      name: "Müllsäcke große",
-      available: false,
-    },
-    {
-      name: "Müllsäcke kleine",
-      available: false,
-    },
-    {
-      name: "Sonstiges:",
-      available: false,
-    },
-  ],
+  linens: initialLinens,
+  essentials: initialEssentials,
+  cart: [],
 };
 
 export const EmptyRow = ({ dispatch, data }) => {

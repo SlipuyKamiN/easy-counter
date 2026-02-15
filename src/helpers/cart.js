@@ -16,6 +16,8 @@ export const groupItems = (items) => {
 
 export const getCartTotal = (cart) => {
   return cart.reduce((total, item) => {
-    return total + item.price * item.quantity || 1;
+    return item.quantity
+      ? total + item.price * item.quantity
+      : total + item.price;
   }, 0);
 };

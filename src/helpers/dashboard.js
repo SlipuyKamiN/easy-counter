@@ -46,7 +46,7 @@ export const getAllColums = (data) => {
 export const getSortBy = (key) => {
   switch (key.toLowerCase()) {
     case "id":
-      return (a, b) => Number(a.id) - Number(b.id);
+      return (a, b) => Number(a.position) - Number(b.position);
     case "adresse":
       return (a, b) => a.address.localeCompare(b.address);
     case "tour-datum":

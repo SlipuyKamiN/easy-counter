@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import {
   Checkbox,
   CheckboxWrapper,
@@ -29,6 +29,8 @@ export const TourerSwitcher = ({ item, onChange }) => {
 
 export const EssentialsCheckbox = ({ item, found, onChange }) => {
   const [isChecked, setIsChecked] = useState(found.available);
+
+  useEffect(() => setIsChecked(found.available), [found.available]);
 
   const handleChange = () => {
     const next = !found.available;

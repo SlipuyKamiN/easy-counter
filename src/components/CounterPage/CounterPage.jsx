@@ -87,7 +87,6 @@ const CounterPage = () => {
                   className={activeId === "counter" && "active"}
                 >
                   <CounterList
-                    addressID={addressID}
                     dispatch={dispatch}
                     current={current}
                     updateProgress={setCounterProgress}

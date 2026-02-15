@@ -6,47 +6,50 @@ import { CounterItem } from "./CounterList.styled";
 import { useAPI } from "~/hooks/useAPI";
 import { API } from "~/API/API";
 import { useRef } from "react";
-import { SectionSwitch } from "./CounterPage.styled";
+import initialEssentials from "~/data/essentials.json";
 
-export const CounterList = ({
-  addressID,
-  dispatch,
-  current,
-  updateProgress,
-}) => {
+export const CounterList = ({ dispatch, current, updateProgress }) => {
   const [update] = useAPI(API.update);
 
   const currentRef = useRef(current);
   currentRef.current = current;
 
   const updateData = () => {
-    dispatch(addressID);
+    dispatch(current.id);
     updateProgress({ done: 1, total: 1 });
   };
 
-  const commentChange = (id, body) => {
+  const currentChange = (id, body) => {
     update({ id, body }).then(updateData);
+  };
+
+  const updateCart = () => {
+    currentChange(current.id, {
+      ...current,
+      cart: [...current.cart, ...current.essentials.filter((e) => e.available)],
+      essentials: initialEssentials,
+    });
   };
 
   const throttledHandleChange = useRef(
     throttle(({ name, qty, itemKey }) => {
       update({
-        id: addressID,
+        id: current.id,
         body: {
           ...currentRef.current,
           [itemKey]: currentRef.current[itemKey].map((l) =>
-            l.name === name ? { ...l, available: qty } : l
+            l.name === name ? { ...l, available: qty } : l,
           ),
           updatedAt: new Date(),
         },
       }).then(updateData);
-    }, 200)
+    }, 200),
   ).current;
 
   const throttledCheckboxChange = useRef(
     throttle((id, body) => {
       update({ id, body }).then(updateData);
-    }, 200)
+    }, 200),
   ).current;
 
   return (
@@ -72,16 +75,11 @@ export const CounterList = ({
       ))}
       <CounterItem>
         <h3>Sonstiges:</h3>
-        <CommentInput item={current} handleChange={commentChange} clearable />
+        <CommentInput item={current} handleChange={currentChange} clearable />
       </CounterItem>
-      {/* <CounterItem>
-        <SectionSwitch
-          type="button"
-          onClick={() => updateProgress({ done: 1, total: 1 })}
-        >
-          Update
-        </SectionSwitch>
-      </CounterItem> */}
+      <CounterItem>
+        <button onClick={updateCart}>Update cart</button>
+      </CounterItem>
     </ul>
   );
 };

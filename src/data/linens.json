@@ -1,0 +1,42 @@
+[
+  {
+    "name": "Bettbezüge",
+    "minimum": 0,
+    "available": 0
+  },
+  {
+    "name": "Kissenbezüge",
+    "minimum": 0,
+    "available": 0
+  },
+  {
+    "name": "Laken grün",
+    "minimum": 0,
+    "available": 0
+  },
+  {
+    "name": "Laken orange",
+    "minimum": 0,
+    "available": 0
+  },
+  {
+    "name": "Duschtücher",
+    "minimum": 0,
+    "available": 0
+  },
+  {
+    "name": "Handtücher",
+    "minimum": 0,
+    "available": 0
+  },
+  {
+    "name": "Badvorleger",
+    "minimum": 0,
+    "available": 0
+  },
+  {
+    "name": "Geschirrtücher",
+    "minimum": 0,
+    "available": 0
+  }
+]

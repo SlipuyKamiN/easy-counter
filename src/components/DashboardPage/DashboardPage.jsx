@@ -117,7 +117,7 @@ const DashboardPage = () => {
               </thead>
               <tbody>
                 {data.sort(getSortBy(sortBy)).map((item) => (
-                  <tr key={item.id}>
+                  <tr key={item.position}>
                     <Td className="id">
                       <DeleteBtn
                         type="button"
@@ -130,7 +130,7 @@ const DashboardPage = () => {
                           }
                         }}
                       >
-                        {item.id}
+                        {item.position}
                         <span>
                           <TiDeleteOutline size={30} />
                         </span>
