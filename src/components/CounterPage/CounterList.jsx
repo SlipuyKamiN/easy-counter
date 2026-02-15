@@ -9,8 +9,10 @@ import { useRef } from "react";
 import initialEssentials from "~/data/essentials.json";
 import { CartButton } from "../DashboardPage/CartContoller.styled";
 import { TbShoppingCartShare } from "react-icons/tb";
+import { useParams } from "react-router-dom";
 
 export const CounterList = ({ dispatch, current, updateProgress }) => {
+  const { user } = useParams();
   const [update] = useAPI(API.update);
 
   const currentRef = useRef(current);
@@ -83,11 +85,13 @@ export const CounterList = ({ dispatch, current, updateProgress }) => {
         <h3>Sonstiges:</h3>
         <CommentInput item={current} handleChange={currentChange} clearable />
       </CounterItem>
-      <CounterItem>
-        <CartButton onClick={updateCart}>
-          <TbShoppingCartShare size={24} />
-        </CartButton>
-      </CounterItem>
+      {user === "admin-1001" && (
+        <CounterItem>
+          <CartButton onClick={updateCart}>
+            <TbShoppingCartShare size={24} />
+          </CartButton>
+        </CounterItem>
+      )}
     </ul>
   );
 };

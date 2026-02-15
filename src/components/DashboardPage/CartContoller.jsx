@@ -114,7 +114,7 @@ export const CartContoller = ({ item, handleChange }) => {
               </>
             ) : (
               <CartHeading>
-                <h4>Warenkorb sind noch leer</h4>
+                <h4>Der Warenkorb ist noch leer</h4>
                 <TbShoppingCartCancel size={28} />
               </CartHeading>
             )}
