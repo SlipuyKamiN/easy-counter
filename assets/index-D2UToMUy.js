@@ -589,7 +589,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 
   &.fixed {
     position: fixed;
-    z-index: 11;
+    z-index: 100;
     top: 15px;
     right: 25px;
   }
@@ -679,14 +679,14 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
   width: 100%;
   height: 100%;
 
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(10px);
 
   display: flex;
   align-items: center;
   justify-content: center;
 
-  z-index: 1000;
+  z-index: 50;
 `,Zx=ke.div`
   background: ${be.classicWhite};
   padding: 20px;
