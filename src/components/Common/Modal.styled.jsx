@@ -8,14 +8,14 @@ export const Backdrop = styled.div`
   width: 100%;
   height: 100%;
 
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(10px);
 
   display: flex;
   align-items: center;
   justify-content: center;
 
-  z-index: 1000;
+  z-index: 50;
 `;
 
 export const ModalWindow = styled.div`

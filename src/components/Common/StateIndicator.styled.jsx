@@ -12,7 +12,7 @@ export const StateWrapper = styled.div`
 
   &.fixed {
     position: fixed;
-    z-index: 11;
+    z-index: 100;
     top: 15px;
     right: 25px;
   }
