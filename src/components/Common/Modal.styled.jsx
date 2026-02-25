@@ -7,8 +7,6 @@ export const Backdrop = styled.div`
   left: 0;
   width: 100%;
   height: 100%;
-  padding-top: 20%;
-  overflow-y: scroll;
 
   background-color: rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(10px);
