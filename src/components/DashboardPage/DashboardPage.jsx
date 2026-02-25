@@ -202,7 +202,7 @@ const DashboardPage = () => {
 
                     {getAllColums(data).allEssentials.map((name) => {
                       const found = item.essentials.find(
-                        (a) => a.name === name,
+                        (a) => a.name.toLowerCase() === name.toLowerCase(),
                       );
 
                       return (

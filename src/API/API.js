@@ -5,7 +5,7 @@ export const API = {
     return await supabase
       .from("apartments")
       .select("*")
-      .order("id", { ascending: true });
+      .order("position", { ascending: true });
   },
   getAddress: async (id) => {
     if (!id) throw new Error("ID missed");
