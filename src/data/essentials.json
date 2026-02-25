@@ -1,46 +1,71 @@
 [
   {
-    "name": "Toilettenpapier",
+    "name": "Toiletten papier",
     "price": 5,
     "available": false
   },
   {
-    "name": "Küchenrollen",
+    "name": "Küchen rollen",
     "price": 4,
     "available": false
   },
   {
-    "name": "Geschirrspülmittel",
+    "name": "Kaffee",
+    "price": 12,
+    "available": false
+  },
+  {
+    "name": "Schwamm tücher",
+    "price": 2,
+    "available": false
+  },
+  {
+    "name": "Schwämme",
+    "price": 2,
+    "available": false
+  },
+  {
+    "name": "Mülltüten",
+    "price": 2,
+    "available": false
+  },
+  {
+    "name": "Geschirrspül mittel",
     "price": 3,
     "available": false
   },
   {
-    "name": "Schwammtücher",
-    "price": 2,
+    "name": "Küchen reiniger",
+    "price": 4,
     "available": false
   },
   {
-    "name": "Spülschwämme",
-    "price": 2,
+    "name": "Bad reiniger",
+    "price": 4,
     "available": false
   },
   {
-    "name": "Geschirrspültabs",
-    "price": 10,
+    "name": "WC Reiniger",
+    "price": 4,
     "available": false
   },
   {
-    "name": "Kaffee",
-    "price": 12.5,
+    "name": "Glas reiniger",
+    "price": 4,
+    "available": false
+  },
+  {
+    "name": "Boden reiniger",
+    "price": 4,
+    "available": false
+  },
+  {
+    "name": "Möbel politur",
+    "price": 4,
     "available": false
   },
   {
     "name": "Handseife",
-    "price": 2,
-    "available": false
-  },
-  {
-    "name": "Shampoo",
     "price": 2,
     "available": false
   },
@@ -50,32 +75,72 @@
     "available": false
   },
   {
-    "name": "Badreiniger",
-    "price": 4,
-    "available": false
-  },
-  {
-    "name": "Küchenreiniger",
-    "price": 1,
-    "available": false
-  },
-  {
-    "name": "Kalkreiniger",
-    "price": 4,
-    "available": false
-  },
-  {
-    "name": "Toilettenreiniger",
-    "price": 4,
-    "available": false
-  },
-  {
-    "name": "Müllsäcke große",
+    "name": "Shampoo",
     "price": 2,
     "available": false
   },
   {
-    "name": "Müllsäcke kleine",
+    "name": "Entkalker",
+    "price": 4,
+    "available": false
+  },
+  {
+    "name": "Chlor reiniger",
+    "price": 4,
+    "available": false
+  },
+  {
+    "name": "Geschirrspül Tabs",
+    "price": 10,
+    "available": false
+  },
+  {
+    "name": "Geschirrspül salz",
+    "price": 3,
+    "available": false
+  },
+  {
+    "name": "Klarspüler",
+    "price": 3,
+    "available": false
+  },
+  {
+    "name": "Geschirrspülmaschinen Reiniger",
+    "price": 5,
+    "available": false
+  },
+  {
+    "name": "Waschmaschinen Tabs",
+    "price": 8,
+    "available": false
+  },
+  {
+    "name": "Staubsauger Beutel",
+    "price": 3,
+    "available": false
+  },
+  {
+    "name": "Kosmetik tücher",
+    "price": 2,
+    "available": false
+  },
+  {
+    "name": "Wattestäbchen",
+    "price": 2,
+    "available": false
+  },
+  {
+    "name": "Wattepads",
+    "price": 2,
+    "available": false
+  },
+  {
+    "name": "Raumduft",
+    "price": 5,
+    "available": false
+  },
+  {
+    "name": "Wasserflasche",
     "price": 2,
     "available": false
   }
