@@ -44,7 +44,7 @@ export const CartContoller = ({ item, handleChange }) => {
         ...item.cart,
         {
           quantity: newQty,
-          name: newName,
+          name: newName.trim(),
           available: false,
           price: newPrice,
         },
