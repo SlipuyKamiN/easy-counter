@@ -109,7 +109,7 @@ export const getRouteLink = (addresses) => {
 
     cleaned = cleaned.replace(/\b(APART\w*|STUDIO\w*)\b/gi, "");
 
-    cleaned = cleaned.replace("-", "straße ");
+    cleaned = cleaned.replace("-", " straße ");
 
     cleaned = cleaned.replace(/\|/g, "");
 
