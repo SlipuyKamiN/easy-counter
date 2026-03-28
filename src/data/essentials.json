@@ -15,6 +15,16 @@
     "available": false
   },
   {
+    "name": "Tee",
+    "price": 3.5,
+    "available": false
+  },
+  {
+    "name": "Zucker",
+    "price": 2.5,
+    "available": false
+  },
+  {
     "name": "Schwamm tücher",
     "price": 2,
     "available": false
