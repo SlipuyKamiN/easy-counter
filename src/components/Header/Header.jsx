@@ -5,13 +5,14 @@ import { PageLogo } from "../Common/PageLogo";
 
 const Header = () => {
   const { user } = useParams();
+  const isAdmin = user === "admin-1001" || user === "test-1001";
 
   return (
     <PageHeader>
       <Container>
         <HeaderWrapper>
           <PageLogo />
-          {user === "admin-1001" && (
+          {isAdmin && (
             <NavList>
               <li>
                 <NavLink to={`/${user}`}>Counter list</NavLink>
