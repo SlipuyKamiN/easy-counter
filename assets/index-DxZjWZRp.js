@@ -974,7 +974,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
     left: 28px;
     font-size: 11px;
   }
-`,Py=()=>{const{user:r}=co();return E.jsxs(OE,{to:`/${r}`,children:[E.jsx(kE,{children:"e"}),"asyRing",E.jsx(AE,{children:"↺"}),E.jsx(RE,{children:"counter"})]})},CE=()=>{const{user:r}=co();return E.jsx(xE,{children:E.jsx(Zs,{children:E.jsxs(EE,{children:[E.jsx(Py,{}),r==="admin-1001"&&E.jsxs(TE,{children:[E.jsx("li",{children:E.jsx(vf,{to:`/${r}`,children:"Counter list"})}),E.jsx("li",{children:E.jsx(vf,{to:"dashboard",children:"Dashboard"})})]})]})})})},jE=ke.footer`
+`,Py=()=>{const{user:r}=co();return E.jsxs(OE,{to:`/${r}`,children:[E.jsx(kE,{children:"e"}),"asyRing",E.jsx(AE,{children:"↺"}),E.jsx(RE,{children:"counter"})]})},CE=()=>{const{user:r}=co(),n=r==="admin-1001"||r==="test-1001";return E.jsx(xE,{children:E.jsx(Zs,{children:E.jsxs(EE,{children:[E.jsx(Py,{}),n&&E.jsxs(TE,{children:[E.jsx("li",{children:E.jsx(vf,{to:`/${r}`,children:"Counter list"})}),E.jsx("li",{children:E.jsx(vf,{to:"dashboard",children:"Dashboard"})})]})]})})})},jE=ke.footer`
   padding: 40px 0;
 `,DE=ke(Zs)`
   display: flex;
