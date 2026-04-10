@@ -21,7 +21,7 @@ export const Footer = () => {
                 target="_blank"
                 rel="noopener nofollow noreferrer"
               >
-                Kaulbachstr. 6A, 12247 Berlin
+                Schrockstraße 25, 14165 Berlin
               </a>
             </AddressListItem>
           </ul>

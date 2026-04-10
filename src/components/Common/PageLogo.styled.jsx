@@ -6,7 +6,7 @@ export const LogoLink = styled(Link)`
   position: relative;
   display: flex;
   align-items: center;
-  max-width: 240px;
+  /* max-width: 240px; */
 
   font-family: Montserrat-Alt1, Montserrat;
   font-style: normal;

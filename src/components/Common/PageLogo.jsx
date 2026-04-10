@@ -11,7 +11,7 @@ export const PageLogo = () => {
 
   return (
     <LogoLink to={`/${user}`}>
-      <FirstLetterLogo>e</FirstLetterLogo>asyRing<ArrowLogo>↺</ArrowLogo>
+      <FirstLetterLogo>e</FirstLetterLogo>asyLinens<ArrowLogo>↺</ArrowLogo>
       <SubLogo>counter</SubLogo>
     </LogoLink>
   );
