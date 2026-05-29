@@ -6,7 +6,7 @@ import { CounterItem } from "./CounterList.styled";
 import { useAPI } from "~/hooks/useAPI";
 import { API } from "~/API/API";
 import { useRef } from "react";
-import initialEssentials from "~/data/essentials.json";
+// import initialEssentials from "~/data/essentials.json";
 import { CartButton } from "../DashboardPage/CartContoller.styled";
 import { TbShoppingCartShare } from "react-icons/tb";
 import { useParams } from "react-router-dom";
@@ -29,6 +29,9 @@ export const CounterList = ({ dispatch, current, updateProgress }) => {
 
   const updateCart = () => {
     const checkedEssentials = current.essentials.filter((e) => e.available);
+    const initialEssentials = current.essentials.map((e) => {
+      return { ...e, available: false };
+    });
 
     if (!checkedEssentials.length) return;
 
@@ -71,7 +74,7 @@ export const CounterList = ({ dispatch, current, updateProgress }) => {
           itemKey={"linens"}
         />
       ))}
-      {current.essentials.map((found) => (
+      {current.essentials?.map((found) => (
         <CounterItem key={found.name}>
           <h3>{found.name}</h3>
           <EssentialsCheckbox
