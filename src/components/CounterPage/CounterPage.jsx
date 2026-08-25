@@ -56,7 +56,8 @@ const CounterPage = () => {
 
   const handleSMS = () => {
     sendSMS({
-      body: `${current.address} – erledigt.\n Counter – aktualisiert. \n Checkliste – abgehakt.`,
+      // body: `${current.address} – erledigt.\n Counter – aktualisiert. \n Checkliste – abgehakt.`,
+      body: `${current.address} – erledigt.\n Counter – aktualisiert.`,
     }).then(() => {
       if (!isSending) {
         console.log(smsData);
@@ -93,7 +94,7 @@ const CounterPage = () => {
                   />
                 </ActiveSectionWrapper>
               </SectionListItem>
-              <SectionListItem>
+              <SectionListItem className={"hidden"}>
                 <SectionSwitch
                   type="button"
                   onClick={() => toggleActive("checklist")}

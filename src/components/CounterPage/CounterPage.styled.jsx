@@ -62,6 +62,10 @@ export const SectionListItem = styled.li`
   &:not(:last-child) {
     margin-bottom: 10px;
   }
+
+  &.hidden {
+    display: none;
+  }
 `;
 
 export const ActiveSectionWrapper = styled.div`
