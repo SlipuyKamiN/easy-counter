@@ -15,8 +15,8 @@ import { API } from "~/API/API";
 import { useAPI } from "~/hooks/useAPI";
 import { TiDeleteOutline } from "react-icons/ti";
 import {
-  countBags,
-  formatDate,
+  // countBags,
+  // formatDate,
   getAllColums,
   getRouteLink,
   getSortBy,
@@ -151,7 +151,7 @@ const DashboardPage = () => {
                     <Td>
                       <TourDatePicker item={item} handleChange={handleChange} />
                     </Td>
-                    <Td>
+                    {/* <Td>
                       <TourerSwitcher
                         onChange={() =>
                           handleChange(item.id, {
@@ -167,7 +167,7 @@ const DashboardPage = () => {
                       {item.updatedAt && (
                         <span>{formatDate(item.updatedAt)}</span>
                       )}
-                    </Td>
+                    </Td> */}
                     {getAllColums(data).allLinens.map((name) => {
                       const found = item.linens.find((l) => l.name === name);
 
